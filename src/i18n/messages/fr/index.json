@@ -1,0 +1,27 @@
+{
+  "app": {
+    "title": "Starter Multilingue Next.js",
+    "description": "Un starter Next.js 15 avec Tailwind CSS et next-intl pour l'internationalisation",
+    "welcome": "Bienvenue sur le Starter Multilingue Next.js",
+    "language": "Langue"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "pages": {
+    "home": {
+      "title": "Accueil",
+      "description": "Ceci est la page d'accueil"
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Ceci est la page à propos"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Ceci est la page de contact"
+    }
+  }
+}

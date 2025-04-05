@@ -22,6 +22,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // The middleware will handle the locale redirection
   return (
     <html lang="en">
       <body
