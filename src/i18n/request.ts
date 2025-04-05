@@ -1,7 +1,9 @@
 import { getRequestConfig } from 'next-intl/server';
 
 export default getRequestConfig(async (context) => {
-  const locale = context.locale;
+  // Use requestLocale instead of context.locale
+  // requestLocale is a Promise, not a function
+  const locale = await context.requestLocale;
   
   return {
     locale,
