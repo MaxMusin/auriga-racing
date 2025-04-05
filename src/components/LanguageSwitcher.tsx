@@ -3,16 +3,23 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from '@/navigation';
 import { useTransition } from 'react';
+import { saveLanguagePreference } from '@/utils/languageDetection';
+import { type Locale } from '@/i18n/i18n';
 
 export default function LanguageSwitcher() {
   const t = useTranslations('app');
-  const locale = useLocale();
+  const currentLocale = useLocale();
+  const locale = currentLocale as Locale; // Cast to our Locale type
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value;
+    const newLocale = e.target.value as Locale;
+    
+    // Save the user's language preference
+    saveLanguagePreference(newLocale);
+    
     startTransition(() => {
       router.replace(pathname, { locale: newLocale });
     });

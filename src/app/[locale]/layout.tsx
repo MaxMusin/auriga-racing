@@ -4,6 +4,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import { getMessages, Locale } from "@/i18n/i18n";
 import { IntlProvider } from "./providers";
+import LanguageInitializer from "@/components/LanguageInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,8 @@ export default async function LocaleLayout(props: Props) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <IntlProvider locale={locale} messages={messages}>
+          {/* This component checks for user language preferences and applies them */}
+          <LanguageInitializer />
           {props.children}
         </IntlProvider>
       </body>
