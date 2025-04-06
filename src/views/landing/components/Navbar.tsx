@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from "lucide-react";
 import Image from 'next/image';
 import { scrollToAnchor } from '@/utils';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,8 +72,11 @@ const Header = () => {
             className="btn-primary mx-2"
             onClick={(e) => handleNavClick(e, 'join')}
           >
-              Join Us
-            </a>
+            Join Us
+          </a>
+          <div className="navbar-language-switcher">  
+            <LanguageSwitcher />
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -99,6 +103,9 @@ const Header = () => {
                 {link.name}
             </a>
             ))}
+            <div className="py-2">
+              <LanguageSwitcher />
+            </div>
             <a
                 href="#join"
                 className="btn-primary mx-2"
