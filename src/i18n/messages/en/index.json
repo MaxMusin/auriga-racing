@@ -3,7 +3,17 @@
     "title": "Next.js Multilingual Starter",
     "description": "A Next.js 15 starter with Tailwind CSS and next-intl for internationalization",
     "welcome": "Welcome to the Next.js Multilingual Starter",
-    "language": "Language"
+    "language": "Language",
+    "about_link": "About Us",
+    "back_home": "Back to Home",
+    "about_title": "About Auriga Racing",
+    "about_description": "Auriga Racing is a multilingual application showcasing internationalization features in Next.js 15.",
+    "language_support": "We support English, French, and Dutch languages.",
+    "about_features": "Key Features",
+    "feature_i18n": "Full internationalization support with next-intl",
+    "feature_detection": "Automatic system language detection",
+    "feature_preference": "User language preference saving",
+    "feature_url": "Language switching via URL or UI"
   },
   "navigation": {
     "home": "Home",

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { Link } from "@/navigation";
 
 // We don't need to use the locale parameter directly in this component
 export default function Home() {
@@ -28,6 +29,16 @@ export default function Home() {
           height={38}
           priority
         />
+
+        <div className="flex flex-col gap-4 w-full">
+          <Link 
+            href="/about" 
+            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors text-center"
+          >
+            {/* Using the key directly without a fallback to fix TypeScript error */}
+            {t("app.about_link")}
+          </Link>
+        </div>
 
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
