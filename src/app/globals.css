@@ -266,7 +266,16 @@
   }
 
   .clip-diagonal-reverse {
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    @apply pt-20 md:pt-[132px] lg:pt-[148px];
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+
+    @media (min-width: 768px) {
+      clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @media (min-width: 1024px) {
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    }
   }
 
 }
