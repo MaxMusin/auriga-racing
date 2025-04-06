@@ -6,9 +6,9 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 const About = () => {
   const stats = [
     { value: 120, label: 'Trackday Events', suffix: '+' },
-    { value: 15, label: 'Years Experience', suffix: '' },
-    { value: 250, label: 'Race Drivers', suffix: '+' },
-    { value: 42, label: 'Podium Finishes', suffix: '' },
+    { value: 9, label: 'Years Experience', suffix: '' },
+    { value: 80, label: 'Racing Enthusiasts', suffix: '+' },
+    { value: 500, label: 'Laps Completed', suffix: '+' },
   ];
 
   return (

@@ -173,7 +173,7 @@
     background-color: var(--racing-black);
   }
   .btn-secondary:hover {
-    background-color: color-mix(in srgb, var(--gray-900) 90%, black);
+    background-color: color-mix(in srgb, var(--racing-black) 90%, black);
   }
   .btn-secondary:focus-visible {
     outline: 1px solid var(--racing-black);
