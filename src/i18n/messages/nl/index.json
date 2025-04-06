@@ -1,37 +1,14 @@
 {
   "app": {
-    "title": "Next.js Meertalige Starter",
-    "description": "Een Next.js 15 starter met Tailwind CSS en next-intl voor internationalisatie",
-    "welcome": "Welkom bij de Next.js Meertalige Starter",
-    "language": "Taal",
-    "about_link": "Over ons",
-    "back_home": "Terug naar home",
-    "about_title": "Over Auriga Racing",
-    "about_description": "Auriga Racing is een meertalige applicatie die internationalisatiefuncties in Next.js 15 toont.",
-    "language_support": "We ondersteunen Engels, Frans en Nederlands.",
-    "about_features": "Belangrijkste functies",
-    "feature_i18n": "Volledige internationalisatieondersteuning met next-intl",
-    "feature_detection": "Automatische systeemtaaldetectie",
-    "feature_preference": "Opslaan van taalvoorkeuren van gebruikers",
-    "feature_url": "Taal wisselen via URL of gebruikersinterface"
+    "title": "Auriga Racing",
+    "description": "Experience the thrill of motorsport with our introductory track driving lessons and a close-knit racing simulation team."
   },
-  "navigation": {
-    "home": "Home",
-    "about": "Over ons",
-    "contact": "Contact"
-  },
-  "pages": {
-    "home": {
-      "title": "Home",
-      "description": "Dit is de homepagina"
-    },
-    "about": {
-      "title": "Over ons",
-      "description": "Dit is de over ons pagina"
-    },
-    "contact": {
-      "title": "Contact",
-      "description": "Dit is de contactpagina"
-    }
+  "hero": {
+    "title": "ERVAAR DE SPANNING",
+    "subtitle": "VAN PROFESSIONEEL RACEN",
+    "description": "Ervaar de spanning van motorsport met onze introductielessen voor circuitrijden en een hechte racesimulatieteam.",
+    "cta": "Boek een trackday",
+    "pitlane": "PITLANE",
+    "simracingTeam": "Simracing Team"
   }
 }

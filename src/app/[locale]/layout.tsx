@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import "../globals.css";
-import { getMessages, Locale } from "@/i18n/i18n";
-import { IntlProvider } from "./providers";
-import LanguageInitializer from "@/components/LanguageInitializer";
+import LanguageInitializer from '@/components/LanguageInitializer';
+import { getMessages, Locale } from '@/i18n/i18n';
+import type { Metadata } from 'next';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { Geist, Geist_Mono } from 'next/font/google';
+import '../globals.css';
+import { IntlProvider } from './providers';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 type Props = {
@@ -27,11 +27,11 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   // This is needed for the dynamic route parameter to work in Next.js 15
   unstable_setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "app" });
+  const t = await getTranslations({ locale, namespace: 'app' });
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: t('title'),
+    description: t('description'),
   };
 }
 

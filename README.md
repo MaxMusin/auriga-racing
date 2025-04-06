@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 # Next.js 15 Multilingual Starter
 
 This project is a Next.js 15 starter with:
+
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [next-intl](https://next-intl-docs.vercel.app/) for internationalization
 - Support for three languages: English, French, and Dutch

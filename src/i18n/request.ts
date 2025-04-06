@@ -4,7 +4,7 @@ export default getRequestConfig(async (context) => {
   // Use requestLocale instead of context.locale
   // requestLocale is a Promise, not a function
   const locale = await context.requestLocale;
-  
+
   return {
     locale,
     messages: (await import(`./messages/${locale}/index.json`)).default,

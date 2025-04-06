@@ -23,7 +23,7 @@ const i18n = {
   locales,
   defaultLocale,
   getMessages,
-  isValidLocale
+  isValidLocale,
 };
 
 // Default export

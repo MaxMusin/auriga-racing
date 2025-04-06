@@ -1,37 +1,14 @@
 {
   "app": {
-    "title": "Starter Multilingue Next.js",
-    "description": "Un starter Next.js 15 avec Tailwind CSS et next-intl pour l'internationalisation",
-    "welcome": "Bienvenue sur le Starter Multilingue Next.js",
-    "language": "Langue",
-    "about_link": "À propos de nous",
-    "back_home": "Retour à l'accueil",
-    "about_title": "À propos d'Auriga Racing",
-    "about_description": "Auriga Racing est une application multilingue présentant les fonctionnalités d'internationalisation dans Next.js 15.",
-    "language_support": "Nous prenons en charge les langues anglaise, française et néerlandaise.",
-    "about_features": "Caractéristiques principales",
-    "feature_i18n": "Support complet d'internationalisation avec next-intl",
-    "feature_detection": "Détection automatique de la langue du système",
-    "feature_preference": "Sauvegarde des préférences linguistiques de l'utilisateur",
-    "feature_url": "Changement de langue via URL ou interface utilisateur"
+    "title": "Auriga Racing",
+    "description": "Experience the thrill of motorsport with our introductory track driving lessons and a close-knit racing simulation team."
   },
-  "navigation": {
-    "home": "Accueil",
-    "about": "À propos",
-    "contact": "Contact"
-  },
-  "pages": {
-    "home": {
-      "title": "Accueil",
-      "description": "Ceci est la page d'accueil"
-    },
-    "about": {
-      "title": "À propos",
-      "description": "Ceci est la page à propos"
-    },
-    "contact": {
-      "title": "Contact",
-      "description": "Ceci est la page de contact"
-    }
+  "hero": {
+    "title": "VIVEZ LE FRISSON",
+    "subtitle": "DE LA COURSE PROFESSIONNELLE",
+    "description": "Découvrez le frisson du sport automobile avec nos cours d\"initiation à la conduite sur circuit et une équipe de simulation de course soudée.",
+    "cta": "Réserver une journée sur circuit",
+    "pitlane": "PITLANE",
+    "simracingTeam": "Équipe Simracing"
   }
 }

@@ -1,18 +1,18 @@
 import createMiddleware from 'next-intl/middleware';
-import { locales, defaultLocale } from './i18n/i18n';
+import { defaultLocale, locales } from './i18n/i18n';
 
 // Create the middleware with a simpler configuration
 export default createMiddleware({
   // A list of all locales that are supported
   locales,
-  
+
   // Used when no locale matches
   defaultLocale,
-  
+
   // Don't redirect from / to /en
-  localePrefix: 'as-needed'
+  localePrefix: 'as-needed',
 });
- 
+
 // Configure the middleware matcher
 export const config = {
   // Match all pathnames except for
@@ -20,5 +20,5 @@ export const config = {
   // - api routes
   // - _next
   // - public files
-  matcher: ['/((?!api|_next|.*\\..*|_vercel).*)']
+  matcher: ['/((?!api|_next|.*\\..*|_vercel).*)'],
 };
