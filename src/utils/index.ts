@@ -65,3 +65,30 @@ export function getNestedValue<T>(obj: any, path: string, defaultValue: T): T {
   
   return (result === undefined || result === null) ? defaultValue : result as T;
 }
+
+/**
+ * Smoothly scrolls to an element with the specified ID
+ * @param id The ID of the element to scroll to (without the # prefix)
+ * @param options Optional configuration for the scroll behavior
+ */
+export function scrollToAnchor(id: string, options: ScrollIntoViewOptions = {}) {
+  // Remove the # if it's included in the id
+  const elementId = id.startsWith('#') ? id.substring(1) : id;
+  const element = document.getElementById(elementId);
+  
+  if (element) {
+    const defaultOptions: ScrollIntoViewOptions = {
+      behavior: 'smooth',
+      block: 'start',
+    };
+    
+    // Merge default options with provided options
+    const scrollOptions = { ...defaultOptions, ...options };
+    
+    // Scroll to the element
+    element.scrollIntoView(scrollOptions);
+    
+    // Update URL hash without causing a jump
+    window.history.pushState(null, '', `#${elementId}`);
+  }
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from "lucide-react";
 import Image from 'next/image';
+import { scrollToAnchor } from '@/utils';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,6 +23,14 @@ const Header = () => {
     { name: "Gallery", href: "#gallery" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    scrollToAnchor(href);
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -30,7 +39,11 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#home" className="relative h-10 w-40">
+          <a 
+            href="#home" 
+            className="relative h-10 w-40"
+            onClick={(e) => handleNavClick(e, 'home')}
+          >
             <Image
               src="/images/auriga_racing__logo.svg"
               alt="Auriga Racing Logo"
@@ -48,6 +61,7 @@ const Header = () => {
               key={link.name}
               href={link.href}
               className="text-white/80 hover:text-racing-red font-medium text-sm transition-colors"
+              onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.name}
             </a>
@@ -55,7 +69,7 @@ const Header = () => {
           <a
             href="#join"
             className="btn-primary mx-2"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, 'join')}
           >
               Join Us
             </a>
@@ -80,7 +94,7 @@ const Header = () => {
                 key={link.name}
                 href={link.href}
                 className="text-white/80 hover:text-racing-red font-medium text-lg py-2 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
             </a>
@@ -88,7 +102,7 @@ const Header = () => {
             <a
                 href="#join"
                 className="btn-primary mx-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, 'join')}
               >
                 Join Us
             </a>
