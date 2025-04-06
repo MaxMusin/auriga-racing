@@ -56,9 +56,9 @@ const HeroSection = () => {
       </div>
 
       {/* Racing stripe - right side with PITLANE text */}
-      <div className="absolute top-0 right-0 h-full w-16 md:w-24 bg-racing-red opacity-80 z-10 flex items-center justify-center">
-        <div className="-rotate-90 transform origin-center whitespace-nowrap">
-          <span className="text-white font-bold text-4xl tracking-[0.15em]">
+      <div className="absolute bottom-4 md:bottom-0 md:top-0 md:right-0 w-full md:h-full w-16 md:w-24 bg-racing-red opacity-50 z-10 flex items-center justify-center">
+        <div className="md:-rotate-90 transform origin-center whitespace-nowrap">
+          <span className="text-white font-bold text-6xl tracking-[0.15em]">
             {t('pitlane')}
           </span>
         </div>
@@ -66,7 +66,7 @@ const HeroSection = () => {
 
       {/* Content with fade-in animations */}
       <div
-        className={`container mx-auto px-4 z-20 text-center transition-all duration-1000 ease-out relative flex flex-col items-center justify-center ${
+        className={`container mx-auto px-4 z-20 text-center transition-all duration-1000 ease-out relative flex flex-col items-center justify-center md:mb-[100px] ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -84,7 +84,7 @@ const HeroSection = () => {
           />
         </div>
         <h1
-          className={`text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 transition-all duration-1000 delay-400 ${
+          className={`text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 transition-all duration-1000 delay-400 uppercase ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -92,7 +92,7 @@ const HeroSection = () => {
           <span className="bg-racing-black">{t('subtitle')}</span>
         </h1>
         <p
-          className={`max-w-2xl mx-auto text-lg md:text-xl text-white/80 mb-8 mx-auto transition-all duration-1000 delay-400 ${
+          className={`max-w-2xl mx-auto text-lg md:text-xl text-white/80 mb-8 mx-auto transition-all duration-1000 delay-400 font-medium ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -114,12 +114,14 @@ const HeroSection = () => {
 
       {/* Scroll indicator - positioned at the bottom of the section */}
       <div
-        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce transition-opacity duration-1000 delay-800 z-30 ${
+        className={`absolute md:bottom-8 bottom-20 left-1/2 transform -translate-x-1/2 cursor-pointer transition-opacity duration-1000 delay-800 z-30 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
         onClick={scrollToContent}
       >
-        <ChevronDown className="w-10 h-10 text-white" />
+        <div className="animate-bounce">
+          <ChevronDown className="w-10 h-10 text-white" />
+        </div>
       </div>
 
       {/* Checkered flag pattern - bottom */}
