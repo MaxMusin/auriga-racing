@@ -13,6 +13,9 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
+    // Check scroll position immediately on component mount
+    handleScroll();
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
