@@ -1,7 +1,16 @@
 {
   "app": {
     "title": "Auriga Racing",
-    "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?"
+    "description": ""
+  },
+  "navbar": {
+    "links": {
+      "events": "Trackdays",
+      "about": "Over ons",
+      "teams": "Teams",
+      "gallery": "Fotogalerij"
+    },
+    "cta": "Doe mee"
   },
   "navbar": {
     "links": {
@@ -14,10 +23,79 @@
   },
   "hero": {
     "title": "",
-    "subtitle": "VAN PROFESSIONEEL RACEN",
+    "subtitle": "Op track & online",
     "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
-    "cta": "",
+    "cta": "Kom op de trackday",
     "pitlane": "",
     "simracingTeam": "Simracing Team"
+  },
+  "teams": {
+    "title": "Onze teams",
+    "description": "Auriga Racing is active across multiple disciplines, from real-world Fun Cup events to serious simracing competitions",
+    "track": {
+      "title": "Fun Cup",
+      "description": "Our track team competes in FUNCUP events across Europe, showcasing skill and precision in some of the most challenging circuits.",
+      "features": {
+        "drivers": "Professional drivers with years of experience",
+        "equipment": "State-of-the-art cars and equipment",
+        "training": "Regular trackdays and training sessions"
+      },
+      "cta": "Join Track Team"
+    },
+    "simracing": {
+      "title": "Sim racing",
+      "description": "Our sim racing division competes at a respectable level in virtual motorsports with serious engagement based on the principles and values ​​that build the team.",
+      "features": {
+        "leagues": "Compete in international e-motorsport leagues",
+        "equipment": "Professional simulation rigs and equipment",
+        "coaching": "Dedicated coaching and strategy team"
+      },
+      "cta": ""
+    }
+  },
+  "join": {
+    "title": "Join the team",
+    "description": "Whether you're an experienced racer or just starting out, we're always looking for passionate individuals to join our teams. Auriga Racing provides opportunities for both track racing and simracing enthusiasts.",
+    "whyJoinUs": "Why join us on track or/and online?",
+    "benefits": {
+      "coaching": "Access to professional coaching and development",
+      "equipment": "State-of-the-art equipment and facilities",
+      "events": "Drive in national and international events",
+      "community": "Be part of a passionate community of racers"
+    },
+    "contact": {
+      "title": "Contacteer ons",
+      "email": "hello@auriga-racing.be",
+      "phone": "+32 474 79 39 24",
+      "organization": "Auriga VZW"
+    },
+    "form": {
+      "title": "Contact us",
+      "firstName": "Voornaam*",
+      "lastName": "Laatste naam*",
+      "email": "E-mail adres*",
+      "phone": "Telefoonnummer",
+      "interest": {
+        "label": "Ik ben geïnteresseerd in*",
+        "placeholder": "Selecteer een optie",
+        "trackday": "Trackday",
+        "simracing": "Sim racing",
+        "both": "Allebei"
+      },
+      "experience": {
+        "label": "Racing ervaring",
+        "placeholder": "Selecteer een optie",
+        "none": "Geen",
+        "beginner": "Beginner (0-3 jaar)",
+        "intermediate": "Intermediate (3-5 years)",
+        "experienced": "Experienced (5+ years)"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Share your racing background, achievements, or why you want to contact us..."
+      },
+      "submit": "Versturen",
+      "disclaimer": "Door het indienen van dit formulier, gaat u akkoord met ons privacybeleid en de algemene voorwaarden."
+    }
   }
 }
