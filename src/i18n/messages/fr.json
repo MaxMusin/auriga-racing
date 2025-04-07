@@ -3,6 +3,15 @@
     "title": "Auriga Racing",
     "description": "Vivez le frisson du sport automobile avec nos initiations au sport automobile sur circuit et pourquoi ne pas rejoindre notre équipe Simracing ?"
   },
+  "navbar": {
+    "links": {
+      "events": "Événements",
+      "about": "À propos",
+      "teams": "Équipes",
+      "gallery": "Galerie"
+    },
+    "cta": "Rejoignez-nous"
+  },
   "hero": {
     "title": "Repousser les limites",
     "subtitle": "Sur piste et en ligne",
