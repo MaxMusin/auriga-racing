@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const Footer = () => {
   const t = useTranslations('footer');
@@ -14,15 +14,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-            <div className="relative h-10 w-40">
-              <Image
-                src="/images/auriga_racing__logo.svg"
-                alt={t('logoAlt')}
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+              <div className="relative h-10 w-40">
+                <Image
+                  src="/images/auriga_racing__logo.svg"
+                  alt={t('logoAlt')}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
             <p className="text-muted-foreground mb-6">
               {t('tagline')}

@@ -129,8 +129,20 @@
         "label": "Message",
         "placeholder": "Share your racing background, achievements, or why you want to contact us..."
       },
+      "subject": {
+        "label": "Subject*",
+        "placeholder": "Select a subject",
+        "general": "General Inquiry",
+        "trackday": "Trackday Information",
+        "simracing": "Simracing Team",
+        "sponsorship": "Sponsorship",
+        "other": "Other"
+      },
+      "name": "Full Name*",
       "submit": "Get in touch",
-      "disclaimer": "By submitting this form, you agree to our Privacy Policy and Terms of Service."
+      "disclaimer": "By submitting this form, you agree to our Privacy Policy and Terms of Service.",
+      "success": "Your message has been sent successfully! We'll get back to you soon.",
+      "error": "There was an error sending your message. Please try again."
     }
   },
   "events": {
