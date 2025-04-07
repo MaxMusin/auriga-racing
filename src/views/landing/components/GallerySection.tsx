@@ -3,38 +3,41 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const GallerySection = () => {
+  const t = useTranslations('gallery');
+  
   const images = [
     {
       id: 1,
       url: '/images/auriga-racing-car.jpg',
-      caption: 'FUNCUP Race at Silverstone',
+      caption: t('images.image1'),
     },
     {
       id: 2,
       url: '/images/auriga-racing-car.jpg',
-      caption: 'Team preparation before race day',
+      caption: t('images.image2'),
     },
     {
       id: 3,
       url: '/images/auriga-racing-car.jpg',
-      caption: 'SimRacing competition finals',
+      caption: t('images.image3'),
     },
     {
       id: 4,
       url: '/images/auriga-racing-car.jpg',
-      caption: 'Pit stop during endurance race',
+      caption: t('images.image4'),
     },
     {
       id: 5,
       url: '/images/auriga-racing-car.jpg',
-      caption: 'Team celebration after podium finish',
+      caption: t('images.image5'),
     },
     {
       id: 6,
       url: '/images/auriga-racing-car.jpg',
-      caption: 'SimRacing training session',
+      caption: t('images.image6'),
     },
   ];
 
@@ -56,11 +59,10 @@ const GallerySection = () => {
     <section id="gallery" className="section-padding bg-card clip-diagonal-reverse">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">GALLERY</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h2>
           <div className="h-1 w-24 racing-gradient mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Moments captured from our racing adventures, both on the track and
-            in the virtual world
+            {t('description')}
           </p>
         </div>
 
@@ -97,7 +99,7 @@ const GallerySection = () => {
           <button
             onClick={prevSlide}
             className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-racing-red text-white p-2 rounded-full shadow-lg hover:bg-racing-red/90 transition-colors z-10 hidden md:block"
-            aria-label="Previous slide"
+            aria-label={t('aria.prevSlide')}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -105,7 +107,7 @@ const GallerySection = () => {
           <button
             onClick={nextSlide}
             className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-racing-red text-white p-2 rounded-full shadow-lg hover:bg-racing-red/90 transition-colors z-10 hidden md:block"
-            aria-label="Next slide"
+            aria-label={t('aria.nextSlide')}
           >
             <ChevronRight className="h-6 w-6" />
           </button>
@@ -123,7 +125,7 @@ const GallerySection = () => {
                     ? 'bg-racing-red'
                     : 'bg-muted'
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={t('aria.goToSlide', { index: index + 1 })}
               />
             ),
           )}
@@ -131,7 +133,7 @@ const GallerySection = () => {
 
         <div className="mt-10 text-center">
           <a href="#" className="btn-primary">
-            View Full Gallery
+            {t('viewFullGallery')}
           </a>
         </div>
       </div>

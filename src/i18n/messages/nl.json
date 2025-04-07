@@ -5,15 +5,6 @@
   },
   "navbar": {
     "links": {
-      "events": "Trackdays",
-      "about": "Over ons",
-      "teams": "Teams",
-      "gallery": "Fotogalerij"
-    },
-    "cta": "Doe mee"
-  },
-  "navbar": {
-    "links": {
       "events": "Evenementen",
       "about": "Over ons",
       "teams": "Teams",
@@ -28,6 +19,36 @@
     "cta": "Kom op de trackday",
     "pitlane": "",
     "simracingTeam": "Simracing Team"
+  },
+  "about": {
+    "title": "Passie voor racen",
+    "subtitle": "Ons verhaal",
+    "paragraph1": "Opgericht door gepassioneerde motorsport-enthousiastelingen, is ons team geëvolueerd van weekendracers naar een professionele raceorganisatie met zowel real-world als virtuele race-afdelingen.",
+    "paragraph2": "Met een toegewijd team van ervaren coureurs, ingenieurs en strategen bieden we buitengewone trackday-ervaringen en competitieve simracing-teams die de grenzen van het mogelijke verleggen.",
+    "cta": "ONTDEK ONZE DIENSTEN",
+    "stats": {
+      "trackdays": {
+        "value": 120,
+        "label": "Trackday Evenementen",
+        "suffix": "+"
+      },
+      "experience": {
+        "value": 9,
+        "label": "Jaren Ervaring",
+        "suffix": ""
+      },
+      "enthusiasts": {
+        "value": 80,
+        "label": "Race Enthousiastelingen",
+        "suffix": "+"
+      },
+      "laps": {
+        "value": 500,
+        "label": "Ronden Voltooid",
+        "suffix": "+"
+      }
+    },
+    "imageAlt": "Raceteam in de pitstraat"
   },
   "teams": {
     "title": "Onze teams",
@@ -51,6 +72,24 @@
         "coaching": "Dedicated coaching and strategy team"
       },
       "cta": ""
+    }
+  },
+  "gallery": {
+    "title": "GALERIJ",
+    "description": "Momenten vastgelegd van onze race-avonturen, zowel op het circuit als in de virtuele wereld",
+    "viewFullGallery": "Bekijk volledige galerij",
+    "images": {
+      "image1": "FUNCUP Race op Silverstone",
+      "image2": "Teamvoorbereiding voor racedag",
+      "image3": "SimRacing competitie finales",
+      "image4": "Pitstop tijdens endurance race",
+      "image5": "Teamviering na podiumplaats",
+      "image6": "SimRacing trainingssessie"
+    },
+    "aria": {
+      "prevSlide": "Vorige slide",
+      "nextSlide": "Volgende slide",
+      "goToSlide": "Ga naar slide {index}"
     }
   },
   "join": {

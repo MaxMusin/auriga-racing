@@ -20,6 +20,36 @@
     "pitlane": "Pitlane",
     "simracingTeam": "Équipe Simracing"
   },
+  "about": {
+    "title": "Passion pour la course",
+    "subtitle": "Notre histoire",
+    "paragraph1": "Fondée par des passionnés de sport automobile, notre équipe a évolué de pilotes du week-end à une organisation professionnelle de course avec des divisions de course réelles et virtuelles.",
+    "paragraph2": "Avec une équipe dédiée de pilotes expérimentés, d'ingénieurs et de stratèges, nous offrons des expériences de trackday extraordinaires et des équipes de simracing compétitives qui repoussent les limites du possible.",
+    "cta": "DÉCOUVREZ NOS SERVICES",
+    "stats": {
+      "trackdays": {
+        "value": 120,
+        "label": "Événements Trackday",
+        "suffix": "+"
+      },
+      "experience": {
+        "value": 9,
+        "label": "Années d'expérience",
+        "suffix": ""
+      },
+      "enthusiasts": {
+        "value": 80,
+        "label": "Passionnés de course",
+        "suffix": "+"
+      },
+      "laps": {
+        "value": 500,
+        "label": "Tours complétés",
+        "suffix": "+"
+      }
+    },
+    "imageAlt": "Équipe de course dans la voie des stands"
+  },
   "teams": {
     "title": "Nos équipes",
     "description": "Auriga Racing est actif dans de multiples disciplines, des événements réels de la Fun Cup aux compétitions de Sim racing",
@@ -42,6 +72,24 @@
         "coaching": "Coaching et équipe stratégique dédiés"
       },
       "cta": "Rejoignez notre équipe Sim racing"
+    }
+  },
+  "gallery": {
+    "title": "GALERIE",
+    "description": "Moments capturés de nos aventures de course, à la fois sur piste et dans le monde virtuel",
+    "viewFullGallery": "Voir la galerie complète",
+    "images": {
+      "image1": "Course FUNCUP à Silverstone",
+      "image2": "Préparation de l'équipe avant le jour de course",
+      "image3": "Finales de compétition SimRacing",
+      "image4": "Arrêt aux stands pendant une course d'endurance",
+      "image5": "Célébration de l'équipe après une place sur le podium",
+      "image6": "Session d'entraînement SimRacing"
+    },
+    "aria": {
+      "prevSlide": "Diapositive précédente",
+      "nextSlide": "Diapositive suivante",
+      "goToSlide": "Aller à la diapositive {index}"
     }
   },
   "join": {

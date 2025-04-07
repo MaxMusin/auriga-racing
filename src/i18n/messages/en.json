@@ -20,6 +20,32 @@
     "pitlane": "PITLANE",
     "simracingTeam": "Simracing Team"
   },
+  "about": {
+    "title": "Passion for racing",
+    "subtitle": "Our Story",
+    "paragraph1": "Founded by passionate motorsport enthusiasts, our team has evolved from weekend racers to a professional racing organization with both real-world and virtual racing divisions.",
+    "paragraph2": "With a dedicated crew of experienced drivers, engineers, and strategists, we provide extraordinary trackday experiences and competitive simracing teams that push the boundaries of what's possible.",
+    "cta": "DISCOVER OUR SERVICES",
+    "stats": {
+      "trackdays": {
+        "label": "Trackday Events",
+        "suffix": "+"
+      },
+      "experience": {
+        "label": "Years Experience",
+        "suffix": ""
+      },
+      "enthusiasts": {
+        "label": "Racing Enthusiasts",
+        "suffix": "+"
+      },
+      "laps": {
+        "label": "Laps Completed",
+        "suffix": "+"
+      }
+    },
+    "imageAlt": "Racing team in pit lane"
+  },
   "teams": {
     "title": "OUR TEAMS",
     "description": "Auriga Racing is active across multiple disciplines, from real-world in Fun Cup events to serious simracing competitions",
@@ -42,6 +68,24 @@
         "coaching": "Dedicated coaching and strategy team"
       },
       "cta": "Join our Sim racing team"
+    }
+  },
+  "gallery": {
+    "title": "GALLERY",
+    "description": "Moments captured from our racing adventures, both on the track and in the virtual world",
+    "viewFullGallery": "View Full Gallery",
+    "images": {
+      "image1": "FUNCUP Race at Silverstone",
+      "image2": "Team preparation before race day",
+      "image3": "SimRacing competition finals",
+      "image4": "Pit stop during endurance race",
+      "image5": "Team celebration after podium finish",
+      "image6": "SimRacing training session"
+    },
+    "aria": {
+      "prevSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "goToSlide": "Go to slide {index}"
     }
   },
   "join": {
