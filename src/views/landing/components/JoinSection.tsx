@@ -3,6 +3,19 @@
 import { Check, Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { useState } from 'react';
+import { toast, Toaster } from 'sonner';
+
+import { Button } from '@/components/ui/button';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { contactFormSchema } from '@/lib/schemas';
+import { sendContactEmail } from '@/lib/actions';
 
 const JoinSection = () => {
   const t = useTranslations('join');
@@ -100,133 +113,244 @@ const JoinSection = () => {
               {t('form.title')}
             </h3>
 
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium text-muted-foreground mb-1"
-                  >
-                    {t('form.firstName')}
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium text-muted-foreground mb-1"
-                  >
-                    {t('form.lastName')}
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {t('form.email')}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {t('form.phone')}
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="interest"
-                  className="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {t('form.interest.label')}
-                </label>
-                <select
-                  id="interest"
-                  className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                  required
-                >
-                  <option value="">{t('form.interest.placeholder')}</option>
-                  <option value="trackday">{t('form.interest.trackday')}</option>
-                  <option value="simracing">{t('form.interest.simracing')}</option>
-                  <option value="both">{t('form.interest.both')}</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="experience"
-                  className="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {t('form.experience.label')}
-                </label>
-                <select
-                  id="experience"
-                  className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                >
-                  <option value="">{t('form.experience.placeholder')}</option>
-                  <option value="none">{t('form.experience.none')}</option>
-                  <option value="beginner">{t('form.experience.beginner')}</option>
-                  <option value="intermediate">{t('form.experience.intermediate')}</option>
-                  <option value="experienced">{t('form.experience.experienced')}</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {t('form.message.label')}
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                  placeholder={t('form.message.placeholder')}
-                ></textarea>
-              </div>
-
-              <button type="submit" className="btn-primary w-full py-3">
-                {t('form.submit')}
-              </button>
-
-              <p className="text-xs text-muted-foreground text-center mt-4">
-                {t('form.disclaimer')}
-              </p>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+// Contact form component with React Hook Form and Resend integration
+function ContactForm() {
+  const t = useTranslations('join');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Define form with React Hook Form and zod validation
+  const form = useForm<z.infer<typeof contactFormSchema>>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      interest: '',
+      experience: '',
+      message: '',
+    },
+  });
+
+  // Handle form submission
+  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    setIsSubmitting(true);
+    
+    try {
+      const result = await sendContactEmail(values);
+      
+      if (result.success) {
+        toast.success(t('form.success'));
+        form.reset({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          interest: '',
+          experience: '',
+          message: '',
+        });
+      } else {
+        toast.error(t('form.error'));
+        console.error('Form submission error:', result.error);
+      }
+    } catch (error) {
+      toast.error(t('form.error'));
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  return (
+    <>
+      <Toaster position="bottom-right" />
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          {/* First Name and Last Name in a grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="firstName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-sm font-medium text-muted-foreground">
+                    {t('form.firstName')}
+                  </FormLabel>
+                  <FormControl>
+                    <Input 
+                      className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
+                      {...field} 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="lastName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-sm font-medium text-muted-foreground">
+                    {t('form.lastName')}
+                  </FormLabel>
+                  <FormControl>
+                    <Input 
+                      className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
+                      {...field} 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm font-medium text-muted-foreground">
+                  {t('form.email')}
+                </FormLabel>
+                <FormControl>
+                  <Input 
+                    type="email" 
+                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
+                    {...field} 
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm font-medium text-muted-foreground">
+                  {t('form.phone')}
+                </FormLabel>
+                <FormControl>
+                  <Input 
+                    type="tel" 
+                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
+                    {...field} 
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="interest"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm font-medium text-muted-foreground">
+                  {t('form.interest.label')}
+                </FormLabel>
+                <Select 
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red">
+                      <SelectValue placeholder={t('form.interest.placeholder')} />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="trackday">{t('form.interest.trackday')}</SelectItem>
+                    <SelectItem value="simracing">{t('form.interest.simracing')}</SelectItem>
+                    <SelectItem value="both">{t('form.interest.both')}</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="experience"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm font-medium text-muted-foreground">
+                  {t('form.experience.label')}
+                </FormLabel>
+                <Select 
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red">
+                      <SelectValue placeholder={t('form.experience.placeholder')} />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="none">{t('form.experience.none')}</SelectItem>
+                    <SelectItem value="beginner">{t('form.experience.beginner')}</SelectItem>
+                    <SelectItem value="intermediate">{t('form.experience.intermediate')}</SelectItem>
+                    <SelectItem value="experienced">{t('form.experience.experienced')}</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm font-medium text-muted-foreground">
+                  {t('form.message.label')}
+                </FormLabel>
+                <FormControl>
+                  <Textarea 
+                    placeholder={t('form.message.placeholder')} 
+                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
+                    rows={4} 
+                    {...field} 
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <Button 
+            type="submit" 
+            className="btn-primary w-full py-3" 
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Sending...' : t('form.submit')}
+          </Button>
+          
+          <p className="text-xs text-muted-foreground text-center mt-4">
+            {t('form.disclaimer')}
+          </p>
+        </form>
+      </Form>
+    </>
+  );
+}
 
 export default JoinSection;
