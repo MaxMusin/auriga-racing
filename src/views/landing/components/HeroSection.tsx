@@ -58,7 +58,7 @@ const HeroSection = () => {
       {/* Racing stripe - right side with PITLANE text */}
       <div className="absolute bottom-4 md:bottom-0 md:top-0 md:right-0 w-full md:h-full w-16 md:w-24 bg-racing-red opacity-50 z-10 flex items-center justify-center">
         <div className="md:-rotate-90 transform origin-center whitespace-nowrap">
-          <span className="text-white font-bold text-6xl tracking-[0.15em]">
+          <span className="text-white font-bold text-6xl tracking-[0.15em] uppercase">
             {t('pitlane')}
           </span>
         </div>
@@ -103,10 +103,10 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <a href="#events" className="btn-primary text-base uppercase">
+          <a href="#events" className="btn-primary text-base">
             {t('cta')}
           </a>
-          <a href="#join" className="btn-secondary text-base uppercase">
+          <a href="#join" className="btn-secondary text-base">
             {t('simracingTeam')}
           </a>
         </div>

@@ -16,8 +16,8 @@
     "title": "Pushing limits",
     "subtitle": "On track & online",
     "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
-    "cta": "Come in Track Day",
-    "pitlane": "PITLANE",
+    "cta": "Come in trackday",
+    "pitlane": "Pitlane",
     "simracingTeam": "Simracing Team"
   },
   "about": {
@@ -25,7 +25,7 @@
     "subtitle": "Our Story",
     "paragraph1": "Founded by passionate motorsport enthusiasts, our team has evolved from weekend racers to a professional racing organization with both real-world and virtual racing divisions.",
     "paragraph2": "With a dedicated crew of experienced drivers, engineers, and strategists, we provide extraordinary trackday experiences and competitive simracing teams that push the boundaries of what's possible.",
-    "cta": "DISCOVER OUR SERVICES",
+    "cta": "Discover Our Services",
     "stats": {
       "trackdays": {
         "label": "Trackday Events",
@@ -47,7 +47,7 @@
     "imageAlt": "Racing team in pit lane"
   },
   "teams": {
-    "title": "OUR TEAMS",
+    "title": "Our teams",
     "description": "Auriga Racing is active across multiple disciplines, from real-world in Fun Cup events to serious simracing competitions",
     "track": {
       "title": "Fun Cup",
@@ -60,27 +60,27 @@
       "cta": "Join us in trackday"
     },
     "simracing": {
-      "title": "Sim racing",
-      "description": "Our Sim racing division competes at a respectable level in virtual motorsports with serious engagement based on the principles and values ​​that build the team.",
+      "title": "Simracing",
+      "description": "Our Simracing division competes at a respectable level in virtual motorsports with serious engagement based on the principles and values ​​that build the team.",
       "features": {
         "leagues": "Compete in international iRacing leagues",
         "equipment": "Professional simulation rigs and equipment",
         "coaching": "Dedicated coaching and strategy team"
       },
-      "cta": "Join our Sim racing team"
+      "cta": "Join our Simracing team"
     }
   },
   "gallery": {
-    "title": "GALLERY",
+    "title": "Gallery",
     "description": "Moments captured from our racing adventures, both on the track and in the virtual world",
     "viewFullGallery": "View Full Gallery",
     "images": {
-      "image1": "FUNCUP Race at Silverstone",
+      "image1": "Fun Cup Race at Silverstone",
       "image2": "Team preparation before race day",
-      "image3": "SimRacing competition finals",
+      "image3": "Simracing competition finals",
       "image4": "Pit stop during endurance race",
       "image5": "Team celebration after podium finish",
-      "image6": "SimRacing training session"
+      "image6": "Simracing training session"
     },
     "aria": {
       "prevSlide": "Previous slide",
@@ -89,7 +89,7 @@
     }
   },
   "join": {
-    "title": "JOIN THE TEAM",
+    "title": "Join the team",
     "description": "Whether you're an experienced racer or just starting out, we're always looking for passionate individuals to join our teams. Auriga Racing provides opportunities for both track racing and simracing enthusiasts.",
     "whyJoinUs": "Why join us on track or/and online?",
     "benefits": {
@@ -114,7 +114,7 @@
         "label": "I'm interested in*",
         "placeholder": "Select an option",
         "trackday": "Trackday",
-        "simracing": "Sim racing",
+        "simracing": "Simracing",
         "both": "Both"
       },
       "experience": {
@@ -131,6 +131,83 @@
       },
       "submit": "Get in touch",
       "disclaimer": "By submitting this form, you agree to our Privacy Policy and Terms of Service."
+    }
+  },
+  "events": {
+    "title": "Upcoming events",
+    "subtitle": "What's next",
+    "description": "Join us at these upcoming trackdays and simracing events where Auriga Racing will compete",
+    "fullCalendar": "Full Racing Calendar",
+    "types": {
+      "track": "Track",
+      "sim": "SimRacing"
+    },
+    "items": [
+      {
+        "id": 1,
+        "event": "FUNCUP Championship 2024",
+        "date": "June 15-16, 2024",
+        "time": "9:00 AM - 5:00 PM",
+        "location": "Spa-Francorchamps, Belgium",
+        "type": "track"
+      },
+      {
+        "id": 2,
+        "event": "World SimRacing League - Round 3",
+        "date": "May 28, 2024",
+        "time": "8:00 PM - 10:00 PM",
+        "location": "Virtual Nürburgring",
+        "type": "sim"
+      },
+      {
+        "id": 3,
+        "event": "European Track Days Cup",
+        "date": "July 12-13, 2024",
+        "time": "10:00 AM - 6:00 PM",
+        "location": "Monza, Italy",
+        "type": "track"
+      },
+      {
+        "id": 4,
+        "event": "Digital Racing Championship - Season 5",
+        "date": "June 5, 2024",
+        "time": "9:00 PM - 11:00 PM",
+        "location": "Virtual Silverstone",
+        "type": "sim"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Pushing limits on track & online.",
+    "description": "Experience the thrill of motorsport with our introductory track driving lessons and a close-knit racing simulation team.",
+    "logoAlt": "Auriga Racing Logo",
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "teams": "Our Teams",
+      "results": "Results",
+      "gallery": "Gallery",
+      "joinUs": "Join Us"
+    },
+    "resources": {
+      "title": "Resources",
+      "calendar": "Race Calendar",
+      "training": "Training Programs",
+      "sponsors": "Sponsors",
+      "equipment": "Equipment",
+      "blog": "Blog"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to our newsletter for the latest updates and racing news.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    },
+    "copyright": "{year} Auriga Racing. All rights reserved.",
+    "legalLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
     }
   }
 }

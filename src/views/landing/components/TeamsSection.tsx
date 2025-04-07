@@ -1,18 +1,18 @@
 'use client';
 
+import Header from '@/components/Header';
 import { Car, Gamepad } from 'lucide-react';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const TeamsSection = () => {
   const t = useTranslations('teams');
-  
+
   return (
     <section id="teams" className="section-padding bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h2>
-          <div className="h-1 w-24 racing-gradient mx-auto mb-8"></div>
+          <Header title={t('title')} subtitle={t('subtitle')} centered />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('description')}
           </p>
@@ -40,15 +40,21 @@ const TeamsSection = () => {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <span className="text-white mr-2">✓</span>
-                  <span className="text-white/80">{t('track.features.drivers')}</span>
+                  <span className="text-white/80">
+                    {t('track.features.drivers')}
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-2">✓</span>
-                  <span className="text-white/80">{t('track.features.equipment')}</span>
+                  <span className="text-white/80">
+                    {t('track.features.equipment')}
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-2">✓</span>
-                  <span className="text-white/80">{t('track.features.training')}</span>
+                  <span className="text-white/80">
+                    {t('track.features.training')}
+                  </span>
                 </li>
               </ul>
               <a href="#join" className="btn-primary w-full">
@@ -78,15 +84,21 @@ const TeamsSection = () => {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <span className="text-white mr-2">✓</span>
-                  <span className="text-white/80">{t('simracing.features.leagues')}</span>
+                  <span className="text-white/80">
+                    {t('simracing.features.leagues')}
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-2">✓</span>
-                  <span className="text-white/80">{t('simracing.features.equipment')}</span>
+                  <span className="text-white/80">
+                    {t('simracing.features.equipment')}
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-2">✓</span>
-                  <span className="text-white/80">{t('simracing.features.coaching')}</span>
+                  <span className="text-white/80">
+                    {t('simracing.features.coaching')}
+                  </span>
                 </li>
               </ul>
               <a href="#join" className="btn-secondary w-full">

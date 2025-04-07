@@ -1,13 +1,14 @@
 'use client';
 
+import Header from '@/components/Header';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState } from 'react';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useState } from 'react';
 
 const GallerySection = () => {
   const t = useTranslations('gallery');
-  
+
   const images = [
     {
       id: 1,
@@ -56,11 +57,13 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="section-padding bg-card clip-diagonal-reverse">
+    <section
+      id="gallery"
+      className="section-padding bg-card clip-diagonal-reverse"
+    >
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h2>
-          <div className="h-1 w-24 racing-gradient mx-auto mb-8"></div>
+          <Header title={t('title')} subtitle={t('subtitle')} centered />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('description')}
           </p>

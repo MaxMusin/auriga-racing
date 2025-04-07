@@ -2,8 +2,10 @@
 
 import Image from 'next/image';
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const Footer = () => {
+  const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,7 +17,7 @@ const Footer = () => {
             <div className="relative h-10 w-40">
               <Image
                 src="/images/auriga_racing__logo.svg"
-                alt="Auriga Racing Logo"
+                alt={t('logoAlt')}
                 fill
                 className="object-contain"
                 priority
@@ -23,9 +25,9 @@ const Footer = () => {
             </div>
             </div>
             <p className="text-muted-foreground mb-6">
-              Pushing limits on track & online.
+              {t('tagline')}
               <br />
-              Experience the thrill of motorsport with our introductory track driving lessons and a close-knit racing simulation team.
+              {t('description')}
             </p>
             <div className="flex space-x-4">
               <a
@@ -56,14 +58,14 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6">{t('quickLinks.title')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#home"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Home
+                  {t('quickLinks.home')}
                 </a>
               </li>
               <li>
@@ -71,7 +73,7 @@ const Footer = () => {
                   href="#teams"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Our Teams
+                  {t('quickLinks.teams')}
                 </a>
               </li>
               <li>
@@ -79,7 +81,7 @@ const Footer = () => {
                   href="#results"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Results
+                  {t('quickLinks.results')}
                 </a>
               </li>
               <li>
@@ -87,7 +89,7 @@ const Footer = () => {
                   href="#gallery"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Gallery
+                  {t('quickLinks.gallery')}
                 </a>
               </li>
               <li>
@@ -95,21 +97,21 @@ const Footer = () => {
                   href="#join"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Join Us
+                  {t('quickLinks.joinUs')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Resources</h3>
+            <h3 className="text-lg font-bold mb-6">{t('resources.title')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Race Calendar
+                  {t('resources.calendar')}
                 </a>
               </li>
               <li>
@@ -117,7 +119,7 @@ const Footer = () => {
                   href="#"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Training Programs
+                  {t('resources.training')}
                 </a>
               </li>
               <li>
@@ -125,7 +127,7 @@ const Footer = () => {
                   href="#"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Sponsors
+                  {t('resources.sponsors')}
                 </a>
               </li>
               <li>
@@ -133,7 +135,7 @@ const Footer = () => {
                   href="#"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Equipment
+                  {t('resources.equipment')}
                 </a>
               </li>
               <li>
@@ -141,27 +143,26 @@ const Footer = () => {
                   href="#"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
-                  Blog
+                  {t('resources.blog')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Newsletter</h3>
+            <h3 className="text-lg font-bold mb-6">{t('newsletter.title')}</h3>
             <p className="text-muted-foreground mb-4">
-              Subscribe to our newsletter for the latest updates and racing
-              news.
+              {t('newsletter.description')}
             </p>
             <form className="space-y-3">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder={t('newsletter.placeholder')}
                 className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
                 required
               />
               <button type="submit" className="btn-primary w-full">
-                Subscribe
+                {t('newsletter.button')}
               </button>
             </form>
           </div>
@@ -170,26 +171,26 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-              {currentYear} Auriga Racing. All rights reserved.
+              {t('copyright', { year: currentYear })}
             </p>
             {/* <div className="flex space-x-6">
               <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-racing-red transition-colors"
               >
-                Privacy Policy
+                {t('legalLinks.privacy')}
               </a>
               <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-racing-red transition-colors"
               >
-                Terms of Service
+                {t('legalLinks.terms')}
               </a>
               <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-racing-red transition-colors"
               >
-                Cookie Policy
+                {t('legalLinks.cookies')}
               </a>
             </div> */}
           </div>

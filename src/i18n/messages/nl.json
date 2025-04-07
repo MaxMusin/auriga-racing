@@ -136,5 +136,82 @@
       "submit": "Versturen",
       "disclaimer": "Door het indienen van dit formulier, gaat u akkoord met ons privacybeleid en de algemene voorwaarden."
     }
+  },
+  "events": {
+    "title": "Komende evenementen",
+    "subtitle": "Wat komt er aan",
+    "description": "Doe mee aan deze komende trackdays en simracing-evenementen waar Auriga Racing zal deelnemen",
+    "fullCalendar": "Volledige racekalender",
+    "types": {
+      "track": "Circuit",
+      "sim": "SimRacing"
+    },
+    "items": [
+      {
+        "id": 1,
+        "event": "FUNCUP Kampioenschap 2024",
+        "date": "15-16 juni 2024",
+        "time": "9:00 - 17:00",
+        "location": "Spa-Francorchamps, België",
+        "type": "track"
+      },
+      {
+        "id": 2,
+        "event": "World SimRacing League - Ronde 3",
+        "date": "28 mei 2024",
+        "time": "20:00 - 22:00",
+        "location": "Virtuele Nürburgring",
+        "type": "sim"
+      },
+      {
+        "id": 3,
+        "event": "Europese Track Days Cup",
+        "date": "12-13 juli 2024",
+        "time": "10:00 - 18:00",
+        "location": "Monza, Italië",
+        "type": "track"
+      },
+      {
+        "id": 4,
+        "event": "Digitaal Race Kampioenschap - Seizoen 5",
+        "date": "5 juni 2024",
+        "time": "21:00 - 23:00",
+        "location": "Virtuele Silverstone",
+        "type": "sim"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Grenzen verleggen op het circuit en online.",
+    "description": "Ervaar de spanning van motorsport met onze introductielessen circuitrijden en een hechte racesimulatieteam.",
+    "logoAlt": "Auriga Racing Logo",
+    "quickLinks": {
+      "title": "Snelle links",
+      "home": "Home",
+      "teams": "Onze teams",
+      "results": "Resultaten",
+      "gallery": "Galerij",
+      "joinUs": "Doe mee"
+    },
+    "resources": {
+      "title": "Bronnen",
+      "calendar": "Racekalender",
+      "training": "Trainingsprogramma's",
+      "sponsors": "Sponsors",
+      "equipment": "Uitrusting",
+      "blog": "Blog"
+    },
+    "newsletter": {
+      "title": "Nieuwsbrief",
+      "description": "Abonneer je op onze nieuwsbrief voor de laatste updates en racenieuws.",
+      "placeholder": "Je e-mailadres",
+      "button": "Abonneren"
+    },
+    "copyright": "{year} Auriga Racing. Alle rechten voorbehouden.",
+    "legalLinks": {
+      "privacy": "Privacybeleid",
+      "terms": "Servicevoorwaarden",
+      "cookies": "Cookiebeleid"
+    }
   }
 }
