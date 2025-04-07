@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
           <ChevronDown size={14} className={cn("transition-transform", isPending && "animate-pulse")} />
           <span className="absolute left-0 bottom-[-4px] h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="bg-racing-black border-racing-black/50">
+        <DropdownMenuContent align="end" className="bg-racing-black border-racing-black/50 mt-2">
           <DropdownMenuItem 
             className={cn(
               "flex justify-between text-white/80 hover:text-white hover:bg-racing-red focus:bg-racing-red focus:text-white cursor-pointer"
