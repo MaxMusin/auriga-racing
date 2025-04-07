@@ -44,7 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 To add a new language:
 
-1. Create a new translation file in `/src/messages/[language-code]/index.json`
+1. Create a new translation file in `/src/messages/[language-code].json`
 2. Add the language code to the `locales` array in `/src/middleware.ts`
 3. Add the language option to the `LanguageSwitcher` component
 

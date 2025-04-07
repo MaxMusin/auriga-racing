@@ -6,9 +6,9 @@ export const defaultLocale: Locale = 'en';
 // Use this function in server components
 export async function getMessages(locale: Locale) {
   try {
-    return (await import(`./messages/${locale}/index.json`)).default;
+    return (await import(`./messages/${locale}.json`)).default;
   } catch {
-    return (await import(`./messages/en/index.json`)).default;
+    return (await import(`./messages/en.json`)).default;
   }
 }
 

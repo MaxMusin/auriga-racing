@@ -7,7 +7,7 @@ export default getRequestConfig(async (context) => {
 
   return {
     locale,
-    messages: (await import(`./messages/${locale}/index.json`)).default,
+    messages: (await import(`./messages/${locale}.json`)).default,
     timeZone: 'Europe/Paris',
     now: new Date('2025-04-04T12:00:00Z'), // Use a fixed date to prevent hydration errors
   };
