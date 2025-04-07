@@ -1,14 +1,14 @@
 {
   "app": {
     "title": "Auriga Racing",
-    "description": "Experience the thrill of motorsport with our introductory track driving lessons and a close-knit racing simulation team."
+    "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?"
   },
   "hero": {
     "title": "ERVAAR DE SPANNING",
     "subtitle": "VAN PROFESSIONEEL RACEN",
-    "description": "Ervaar de spanning van motorsport met onze introductielessen voor circuitrijden en een hechte racesimulatieteam.",
+    "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
     "cta": "Boek een trackday",
-    "pitlane": "PITLANE",
+    "pitlane": "",
     "simracingTeam": "Simracing Team"
   }
 }
