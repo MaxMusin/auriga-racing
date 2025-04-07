@@ -236,11 +236,11 @@
   }
 
   .text-racing-dark {
-    color: var(--racing-dark);
+    color: var(--racing-gray);
   }
 
   .bg-racing-dark {
-    background-color: var(--racing-dark);
+    background-color: var(--racing-gray);
   }
 
   .race-title {

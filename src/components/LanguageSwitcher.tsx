@@ -5,7 +5,14 @@ import { usePathname, useRouter } from '@/navigation';
 import { saveLanguagePreference } from '@/utils/languageDetection';
 import { useLocale } from 'next-intl';
 import { useTransition } from 'react';
-import { Globe } from 'lucide-react';
+import { Check, ChevronDown, Globe, Loader2 } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { cn } from '@/utils';
 
 export default function LanguageSwitcher() {
   const currentLocale = useLocale();
@@ -14,9 +21,7 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value as Locale;
-
+  const handleLocaleChange = (newLocale: Locale) => {
     // Save the user's language preference
     saveLanguagePreference(newLocale);
 
@@ -27,21 +32,42 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="navbar-language-switcher flex items-center gap-2">
-      <Globe size={16} className="text-white/80" />
-      <select
-        id="language-select"
-        value={locale}
-        onChange={handleChange}
-        className="bg-transparent text-white/80 hover:text-racing-red border-none focus:ring-0 focus:outline-none text-sm font-medium transition-colors appearance-none cursor-pointer"
-        disabled={isPending}
-      >
-        <option value="en" className="bg-racing-dark text-white">English</option>
-        <option value="fr" className="bg-racing-dark text-white">Français</option>
-        <option value="nl" className="bg-racing-dark text-white">Nederlands</option>
-      </select>
-      {isPending && (
-        <span className="text-xs text-white/60 animate-pulse">...</span>
-      )}
+      <DropdownMenu>
+        <DropdownMenuTrigger className="flex items-center gap-1.5 bg-transparent text-white/80 hover:text-racing-red border-none focus:ring-0 focus:outline-none text-sm font-medium transition-colors cursor-pointer">
+          {isPending ? <Loader2 size={16} className="text-white/80 animate-spin" /> : <Globe size={16} className="text-white/80" />}
+          <span className="capitalize">{locale === 'en' ? 'English' : locale === 'fr' ? 'Français' : 'Nederlands'}</span>
+          <ChevronDown size={14} className={cn("transition-transform", isPending && "animate-pulse")} />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="bg-racing-black border-racing-black/50">
+          <DropdownMenuItem 
+            className={cn(
+              "flex justify-between text-white/80 hover:text-white cursor-pointer"
+            )}
+            onClick={() => handleLocaleChange('en')}
+          >
+            English
+            {locale === 'en' && <Check size={16} />}
+          </DropdownMenuItem>
+          <DropdownMenuItem 
+            className={cn(
+              "flex justify-between text-white/80 hover:text-white cursor-pointer"
+            )}
+            onClick={() => handleLocaleChange('fr')}
+          >
+            Français
+            {locale === 'fr' && <Check size={16} />}
+          </DropdownMenuItem>
+          <DropdownMenuItem 
+            className={cn(
+              "flex justify-between text-white/80 hover:text-white cursor-pointer"
+            )}
+            onClick={() => handleLocaleChange('nl')}
+          >
+            Nederlands
+            {locale === 'nl' && <Check size={16} />}
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }
