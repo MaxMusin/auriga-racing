@@ -61,10 +61,11 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-white/80 hover:text-racing-red font-medium text-sm transition-colors"
+              className="text-white/80 hover:text-white font-medium text-sm transition-colors relative group"
               onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.name}
+              <span className="absolute left-0 bottom-[-4px] h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
           <a
@@ -97,11 +98,12 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white/80 hover:text-racing-red font-medium text-lg py-2 transition-colors"
+                className="text-white/80 hover:text-white font-medium text-lg py-2 transition-colors relative group"
                 onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
-            </a>
+                <span className="absolute left-0 bottom-[-2px] h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
+              </a>
             ))}
             <div className="py-2">
               <LanguageSwitcher />

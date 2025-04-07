@@ -33,10 +33,11 @@ export default function LanguageSwitcher() {
   return (
     <div className="navbar-language-switcher flex items-center gap-2">
       <DropdownMenu modal={false}>
-        <DropdownMenuTrigger className="flex items-center gap-1.5 bg-transparent text-white/80 hover:text-racing-red border-none focus:ring-0 focus:outline-none text-sm font-medium transition-colors cursor-pointer">
-          {isPending ? <Loader2 size={16} className="text-white/80 animate-spin" /> : <Globe size={16} className="text-white/80" />}
+        <DropdownMenuTrigger className="flex items-center gap-1.5 bg-transparent text-white/80 hover:text-white border-none focus:ring-0 focus:outline-none text-sm font-medium transition-colors cursor-pointer relative group">
+          {isPending ? <Loader2 size={14} className="text-white/80 animate-spin" /> : <Globe size={14} className="text-white/80" />}
           <span className="capitalize">{locale === 'en' ? 'English' : locale === 'fr' ? 'Français' : 'Nederlands'}</span>
           <ChevronDown size={14} className={cn("transition-transform", isPending && "animate-pulse")} />
+          <span className="absolute left-0 bottom-[-4px] h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="bg-racing-black border-racing-black/50">
           <DropdownMenuItem 
