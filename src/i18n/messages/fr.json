@@ -28,22 +28,18 @@
     "cta": "DÉCOUVREZ NOS SERVICES",
     "stats": {
       "trackdays": {
-        "value": 120,
         "label": "Événements Trackday",
         "suffix": "+"
       },
       "experience": {
-        "value": 9,
         "label": "Années d'expérience",
         "suffix": ""
       },
       "enthusiasts": {
-        "value": 80,
         "label": "Passionnés de course",
         "suffix": "+"
       },
       "laps": {
-        "value": 500,
         "label": "Tours complétés",
         "suffix": "+"
       }
@@ -182,8 +178,8 @@
     ]
   },
   "footer": {
-    "tagline": "Repousser les limites sur piste et en ligne.",
-    "description": "Vivez le frisson du sport automobile avec nos leçons de conduite sur circuit et une équipe de simulation de course soudée.",
+    "tagline": "We are not just a racing team,",
+    "description": "we are a bunch of true passionates!",
     "logoAlt": "Logo Auriga Racing",
     "quickLinks": {
       "title": "Liens rapides",

@@ -5,10 +5,10 @@
   },
   "navbar": {
     "links": {
-      "events": "Evenementen",
+      "events": "Trackdays",
       "about": "Over ons",
       "teams": "Teams",
-      "gallery": "Galerij"
+      "gallery": "Fotogalerij"
     },
     "cta": "Doe mee"
   },
@@ -17,7 +17,7 @@
     "subtitle": "Op track & online",
     "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
     "cta": "Kom op de trackday",
-    "pitlane": "",
+    "pitlane": "Pitlane",
     "simracingTeam": "Simracing Team"
   },
   "about": {
@@ -28,22 +28,18 @@
     "cta": "ONTDEK ONZE DIENSTEN",
     "stats": {
       "trackdays": {
-        "value": 120,
         "label": "Trackday Evenementen",
         "suffix": "+"
       },
       "experience": {
-        "value": 9,
         "label": "Jaren Ervaring",
         "suffix": ""
       },
       "enthusiasts": {
-        "value": 80,
         "label": "Race Enthousiastelingen",
         "suffix": "+"
       },
       "laps": {
-        "value": 500,
         "label": "Ronden Voltooid",
         "suffix": "+"
       }
@@ -71,7 +67,25 @@
         "equipment": "Professional simulation rigs and equipment",
         "coaching": "Dedicated coaching and strategy team"
       },
-      "cta": ""
+      "cta": "Join our Simracing team"
+    }
+  },
+  "gallery": {
+    "title": "GALERIJ",
+    "description": "Momenten vastgelegd van onze race-avonturen, zowel op het circuit als in de virtuele wereld",
+    "viewFullGallery": "Bekijk volledige galerij",
+    "images": {
+      "image1": "FUNCUP Race op Silverstone",
+      "image2": "Teamvoorbereiding voor racedag",
+      "image3": "SimRacing competitie finales",
+      "image4": "Pitstop tijdens endurance race",
+      "image5": "Teamviering na podiumplaats",
+      "image6": "SimRacing trainingssessie"
+    },
+    "aria": {
+      "prevSlide": "Vorige slide",
+      "nextSlide": "Volgende slide",
+      "goToSlide": "Ga naar slide {index}"
     }
   },
   "gallery": {
@@ -182,8 +196,8 @@
     ]
   },
   "footer": {
-    "tagline": "Grenzen verleggen op het circuit en online.",
-    "description": "Ervaar de spanning van motorsport met onze introductielessen circuitrijden en een hechte racesimulatieteam.",
+    "tagline": "We are not just a racing team,",
+    "description": "we are a bunch of true passionates!",
     "logoAlt": "Auriga Racing Logo",
     "quickLinks": {
       "title": "Snelle links",
