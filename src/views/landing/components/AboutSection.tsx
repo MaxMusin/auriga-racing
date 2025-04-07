@@ -2,13 +2,32 @@ import Header from '@/components/Header';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import AnimatedCounter from '@/components/AnimatedCounter';
+import { useTranslations } from 'next-intl';
 
 const About = () => {
+  const t = useTranslations('about');
+  
   const stats = [
-    { value: 120, label: 'Trackday Events', suffix: '+' },
-    { value: 9, label: 'Years Experience', suffix: '' },
-    { value: 80, label: 'Racing Enthusiasts', suffix: '+' },
-    { value: 500, label: 'Laps Completed', suffix: '+' },
+    { 
+      value: 120, 
+      label: t('stats.trackdays.label'), 
+      suffix: t('stats.trackdays.suffix') 
+    },
+    { 
+      value: 9, 
+      label: t('stats.experience.label'), 
+      suffix: t('stats.experience.suffix') 
+    },
+    { 
+      value: 80, 
+      label: t('stats.enthusiasts.label'), 
+      suffix: t('stats.enthusiasts.suffix') 
+    },
+    { 
+      value: 500, 
+      label: t('stats.laps.label'), 
+      suffix: t('stats.laps.suffix') 
+    },
   ];
 
   return (
@@ -19,26 +38,21 @@ const About = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="space-y-6">
-            <Header title="Passion for racing" subtitle="Our Story" />
+            <Header title={t('title')} subtitle={t('subtitle')} />
 
             <p className="text-white/80 text-lg">
-              Founded by passionate motorsport enthusiasts, our team has evolved
-              from weekend racers to a professional racing organization with
-              both real-world and virtual racing divisions.
+              {t('paragraph1')}
             </p>
 
             <p className="text-white/80 text-lg">
-              With a dedicated crew of experienced drivers, engineers, and
-              strategists, we provide extraordinary trackday experiences and
-              competitive simracing teams that push the boundaries of what's
-              possible.
+              {t('paragraph2')}
             </p>
 
             <a
               href="#trackdays"
               className="inline-flex items-center gap-2 text-racing-red hover:text-red-400 font-semibold transition-colors"
             >
-              DISCOVER OUR SERVICES <ArrowRight size={16} />
+              {t('cta')} <ArrowRight size={16} />
             </a>
           </div>
 
@@ -47,7 +61,7 @@ const About = () => {
               <Image
               fill
                 src="/images/auriga-racing-car.jpg"
-                alt="Racing team in pit lane"
+                alt={t('imageAlt')}
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>

@@ -3,59 +3,29 @@
 import Header from '@/components/Header';
 import { Calendar, Clock, Flag, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
+interface EventItem {
+  id: number;
+  event: string;
+  date: string;
+  time: string;
+  location: string;
+  type: 'track' | 'sim';
+}
 
 const UpcomingEventsSection = () => {
-  const upcomingEvents = [
-    {
-      id: 1,
-      event: 'FUNCUP Championship 2024',
-      date: 'June 15-16, 2024',
-      time: '9:00 AM - 5:00 PM',
-      location: 'Spa-Francorchamps, Belgium',
-      image:
-        '/images/auriga-racing-car.jpg',
-      type: 'track',
-    },
-    {
-      id: 2,
-      event: 'World SimRacing League - Round 3',
-      date: 'May 28, 2024',
-      time: '8:00 PM - 10:00 PM',
-      location: 'Virtual Nürburgring',
-      image:
-        '/images/auriga-racing-car.jpg',
-      type: 'sim',
-    },
-    {
-      id: 3,
-      event: 'European Track Days Cup',
-      date: 'July 12-13, 2024',
-      time: '10:00 AM - 6:00 PM',
-      location: 'Monza, Italy',
-      image:
-        '/images/auriga-racing-car.jpg',
-      type: 'track',
-    },
-    {
-      id: 4,
-      event: 'Digital Racing Championship - Season 5',
-      date: 'June 5, 2024',
-      time: '9:00 PM - 11:00 PM',
-      location: 'Virtual Silverstone',
-      image:
-        '/images/auriga-racing-car.jpg',
-      type: 'sim',
-    },
-  ];
+  const t = useTranslations('events');
+  
+  const upcomingEvents = t.raw('items') as EventItem[];
 
   return (
     <section id="events" className="section-padding bg-card clip-diagonal">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <Header title="Upcoming events" subtitle="What's next" centered />
+          <Header title={t('title')} subtitle={t('subtitle')} centered />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join us at these upcoming trackdays and simracing events where
-            Auriga Racing will compete
+            {t('description')}
           </p>
         </div>
 
@@ -68,7 +38,7 @@ const UpcomingEventsSection = () => {
               <div className="h-48 overflow-hidden relative">
                 <Image
                   fill
-                  src={event.image}
+                  src={'/images/auriga-racing-car.jpg'}
                   alt={event.event}
                   className="w-full h-full object-cover"
                   priority
@@ -78,7 +48,7 @@ const UpcomingEventsSection = () => {
                     event.type === 'track' ? 'bg-racing-red' : 'bg-racing-blue'
                   } text-white`}
                 >
-                  {event.type === 'track' ? 'Track' : 'SimRacing'}
+                  {event.type === 'track' ? t('types.track') : t('types.sim')}
                 </div>
               </div>
 
@@ -109,7 +79,7 @@ const UpcomingEventsSection = () => {
         <div className="mt-10 text-center">
           <a href="#" className="btn-primary inline-flex items-center">
             <Flag className="mr-2 h-5 w-5" />
-            Full Racing Calendar
+            {t('fullCalendar')}
           </a>
         </div>
       </div>

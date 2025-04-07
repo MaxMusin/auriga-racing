@@ -88,6 +88,24 @@
       "goToSlide": "Ga naar slide {index}"
     }
   },
+  "gallery": {
+    "title": "GALERIJ",
+    "description": "Momenten vastgelegd van onze race-avonturen, zowel op het circuit als in de virtuele wereld",
+    "viewFullGallery": "Bekijk volledige galerij",
+    "images": {
+      "image1": "FUNCUP Race op Silverstone",
+      "image2": "Teamvoorbereiding voor racedag",
+      "image3": "SimRacing competitie finales",
+      "image4": "Pitstop tijdens endurance race",
+      "image5": "Teamviering na podiumplaats",
+      "image6": "SimRacing trainingssessie"
+    },
+    "aria": {
+      "prevSlide": "Vorige slide",
+      "nextSlide": "Volgende slide",
+      "goToSlide": "Ga naar slide {index}"
+    }
+  },
   "join": {
     "title": "Join the team",
     "description": "Whether you're an experienced racer or just starting out, we're always looking for passionate individuals to join our teams. Auriga Racing provides opportunities for both track racing and simracing enthusiasts.",
