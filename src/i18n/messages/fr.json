@@ -132,5 +132,82 @@
       "submit": "Envoyer",
       "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation."
     }
+  },
+  "events": {
+    "title": "Événements à venir",
+    "subtitle": "Prochainement",
+    "description": "Rejoignez-nous lors de ces prochains trackdays et événements de simracing où Auriga Racing participera",
+    "fullCalendar": "Calendrier complet des courses",
+    "types": {
+      "track": "Circuit",
+      "sim": "SimRacing"
+    },
+    "items": [
+      {
+        "id": 1,
+        "event": "Championnat FUNCUP 2024",
+        "date": "15-16 juin 2024",
+        "time": "9h00 - 17h00",
+        "location": "Spa-Francorchamps, Belgique",
+        "type": "track"
+      },
+      {
+        "id": 2,
+        "event": "Ligue mondiale de SimRacing - Manche 3",
+        "date": "28 mai 2024",
+        "time": "20h00 - 22h00",
+        "location": "Nürburgring virtuel",
+        "type": "sim"
+      },
+      {
+        "id": 3,
+        "event": "Coupe européenne des Track Days",
+        "date": "12-13 juillet 2024",
+        "time": "10h00 - 18h00",
+        "location": "Monza, Italie",
+        "type": "track"
+      },
+      {
+        "id": 4,
+        "event": "Championnat de course numérique - Saison 5",
+        "date": "5 juin 2024",
+        "time": "21h00 - 23h00",
+        "location": "Silverstone virtuel",
+        "type": "sim"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Repousser les limites sur piste et en ligne.",
+    "description": "Vivez le frisson du sport automobile avec nos leçons de conduite sur circuit et une équipe de simulation de course soudée.",
+    "logoAlt": "Logo Auriga Racing",
+    "quickLinks": {
+      "title": "Liens rapides",
+      "home": "Accueil",
+      "teams": "Nos équipes",
+      "results": "Résultats",
+      "gallery": "Galerie",
+      "joinUs": "Rejoignez-nous"
+    },
+    "resources": {
+      "title": "Ressources",
+      "calendar": "Calendrier des courses",
+      "training": "Programmes d'entraînement",
+      "sponsors": "Sponsors",
+      "equipment": "Équipement",
+      "blog": "Blog"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Abonnez-vous à notre newsletter pour les dernières mises à jour et actualités de course.",
+      "placeholder": "Votre adresse e-mail",
+      "button": "S'abonner"
+    },
+    "copyright": "{year} Auriga Racing. Tous droits réservés.",
+    "legalLinks": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "cookies": "Politique des cookies"
+    }
   }
 }
