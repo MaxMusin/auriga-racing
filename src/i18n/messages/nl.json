@@ -1,15 +1,48 @@
 {
   "app": {
     "title": "Auriga Racing",
-    "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?"
+    "description": ""
+  },
+  "navbar": {
+    "links": {
+      "events": "Trackdays",
+      "about": "Over ons",
+      "teams": "Teams",
+      "gallery": "Fotogalerij"
+    },
+    "cta": "Doe mee"
   },
   "hero": {
     "title": "",
-    "subtitle": "VAN PROFESSIONEEL RACEN",
+    "subtitle": "Op track & online",
     "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
-    "cta": "Come in Track Day",
+    "cta": "Kom op de trackday",
     "pitlane": "",
     "simracingTeam": "Simracing Team"
+  },
+  "teams": {
+    "title": "Onze teams",
+    "description": "Auriga Racing is active across multiple disciplines, from real-world Fun Cup events to serious simracing competitions",
+    "track": {
+      "title": "Fun Cup",
+      "description": "Our track team competes in FUNCUP events across Europe, showcasing skill and precision in some of the most challenging circuits.",
+      "features": {
+        "drivers": "Professional drivers with years of experience",
+        "equipment": "State-of-the-art cars and equipment",
+        "training": "Regular trackdays and training sessions"
+      },
+      "cta": "Join Track Team"
+    },
+    "simracing": {
+      "title": "Sim racing",
+      "description": "Our sim racing division competes at a respectable level in virtual motorsports with serious engagement based on the principles and values ​​that build the team.",
+      "features": {
+        "leagues": "Compete in international e-motorsport leagues",
+        "equipment": "Professional simulation rigs and equipment",
+        "coaching": "Dedicated coaching and strategy team"
+      },
+      "cta": "Join SimRacing Team"
+    }
   },
   "join": {
     "title": "JOIN THE TEAM",
