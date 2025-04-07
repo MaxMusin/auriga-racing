@@ -25,68 +25,68 @@
     "description": "Auriga Racing est actif dans de multiples disciplines, des événements réels de la Fun Cup aux compétitions de Sim racing",
     "track": {
       "title": "Fun Cup",
-      "description": "Our track team competes in FUNCUP events across Europe, showcasing skill and precision in some of the most challenging circuits.",
+      "description": "Notre équipe Fun Cup participe à des événements dans toute l'Europe, démontrant son habileté et sa précision sur certains des circuits les plus difficiles.",
       "features": {
         "drivers": "Professional drivers with years of experience",
         "equipment": "State-of-the-art cars and equipment",
         "training": "Regular trackdays and training sessions"
       },
-      "cta": "Join Track Team"
+      "cta": "Rejoinez-nous en trackday"
     },
     "simracing": {
       "title": "Sim racing",
-      "description": "Our sim racing division competes at a respectable level in virtual motorsports with serious engagement based on the principles and values ​​that build the team.",
+      "description": "Notre division Sim racing rivalise à un niveau respectable dans les sports auto virtuels avec un engagement sérieux basé sur les principes et les valeurs qui construisent l'équipe.",
       "features": {
-        "leagues": "Compete in international e-motorsport leagues",
+        "leagues": "Participez à la compétition dans les ligues internationales de sport sur iRacing",
         "equipment": "Professional simulation rigs and equipment",
-        "coaching": "Dedicated coaching and strategy team"
+        "coaching": "Coaching et équipe stratégique dédiés"
       },
-      "cta": "Join SimRacing Team"
+      "cta": "Rejoignez notre équipe Sim racing"
     }
   },
   "join": {
-    "title": "JOIN THE TEAM",
-    "description": "Whether you're an experienced racer or just starting out, we're always looking for passionate individuals to join our teams. Auriga Racing provides opportunities for both track racing and simracing enthusiasts.",
-    "whyJoinUs": "Why join us on track or/and online?",
+    "title": "Rejoindre l'équipe",
+    "description": "Que vous soyez expérimenté ou débutant, nous sommes toujours à la recherche de passionnées pour nous rejoindre en trackday ou dans notre équipe de Sim racing. Auriga Racing offre des possibilités à la fois aux amateurs de course sur piste et de simracing.",
+    "whyJoinUs": "Pourquoi nous rejoindre sur circuit ou/et en ligne ?",
     "benefits": {
-      "coaching": "Access to professional coaching and development",
+      "coaching": "Accéder à un coaching professionnel et au développement technique de la conduite du sport automobile",
       "equipment": "State-of-the-art equipment and facilities",
-      "events": "Drive in national and international events",
-      "community": "Be part of a passionate community of racers"
+      "events": "Conduisez dans des événements nationaux et internationaux",
+      "community": "Faites partie d'une communauté de passionnés"
     },
     "contact": {
-      "title": "Contact us",
+      "title": "Contactez-nous",
       "email": "hello@auriga-racing.be",
       "phone": "+32 474 79 39 24",
       "organization": "Auriga ASBL"
     },
     "form": {
-      "title": "Contact us",
-      "firstName": "First Name*",
-      "lastName": "Last Name*",
-      "email": "Email Address*",
-      "phone": "Phone Number",
+      "title": "Prendre contact avec nous",
+      "firstName": "Prénom *",
+      "lastName": "Nom *",
+      "email": "Adresse e-mail *",
+      "phone": "Numéro de téléphone",
       "interest": {
-        "label": "I'm interested in*",
-        "placeholder": "Select an option",
+        "label": "Je suis intéressé par *",
+        "placeholder": "Sélectionnez une option",
         "trackday": "Trackday",
         "simracing": "Sim racing",
-        "both": "Both"
+        "both": "Les deux"
       },
       "experience": {
-        "label": "Racing Experience",
-        "placeholder": "Select an option",
-        "none": "None",
-        "beginner": "Beginner (0-3 years)",
-        "intermediate": "Intermediate (3-5 years)",
-        "experienced": "Experienced (5+ years)"
+        "label": "Expérience de course",
+        "placeholder": "Sélectionnez une option",
+        "none": "Aucune",
+        "beginner": "Débutant (0-3 ans)",
+        "intermediate": "Intermédiaire (3-5 ans)",
+        "experienced": "Expérimenté (5+ ans)"
       },
       "message": {
         "label": "Message",
-        "placeholder": "Share your racing background, achievements, or why you want to contact us..."
+        "placeholder": "Partagez votre expérience de course, vos accomplissements ou pourquoi vous voulez nous contacter..."
       },
-      "submit": "Get in touch",
-      "disclaimer": "By submitting this form, you agree to our Privacy Policy and Terms of Service."
+      "submit": "Envoyer",
+      "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation."
     }
   }
 }
