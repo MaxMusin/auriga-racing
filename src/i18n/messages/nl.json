@@ -41,11 +41,11 @@
         "equipment": "Professional simulation rigs and equipment",
         "coaching": "Dedicated coaching and strategy team"
       },
-      "cta": "Join SimRacing Team"
+      "cta": ""
     }
   },
   "join": {
-    "title": "JOIN THE TEAM",
+    "title": "Join the team",
     "description": "Whether you're an experienced racer or just starting out, we're always looking for passionate individuals to join our teams. Auriga Racing provides opportunities for both track racing and simracing enthusiasts.",
     "whyJoinUs": "Why join us on track or/and online?",
     "benefits": {
@@ -55,29 +55,29 @@
       "community": "Be part of a passionate community of racers"
     },
     "contact": {
-      "title": "Contact us",
+      "title": "Contacteer ons",
       "email": "hello@auriga-racing.be",
       "phone": "+32 474 79 39 24",
-      "organization": "Auriga ASBL"
+      "organization": "Auriga VZW"
     },
     "form": {
       "title": "Contact us",
-      "firstName": "First Name*",
-      "lastName": "Last Name*",
-      "email": "Email Address*",
-      "phone": "Phone Number",
+      "firstName": "Voornaam*",
+      "lastName": "Laatste naam*",
+      "email": "E-mail adres*",
+      "phone": "Telefoonnummer",
       "interest": {
-        "label": "I'm interested in*",
-        "placeholder": "Select an option",
+        "label": "Ik ben geïnteresseerd in*",
+        "placeholder": "Selecteer een optie",
         "trackday": "Trackday",
         "simracing": "Sim racing",
-        "both": "Both"
+        "both": "Allebei"
       },
       "experience": {
-        "label": "Racing Experience",
-        "placeholder": "Select an option",
-        "none": "None",
-        "beginner": "Beginner (0-3 years)",
+        "label": "Racing ervaring",
+        "placeholder": "Selecteer een optie",
+        "none": "Geen",
+        "beginner": "Beginner (0-3 jaar)",
         "intermediate": "Intermediate (3-5 years)",
         "experienced": "Experienced (5+ years)"
       },
@@ -85,8 +85,8 @@
         "label": "Message",
         "placeholder": "Share your racing background, achievements, or why you want to contact us..."
       },
-      "submit": "Get in touch",
-      "disclaimer": "By submitting this form, you agree to our Privacy Policy and Terms of Service."
+      "submit": "Versturen",
+      "disclaimer": "Door het indienen van dit formulier, gaat u akkoord met ons privacybeleid en de algemene voorwaarden."
     }
   }
 }
