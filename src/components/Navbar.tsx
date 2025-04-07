@@ -3,10 +3,12 @@ import { Menu, X } from "lucide-react";
 import Image from 'next/image';
 import { scrollToAnchor } from '@/utils';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useTranslations } from 'next-intl';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations('navbar');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,10 +23,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Events", href: "#events" },
-    { name: "About", href: "#about" },
-    { name: "Teams", href: "#teams" },
-    { name: "Gallery", href: "#gallery" },
+    { name: t('links.events'), href: "#events" },
+    { name: t('links.about'), href: "#about" },
+    { name: t('links.teams'), href: "#teams" },
+    { name: t('links.gallery'), href: "#gallery" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -76,7 +78,7 @@ const Header = () => {
             className="btn-primary mx-2"
             onClick={(e) => handleNavClick(e, 'join')}
           >
-            Join Us
+            {t('cta')}
           </a>
           <div className="navbar-language-switcher">  
             <LanguageSwitcher />
@@ -116,7 +118,7 @@ const Header = () => {
                 className="btn-primary mx-2"
                 onClick={(e) => handleNavClick(e, 'join')}
               >
-                Join Us
+                {t('cta')}
             </a>
           </nav>
         </div>

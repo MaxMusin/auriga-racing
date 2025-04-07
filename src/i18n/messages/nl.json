@@ -12,6 +12,15 @@
     },
     "cta": "Doe mee"
   },
+  "navbar": {
+    "links": {
+      "events": "Evenementen",
+      "about": "Over ons",
+      "teams": "Teams",
+      "gallery": "Galerij"
+    },
+    "cta": "Doe mee"
+  },
   "hero": {
     "title": "",
     "subtitle": "Op track & online",

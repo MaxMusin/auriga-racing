@@ -3,6 +3,15 @@
     "title": "Auriga Racing",
     "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?"
   },
+  "navbar": {
+    "links": {
+      "events": "Events",
+      "about": "About",
+      "teams": "Teams",
+      "gallery": "Gallery"
+    },
+    "cta": "Join Us"
+  },
   "hero": {
     "title": "Pushing limits",
     "subtitle": "On track & online",
@@ -10,6 +19,30 @@
     "cta": "Come in Track Day",
     "pitlane": "PITLANE",
     "simracingTeam": "Simracing Team"
+  },
+  "teams": {
+    "title": "OUR TEAMS",
+    "description": "Auriga Racing is active across multiple disciplines, from real-world Fun Cup events to serious simracing competitions",
+    "track": {
+      "title": "Fun Cup",
+      "description": "Our track team competes in FUNCUP events across Europe, showcasing skill and precision in some of the most challenging circuits.",
+      "features": {
+        "drivers": "Professional drivers with years of experience",
+        "equipment": "State-of-the-art cars and equipment",
+        "training": "Regular trackdays and training sessions"
+      },
+      "cta": "Join Track Team"
+    },
+    "simracing": {
+      "title": "Sim racing",
+      "description": "Our sim racing division competes at a respectable level in virtual motorsports with serious engagement based on the principles and values ​​that build the team.",
+      "features": {
+        "leagues": "Compete in international e-motorsport leagues",
+        "equipment": "Professional simulation rigs and equipment",
+        "coaching": "Dedicated coaching and strategy team"
+      },
+      "cta": "Join SimRacing Team"
+    }
   },
   "join": {
     "title": "JOIN THE TEAM",
