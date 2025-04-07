@@ -52,15 +52,15 @@ export function delay(ms: number) {
 /**
  * Safely access nested object properties without throwing errors
  */
-export function getNestedValue<T>(obj: any, path: string, defaultValue: T): T {
+export function getNestedValue<T>(obj: Record<string, unknown>, path: string, defaultValue: T): T {
   const keys = path.split('.');
-  let result = obj;
+  let result: unknown = obj;
   
   for (const key of keys) {
     if (result === undefined || result === null) {
       return defaultValue;
     }
-    result = result[key];
+    result = (result as Record<string, unknown>)[key];
   }
   
   return (result === undefined || result === null) ? defaultValue : result as T;
