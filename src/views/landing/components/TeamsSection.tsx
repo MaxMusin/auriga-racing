@@ -39,16 +39,16 @@ const TeamsSection = () => {
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
-                  <span className="text-racing-red mr-2">✓</span>
-                  <span>{t('track.features.drivers')}</span>
+                  <span className="text-white mr-2">✓</span>
+                  <span className="text-white/80">{t('track.features.drivers')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-racing-red mr-2">✓</span>
-                  <span>{t('track.features.equipment')}</span>
+                  <span className="text-white mr-2">✓</span>
+                  <span className="text-white/80">{t('track.features.equipment')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-racing-red mr-2">✓</span>
-                  <span>{t('track.features.training')}</span>
+                  <span className="text-white mr-2">✓</span>
+                  <span className="text-white/80">{t('track.features.training')}</span>
                 </li>
               </ul>
               <a href="#join" className="btn-primary w-full">
@@ -69,7 +69,7 @@ const TeamsSection = () => {
             </div>
             <div className="p-6">
               <div className="flex items-center space-x-2 mb-4">
-                <Gamepad className="h-6 w-6 text-racing-blue" />
+                <Gamepad className="h-6 w-6 text-racing-red" />
                 <h3 className="text-2xl font-bold">{t('simracing.title')}</h3>
               </div>
               <p className="text-muted-foreground mb-4">
@@ -77,16 +77,16 @@ const TeamsSection = () => {
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
-                  <span className="text-racing-blue mr-2">✓</span>
-                  <span>{t('simracing.features.leagues')}</span>
+                  <span className="text-white mr-2">✓</span>
+                  <span className="text-white/80">{t('simracing.features.leagues')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-racing-blue mr-2">✓</span>
-                  <span>{t('simracing.features.equipment')}</span>
+                  <span className="text-white mr-2">✓</span>
+                  <span className="text-white/80">{t('simracing.features.equipment')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-racing-blue mr-2">✓</span>
-                  <span>{t('simracing.features.coaching')}</span>
+                  <span className="text-white mr-2">✓</span>
+                  <span className="text-white/80">{t('simracing.features.coaching')}</span>
                 </li>
               </ul>
               <a href="#join" className="btn-secondary w-full">

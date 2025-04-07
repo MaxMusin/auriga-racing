@@ -2,19 +2,31 @@
 
 import { Check, Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const JoinSection = () => {
   const t = useTranslations('join');
   
   return (
-    <section id="join" className="section-padding bg-racing-red">
-      <div className="container mx-auto">
+    <section id="join" className="section-padding relative overflow-hidden bg-overlay-container">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/images/raidillon.jpg"
+          alt="Raidillon corner"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      
+      <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               {t('title')}
             </h2>
-            <div className="h-1 w-24 bg-racing-red mb-8"></div>
+            <div className="h-1 w-24 bg-white mb-8"></div>
 
             <p className="text-lg text-white/80 mb-8">
               {t('description')}
