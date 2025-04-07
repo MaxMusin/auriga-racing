@@ -1,30 +1,46 @@
 'use client';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Check, Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { toast, Toaster } from 'sonner';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { contactFormSchema } from '@/lib/schemas';
 import { sendContactEmail } from '@/lib/actions';
+import { contactFormSchema } from '@/lib/schemas';
 
 const JoinSection = () => {
   const t = useTranslations('join');
-  
+
   return (
-    <section id="join" className="section-padding relative overflow-hidden bg-overlay-container">
+    <section
+      id="join"
+      className="section-padding relative overflow-hidden bg-overlay-container"
+    >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <Image 
+        <Image
           src="/images/raidillon.jpg"
           alt="Raidillon corner"
           fill
@@ -32,7 +48,7 @@ const JoinSection = () => {
           priority
         />
       </div>
-      
+
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
@@ -41,9 +57,7 @@ const JoinSection = () => {
             </h2>
             <div className="h-1 w-24 bg-white mb-8"></div>
 
-            <p className="text-lg text-white/80 mb-8">
-              {t('description')}
-            </p>
+            <p className="text-lg text-white/80 mb-8">{t('description')}</p>
 
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4 text-white">
@@ -64,9 +78,7 @@ const JoinSection = () => {
                 </li>
                 <li className="flex items-start">
                   <Check className="text-white mr-2 h-5 w-5 mt-1" />
-                  <span className="text-white/80">
-                    {t('benefits.events')}
-                  </span>
+                  <span className="text-white/80">{t('benefits.events')}</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="text-white mr-2 h-5 w-5 mt-1" />
@@ -78,7 +90,9 @@ const JoinSection = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4 text-white">{t('contact.title')}</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">
+                {t('contact.title')}
+              </h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <Mail className="text-white mr-3 h-5 w-5" />
@@ -125,7 +139,7 @@ const JoinSection = () => {
 function ContactForm() {
   const t = useTranslations('join');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   // Define form with React Hook Form and zod validation
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -143,10 +157,10 @@ function ContactForm() {
   // Handle form submission
   async function onSubmit(values: z.infer<typeof contactFormSchema>) {
     setIsSubmitting(true);
-    
+
     try {
       const result = await sendContactEmail(values);
-      
+
       if (result.success) {
         toast.success(t('form.success'));
         form.reset({
@@ -186,16 +200,13 @@ function ContactForm() {
                     {t('form.firstName')}
                   </FormLabel>
                   <FormControl>
-                    <Input 
-                      className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
-                      {...field} 
-                    />
+                    <Input {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="lastName"
@@ -205,17 +216,14 @@ function ContactForm() {
                     {t('form.lastName')}
                   </FormLabel>
                   <FormControl>
-                    <Input 
-                      className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
-                      {...field} 
-                    />
+                    <Input {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
-          
+
           <FormField
             control={form.control}
             name="email"
@@ -225,17 +233,13 @@ function ContactForm() {
                   {t('form.email')}
                 </FormLabel>
                 <FormControl>
-                  <Input 
-                    type="email" 
-                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
-                    {...field} 
-                  />
+                  <Input type="email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="phone"
@@ -245,17 +249,13 @@ function ContactForm() {
                   {t('form.phone')}
                 </FormLabel>
                 <FormControl>
-                  <Input 
-                    type="tel" 
-                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
-                    {...field} 
-                  />
+                  <Input type="tel" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="interest"
@@ -264,27 +264,35 @@ function ContactForm() {
                 <FormLabel className="text-sm font-medium text-muted-foreground">
                   {t('form.interest.label')}
                 </FormLabel>
-                <Select 
+                <Select
                   onValueChange={field.onChange}
                   value={field.value}
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red">
-                      <SelectValue placeholder={t('form.interest.placeholder')} />
+                    <SelectTrigger>
+                      <SelectValue
+                        placeholder={t('form.interest.placeholder')}
+                      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="trackday">{t('form.interest.trackday')}</SelectItem>
-                    <SelectItem value="simracing">{t('form.interest.simracing')}</SelectItem>
-                    <SelectItem value="both">{t('form.interest.both')}</SelectItem>
+                    <SelectItem value="trackday">
+                      {t('form.interest.trackday')}
+                    </SelectItem>
+                    <SelectItem value="simracing">
+                      {t('form.interest.simracing')}
+                    </SelectItem>
+                    <SelectItem value="both">
+                      {t('form.interest.both')}
+                    </SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="experience"
@@ -293,28 +301,38 @@ function ContactForm() {
                 <FormLabel className="text-sm font-medium text-muted-foreground">
                   {t('form.experience.label')}
                 </FormLabel>
-                <Select 
+                <Select
                   onValueChange={field.onChange}
                   value={field.value}
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red">
-                      <SelectValue placeholder={t('form.experience.placeholder')} />
+                    <SelectTrigger>
+                      <SelectValue
+                        placeholder={t('form.experience.placeholder')}
+                      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="none">{t('form.experience.none')}</SelectItem>
-                    <SelectItem value="beginner">{t('form.experience.beginner')}</SelectItem>
-                    <SelectItem value="intermediate">{t('form.experience.intermediate')}</SelectItem>
-                    <SelectItem value="experienced">{t('form.experience.experienced')}</SelectItem>
+                    <SelectItem value="none">
+                      {t('form.experience.none')}
+                    </SelectItem>
+                    <SelectItem value="beginner">
+                      {t('form.experience.beginner')}
+                    </SelectItem>
+                    <SelectItem value="intermediate">
+                      {t('form.experience.intermediate')}
+                    </SelectItem>
+                    <SelectItem value="experienced">
+                      {t('form.experience.experienced')}
+                    </SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="message"
@@ -324,26 +342,25 @@ function ContactForm() {
                   {t('form.message.label')}
                 </FormLabel>
                 <FormControl>
-                  <Textarea 
-                    placeholder={t('form.message.placeholder')} 
-                    className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red" 
-                    rows={4} 
-                    {...field} 
+                  <Textarea
+                    placeholder={t('form.message.placeholder')}
+                    rows={4}
+                    {...field}
                   />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          
-          <Button 
-            type="submit" 
-            className="btn-primary w-full py-3" 
+
+          <Button
+            type="submit"
+            className="btn-primary w-full py-3"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Sending...' : t('form.submit')}
           </Button>
-          
+
           <p className="text-xs text-muted-foreground text-center mt-4">
             {t('form.disclaimer')}
           </p>

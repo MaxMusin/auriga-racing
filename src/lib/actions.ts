@@ -20,7 +20,7 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
         from: 'Auriga Racing <onboarding@resend.dev>',
         to: ['hello@maximemusin.me'],
         replyTo: email,
-        subject: `Auriga Racing - New Contact Form Submission: ${interest}`,
+        subject: `Auriga Racing - Form: ${interest} | ${firstName} ${lastName}`,
         message: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nInterest: ${interest}\nExperience: ${experience || 'Not provided'}\nMessage: ${message}`
       });
       
@@ -31,7 +31,7 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
       from: 'Auriga Racing <onboarding@resend.dev>',
       to: ['hello@maximemusin.me'], // Replace with your team's email
       replyTo: email,
-      subject: `Auriga Racing - New Contact Form Submission: ${interest}`,
+      subject: `Auriga Racing - Form: ${interest} | ${firstName} ${lastName}`,
       html: `
         <h2>Auriga Racing</h2>
         <p><strong>First Name:</strong> ${firstName}</p>
