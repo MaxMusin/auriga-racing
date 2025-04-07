@@ -31,28 +31,20 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/auriga.racing.team"
                 className="text-muted-foreground hover:text-racing-red transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/aurigaracing/"
                 className="text-muted-foreground hover:text-racing-red transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-racing-red transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-racing-red transition-colors"
-              >
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
