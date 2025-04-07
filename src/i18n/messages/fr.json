@@ -7,8 +7,53 @@
     "title": "Repousser les limites",
     "subtitle": "Sur piste et en ligne",
     "description": "Vivez le frisson du sport automobile avec nos initiations au sport automobile sur circuit et pourquoi ne pas rejoindre notre équipe Simracing ?",
-    "cta": "Rejoignez-nous en trackday",
+    "cta": "Come in Track Day",
     "pitlane": "",
     "simracingTeam": "Équipe Simracing"
+  },
+  "join": {
+    "title": "JOIN THE TEAM",
+    "description": "Whether you're an experienced racer or just starting out, we're always looking for passionate individuals to join our teams. Auriga Racing provides opportunities for both track racing and simracing enthusiasts.",
+    "whyJoinUs": "Why join us on track or/and online?",
+    "benefits": {
+      "coaching": "Access to professional coaching and development",
+      "equipment": "State-of-the-art equipment and facilities",
+      "events": "Drive in national and international events",
+      "community": "Be part of a passionate community of racers"
+    },
+    "contact": {
+      "title": "Contact us",
+      "email": "hello@auriga-racing.be",
+      "phone": "+32 474 79 39 24",
+      "organization": "Auriga ASBL"
+    },
+    "form": {
+      "title": "Contact us",
+      "firstName": "First Name*",
+      "lastName": "Last Name*",
+      "email": "Email Address*",
+      "phone": "Phone Number",
+      "interest": {
+        "label": "I'm interested in*",
+        "placeholder": "Select an option",
+        "trackday": "Trackday",
+        "simracing": "Sim racing",
+        "both": "Both"
+      },
+      "experience": {
+        "label": "Racing Experience",
+        "placeholder": "Select an option",
+        "none": "None",
+        "beginner": "Beginner (0-3 years)",
+        "intermediate": "Intermediate (3-5 years)",
+        "experienced": "Experienced (5+ years)"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Share your racing background, achievements, or why you want to contact us..."
+      },
+      "submit": "Get in touch",
+      "disclaimer": "By submitting this form, you agree to our Privacy Policy and Terms of Service."
+    }
   }
 }
