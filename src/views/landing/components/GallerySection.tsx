@@ -134,11 +134,11 @@ const GallerySection = () => {
           )}
         </div>
 
-        <div className="mt-10 text-center">
+        {/* <div className="mt-10 text-center">
           <a href="#" className="btn-primary">
             {t('viewFullGallery')}
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

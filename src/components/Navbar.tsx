@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from "lucide-react";
-import Image from 'next/image';
-import { scrollToAnchor } from '@/utils';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { scrollToAnchor } from '@/utils';
+import { navLinks } from '@/utils/config';
+import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,19 +18,15 @@ const Header = () => {
 
     // Check scroll position immediately on component mount
     handleScroll();
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: t('links.events'), href: "#events" },
-    { name: t('links.about'), href: "#about" },
-    { name: t('links.teams'), href: "#teams" },
-    { name: t('links.gallery'), href: "#gallery" },
-  ];
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     scrollToAnchor(href);
     if (isMenuOpen) {
@@ -38,15 +35,17 @@ const Header = () => {
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled || isMenuOpen
+          ? 'bg-background/95 backdrop-blur-sm shadow-md py-3'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
-          <a 
-            href="#home" 
+          <a
+            href="#home"
             className="relative h-10 w-40"
             onClick={(e) => handleNavClick(e, 'home')}
           >
@@ -61,8 +60,8 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
+        <nav className="hidden lg:flex items-center space-x-8">
+          {navLinks(t).map((link) => (
             <a
               key={link.name}
               href={link.href}
@@ -75,19 +74,19 @@ const Header = () => {
           ))}
           <a
             href="#join"
-            className="btn-primary mx-2"
+            className="btn-primary lg:mx-2"
             onClick={(e) => handleNavClick(e, 'join')}
           >
             {t('cta')}
           </a>
-          <div className="navbar-language-switcher">  
+          <div className="navbar-language-switcher">
             <LanguageSwitcher />
           </div>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="lg:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
         >
@@ -97,9 +96,9 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-racing-gray/95 backdrop-blur-sm p-4 shadow-lg animate-fade-in">
+        <div className="lg:hidden absolute top-full left-0 right-0 backdrop-blur-sm p-4 shadow-lg bg-background/95">
           <nav className="flex flex-col space-y-4">
-            {navLinks.map((link) => (
+            {navLinks(t).map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -110,16 +109,16 @@ const Header = () => {
                 <span className="absolute left-0 bottom-[-2px] h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
+            <a
+              href="#join"
+              className="btn-primary lg:mx-2"
+              onClick={(e) => handleNavClick(e, 'join')}
+            >
+              {t('cta')}
+            </a>
             <div className="py-2">
               <LanguageSwitcher />
             </div>
-            <a
-                href="#join"
-                className="btn-primary mx-2"
-                onClick={(e) => handleNavClick(e, 'join')}
-              >
-                {t('cta')}
-            </a>
           </nav>
         </div>
       )}
