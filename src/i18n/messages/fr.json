@@ -129,8 +129,20 @@
         "label": "Message",
         "placeholder": "Partagez votre expérience de course, vos accomplissements ou pourquoi vous voulez nous contacter..."
       },
+      "subject": {
+        "label": "Subject*",
+        "placeholder": "Select a subject",
+        "general": "General Inquiry",
+        "trackday": "Trackday Information",
+        "simracing": "Simracing Team",
+        "sponsorship": "Sponsorship",
+        "other": "Other"
+      },
+      "name": "Full Name*",
       "submit": "Envoyer",
-      "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation."
+      "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.",
+      "success": "Your message has been sent successfully! We'll get back to you soon.",
+      "error": "There was an error sending your message. Please try again."
     }
   },
   "events": {
@@ -178,8 +190,8 @@
     ]
   },
   "footer": {
-    "tagline": "We are not just a racing team,",
-    "description": "we are a bunch of true passionates!",
+    "tagline": "Repousser les limites sur piste et en ligne.",
+    "description": "Vivez le frisson du sport automobile avec nos leçons de conduite sur circuit et une équipe de simulation de course soudée.",
     "logoAlt": "Logo Auriga Racing",
     "quickLinks": {
       "title": "Liens rapides",
