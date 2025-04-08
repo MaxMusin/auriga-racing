@@ -213,7 +213,10 @@
       "title": "Nieuwsbrief",
       "description": "Abonneer je op onze nieuwsbrief voor de laatste updates en racenieuws.",
       "placeholder": "Je e-mailadres",
-      "button": "Abonneren"
+      "button": "Abonneren",
+      "submitting": "Bezig met abonneren...",
+      "invalidEmail": "Voer een geldig e-mailadres in",
+      "error": "Abonneren mislukt. Probeer het later opnieuw."
     },
     "copyright": "{year} Auriga Racing. Alle rechten voorbehouden.",
     "legalLinks": {

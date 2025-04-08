@@ -48,6 +48,22 @@ To add a new language:
 2. Add the language code to the `locales` array in `/src/middleware.ts`
 3. Add the language option to the `LanguageSwitcher` component
 
+## Newsletter Integration with Brevo
+
+This project uses [Brevo](https://www.brevo.com/) (formerly Sendinblue) for newsletter subscriptions. To set up the newsletter functionality:
+
+1. Create a Brevo account if you don't have one
+2. Create a contact list in Brevo for your subscribers
+3. Get your API key from Brevo dashboard (Marketing API)
+4. Create a `.env.local` file in the project root with the following variables:
+
+```bash
+NEXT_PUBLIC_BREVO_API_KEY=your_brevo_api_key
+NEXT_PUBLIC_BREVO_LIST_ID=your_brevo_list_id
+```
+
+The newsletter form in the footer will automatically connect to Brevo when these environment variables are set.
+
 ## Learn More
 
 To learn more about Next.js and next-intl, take a look at the following resources:

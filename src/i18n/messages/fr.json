@@ -213,7 +213,10 @@
       "title": "Newsletter",
       "description": "Abonnez-vous à notre newsletter pour les dernières mises à jour et actualités de course.",
       "placeholder": "Votre adresse e-mail",
-      "button": "S'abonner"
+      "button": "S'abonner",
+      "submitting": "Inscription...",
+      "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+      "error": "Échec de l'abonnement. Veuillez réessayer plus tard."
     },
     "copyright": "{year} Auriga Racing. Tous droits réservés.",
     "legalLinks": {

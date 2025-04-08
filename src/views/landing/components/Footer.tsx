@@ -3,17 +3,63 @@
 import { Facebook, Instagram } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useState, FormEvent } from 'react';
+import { subscribeToNewsletter } from '@/utils/brevo';
+import { useToast } from '@/hooks/use-toast';
 
 const Footer = () => {
   const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
+  const { toast } = useToast();
+  
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubscribe = async (e: FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes('@')) {
+      toast({
+        variant: "destructive",
+        title: t('newsletter.invalidEmail'),
+        duration: 3000,
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Appel direct à la fonction serveur
+      const result = await subscribeToNewsletter(email);
+      
+      toast({
+        variant: result.success ? "default" : "destructive",
+        title: result.message,
+        duration: 3000,
+      });
+      
+      if (result.success) {
+        setEmail('');
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      toast({
+        variant: "destructive",
+        title: t('newsletter.error'),
+        duration: 3000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className="bg-background text-white pt-16 pb-8">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center space-x-2 mb-6">
+            <div className="flex items-center space-x-2 mb-2 md:mb-6">
               <div className="relative h-10 w-40">
                 <Image
                   src="/images/auriga_racing__logo.svg"
@@ -24,7 +70,7 @@ const Footer = () => {
                 />
               </div>
             </div>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-2 md:mb-6">
               {t('tagline')}
               <br />
               {t('description')}
@@ -50,7 +96,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">{t('quickLinks.title')}</h3>
+            <h3 className="text-lg font-bold mb-2 md:mb-6">{t('quickLinks.title')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -96,7 +142,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">{t('resources.title')}</h3>
+            <h3 className="text-lg font-bold mb-2 md:mb-6">{t('resources.title')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -142,19 +188,29 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">{t('newsletter.title')}</h3>
+            <h3 className="text-lg font-bold mb-2 md:mb-6">{t('newsletter.title')}</h3>
             <p className="text-muted-foreground mb-4">
               {t('newsletter.description')}
             </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder={t('newsletter.placeholder')}
-                className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
-                required
-              />
-              <button type="submit" className="btn-primary w-full">
-                {t('newsletter.button')}
+            <form className="space-y-3" onSubmit={handleSubscribe}>
+              <div>
+                <input
+                  type="email"
+                  placeholder={t('newsletter.placeholder')}
+                  className="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-racing-red"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isSubmitting}
+                />
+              </div>
+              
+              <button 
+                type="submit" 
+                className={`btn-primary w-full ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? t('newsletter.submitting') : t('newsletter.button')}
               </button>
             </form>
           </div>
