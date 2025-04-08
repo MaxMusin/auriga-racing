@@ -18,7 +18,7 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
       console.log('Using test mode - would have sent:');
       console.log({
         from: 'Auriga Racing <onboarding@resend.dev>',
-        to: ['hello@maximemusin.me'],
+        to: ['hello@aurigaracing.be'],
         replyTo: email,
         subject: `Auriga Racing - Form: ${interest} | ${firstName} ${lastName}`,
         message: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nInterest: ${interest}\nExperience: ${experience || 'Not provided'}\nMessage: ${message}`
@@ -29,7 +29,7 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
     
     const { data, error } = await resend.emails.send({
       from: 'Auriga Racing <onboarding@resend.dev>',
-      to: ['hello@maximemusin.me'], // Replace with your team's email
+      to: ['hello@aurigaracing.be'],
       replyTo: email,
       subject: `Auriga Racing - Form: ${interest} | ${firstName} ${lastName}`,
       html: `
