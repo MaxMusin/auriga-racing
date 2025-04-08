@@ -6,6 +6,11 @@ import axios from 'axios';
 const BREVO_API_KEY = process.env.BREVO_API_KEY || '';
 const BREVO_API_URL = 'https://api.brevo.com/v3';
 
+// Log pour débogage en production
+console.log('Environment check on server load:');
+console.log('- BREVO_API_KEY configured:', BREVO_API_KEY ? 'Yes' : 'No');
+console.log('- Node environment:', process.env.NODE_ENV);
+
 /**
  * Subscribe an email to the Brevo newsletter list
  * @param email - Email address to subscribe
@@ -19,6 +24,7 @@ export async function subscribeToNewsletter(
   // Log pour débogage
   console.log('Attempting to subscribe email:', email);
   console.log('API Key configured:', BREVO_API_KEY ? 'Yes' : 'No');
+  console.log('Server environment:', process.env.NODE_ENV);
   
   if (!BREVO_API_KEY) {
     console.error('Brevo API key is not configured');
