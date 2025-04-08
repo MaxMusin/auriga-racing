@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { toast, Toaster } from 'sonner';
 import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
@@ -27,6 +26,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 import { sendContactEmail } from '@/lib/actions';
 import { contactFormSchema } from '@/lib/schemas';
 
@@ -139,6 +139,7 @@ const JoinSection = () => {
 function ContactForm() {
   const t = useTranslations('join');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   // Define form with React Hook Form and zod validation
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -162,7 +163,10 @@ function ContactForm() {
       const result = await sendContactEmail(values);
 
       if (result.success) {
-        toast.success(t('form.success'));
+        toast({
+          title: t('form.success'),
+          variant: 'default',
+        });
         form.reset({
           firstName: '',
           lastName: '',
@@ -173,11 +177,17 @@ function ContactForm() {
           message: '',
         });
       } else {
-        toast.error(t('form.error'));
+        toast({
+          title: t('form.error'),
+          variant: 'destructive',
+        });
         console.error('Form submission error:', result.error);
       }
     } catch (error) {
-      toast.error(t('form.error'));
+      toast({
+        title: t('form.error'),
+        variant: 'destructive',
+      });
       console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
@@ -186,7 +196,6 @@ function ContactForm() {
 
   return (
     <>
-      <Toaster position="bottom-right" />
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {/* First Name and Last Name in a grid */}
