@@ -4,6 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { scrollToAnchor } from '@/utils';
 
 const HeroSection = () => {
   const [offset, setOffset] = useState(0);
@@ -31,10 +32,12 @@ const HeroSection = () => {
 
   const scrollToContent = () => {
     // Target the first section after hero (UpcomingEventsSection)
-    const eventsSection = document.getElementById('events');
-    if (eventsSection) {
-      eventsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToAnchor('events');
+  };
+
+  const handleScrollToJoin = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToAnchor('join');
   };
 
   return (
@@ -103,12 +106,12 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <a href="#events" className="btn-primary text-base">
+          <button onClick={scrollToContent} className="btn-primary text-base">
             {t('cta')}
-          </a>
-          <a href="#join" className="btn-secondary text-base">
+          </button>
+          <button onClick={handleScrollToJoin} className="btn-secondary text-base">
             {t('simracingTeam')}
-          </a>
+          </button>
         </div>
       </div>
 

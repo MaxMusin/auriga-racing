@@ -4,9 +4,15 @@ import Header from '@/components/Header';
 import { Car, Gamepad } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { scrollToAnchor } from '@/utils';
 
 const TeamsSection = () => {
   const t = useTranslations('teams');
+
+  const handleScrollToJoin = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToAnchor('join');
+  };
 
   return (
     <section id="teams" className="section-padding bg-background">
@@ -57,9 +63,9 @@ const TeamsSection = () => {
                   </span>
                 </li>
               </ul>
-              <a href="#join" className="btn-primary w-full">
+              <button onClick={handleScrollToJoin} className="btn-primary w-full">
                 {t('track.cta')}
-              </a>
+              </button>
             </div>
           </div>
 
@@ -101,9 +107,9 @@ const TeamsSection = () => {
                   </span>
                 </li>
               </ul>
-              <a href="#join" className="btn-secondary w-full">
+              <button onClick={handleScrollToJoin} className="btn-secondary w-full">
                 {t('simracing.cta')}
-              </a>
+              </button>
             </div>
           </div>
         </div>
