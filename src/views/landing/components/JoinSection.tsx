@@ -94,6 +94,12 @@ const JoinSection = () => {
                 {t('contact.title')}
               </h3>
               <div className="space-y-3">
+              <div className="flex items-center">
+                  <MapPin className="text-white mr-3 h-5 w-5" />
+                  <span className="text-white/80">
+                    {t('contact.organization')}
+                  </span>
+                </div>
                 <div className="flex items-center">
                   <Mail className="text-white mr-3 h-5 w-5" />
                   <a
@@ -111,12 +117,6 @@ const JoinSection = () => {
                   >
                     {t('contact.phone')}
                   </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="text-white mr-3 h-5 w-5" />
-                  <span className="text-white/80">
-                    {t('contact.organization')}
-                  </span>
                 </div>
               </div>
             </div>
