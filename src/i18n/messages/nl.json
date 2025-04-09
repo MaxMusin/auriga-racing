@@ -48,6 +48,7 @@
   },
   "teams": {
     "title": "Onze teams",
+    "subtitle": "",
     "description": "Auriga Racing is active across multiple disciplines, from real-world Fun Cup events to serious simracing competitions",
     "track": {
       "title": "Fun Cup",
@@ -71,7 +72,8 @@
     }
   },
   "gallery": {
-    "title": "GALERIJ",
+    "title": "Galerij",
+    "subtitle": "",
     "description": "Momenten vastgelegd van onze race-avonturen, zowel op het circuit als in de virtuele wereld",
     "viewFullGallery": "Bekijk volledige galerij",
     "images": {

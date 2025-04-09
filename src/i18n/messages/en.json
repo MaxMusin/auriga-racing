@@ -10,7 +10,7 @@
       "teams": "Teams",
       "gallery": "Gallery"
     },
-    "cta": "Join Us"
+    "cta": "Get in touch"
   },
   "hero": {
     "title": "Pushing limits",
@@ -24,7 +24,7 @@
     "title": "Passion for racing",
     "subtitle": "Our Story",
     "paragraph1": "Founded by passionate motorsport enthusiasts, our team has evolved from weekend racers to a professional racing organization with both real-world and virtual racing divisions.",
-    "paragraph2": "With a dedicated crew of experienced drivers, engineers, and strategists, we provide extraordinary trackday experiences and competitive simracing teams that push the boundaries of what's possible.",
+    "paragraph2": "With a dedicated crew of experienced drivers, engineers, strategists and coaches, we provide extraordinary trackday experiences and competitive simracing teams that push the boundaries of what's possible.",
     "cta": "Discover Our Services",
     "stats": {
       "trackdays": {
@@ -48,6 +48,7 @@
   },
   "teams": {
     "title": "Our teams",
+    "subtitle": "",
     "description": "Auriga Racing is active across multiple disciplines, from real-world in Fun Cup events to serious simracing competitions",
     "track": {
       "title": "Fun Cup",
@@ -72,6 +73,7 @@
   },
   "gallery": {
     "title": "Gallery",
+    "subtitle": "",
     "description": "Moments captured from our racing adventures, both on the track and in the virtual world",
     "viewFullGallery": "View Full Gallery",
     "images": {
@@ -147,47 +149,18 @@
   },
   "events": {
     "title": "Upcoming events",
-    "subtitle": "What's next",
+    "subtitle": "On track",
     "description": "Join us at these upcoming trackdays and simracing events where Auriga Racing will compete",
     "fullCalendar": "Full Racing Calendar",
-    "types": {
-      "track": "Track",
-      "sim": "SimRacing"
+    "track": "Circuit of {track}",
+    "event": {
+      "title": "Trackday at {track}"
     },
-    "items": [
-      {
-        "id": 1,
-        "event": "FUNCUP Championship 2024",
-        "date": "June 15-16, 2024",
-        "time": "9:00 AM - 5:00 PM",
-        "location": "Spa-Francorchamps, Belgium",
-        "type": "track"
-      },
-      {
-        "id": 2,
-        "event": "World SimRacing League - Round 3",
-        "date": "May 28, 2024",
-        "time": "8:00 PM - 10:00 PM",
-        "location": "Virtual Nürburgring",
-        "type": "sim"
-      },
-      {
-        "id": 3,
-        "event": "European Track Days Cup",
-        "date": "July 12-13, 2024",
-        "time": "10:00 AM - 6:00 PM",
-        "location": "Monza, Italy",
-        "type": "track"
-      },
-      {
-        "id": 4,
-        "event": "Digital Racing Championship - Season 5",
-        "date": "June 5, 2024",
-        "time": "9:00 PM - 11:00 PM",
-        "location": "Virtual Silverstone",
-        "type": "sim"
-      }
-    ]
+    "countries": {
+      "belgium": "Belgium",
+      "france": "France",
+      "netherlands": "Netherlands"
+    }
   },
   "footer": {
     "tagline": "We are not just a racing team,",

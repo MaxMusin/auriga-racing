@@ -22,10 +22,88 @@ const countryFlags: Record<EventItem['country'], string> = {
   netherlands: '🇳🇱',
 };
 
+const types = {
+  trackday: 'Trackday',
+  simracing: 'Simracing',
+};
+
+const tracks: Record<string, string> = {
+  'spa-francorchamps': 'Spa-Francorchamps',
+  mettet: 'Mettet',
+  clastres: 'Clastres',
+  'magny-court': 'Magny-Court',
+  zandvoort: 'Zandvoort',
+};
+
+const items = (t: ReturnType<typeof useTranslations>) => [
+  {
+    id: 1,
+    date: '26 mars 2025',
+    time: '9h30 - 18h00',
+    type: 'trackday',
+    track: 'spa-francorchamps',
+    country: 'belgium',
+  },
+  {
+    id: 2,
+    date: '27 mars 2025',
+    time: '9h30 - 18h00',
+    type: 'trackday',
+    track: 'spa-francorchamps',
+    country: 'belgium',
+  },
+  {
+    id: 3,
+    date: '29 avril 2025',
+    time: '9h00 - 18h00',
+    type: 'trackday',
+    track: 'mettet',
+    country: 'belgium',
+  },
+  {
+    id: 4,
+    date: '27 juin 2025',
+    time: '9h00 - 18h00',
+    type: 'trackday',
+    track: 'clastres',
+    country: 'france',
+  },
+  {
+    id: 5,
+    date: '20 août 2025',
+    time: '9h30 - 18h00',
+    type: 'trackday',
+    track: 'magny-court',
+    country: 'france',
+  },
+  {
+    id: 6,
+    date: '28 août 2025',
+    time: '9h00 - 18h00',
+    type: 'trackday',
+    track: 'clastres',
+    country: 'france',
+  },
+  {
+    id: 7,
+    date: '18 septembre 2025',
+    time: '9h00 - 18h00',
+    type: 'trackday',
+    track: 'clastres',
+    country: 'france',
+  },
+  {
+    id: 8,
+    date: '17 octobre 2025',
+    time: '9h30 - 18h00',
+    type: 'trackday',
+    track: 'zandvoort',
+    country: 'netherlands',
+  },
+];
+
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
-
-  const upcomingEvents = t.raw('items') as EventItem[];
 
   return (
     <section id="events" className="section-padding bg-card clip-diagonal">
@@ -38,7 +116,7 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {upcomingEvents.map((event) => (
+          {items(t).map((event) => (
             <div
               key={event.id}
               className="bg-background rounded-lg overflow-hidden shadow-md card-hover"
@@ -47,7 +125,7 @@ const UpcomingEventsSection = () => {
                 <Image
                   fill
                   src={`/images/${event.track}.jpg`}
-                  alt={event.event}
+                  alt={tracks[event.track]}
                   className="w-full h-full object-cover"
                   priority
                 />
@@ -58,15 +136,14 @@ const UpcomingEventsSection = () => {
                       : 'bg-racing-black'
                   } text-white`}
                 >
-                  {event.type === 'trackday'
-                    ? t('types.trackday')
-                    : t('types.simracing')}
+                  {types[event.type]}
                 </div>
               </div>
 
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2 line-clamp-1">
-                  {event.event} {countryFlags[event.country]}
+                  {t('event.title', { track: tracks[event.track] })}{' '}
+                  {countryFlags[event.country as EventItem['country']]}
                 </h3>
 
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
@@ -81,7 +158,7 @@ const UpcomingEventsSection = () => {
 
                 <div className="flex items-center text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 mr-2" />
-                  <span className="line-clamp-1">{event.location}</span>
+                  <span className="line-clamp-1">{`${t('track', { track: tracks[event.track] })}, ${t('countries.' + event.country)}`}</span>
                 </div>
               </div>
             </div>
