@@ -48,6 +48,7 @@
   },
   "teams": {
     "title": "Onze teams",
+    "subtitle": "",
     "description": "Auriga Racing is active across multiple disciplines, from real-world Fun Cup events to serious simracing competitions",
     "track": {
       "title": "Fun Cup",
@@ -71,7 +72,8 @@
     }
   },
   "gallery": {
-    "title": "GALERIJ",
+    "title": "Galerij",
+    "subtitle": "",
     "description": "Momenten vastgelegd van onze race-avonturen, zowel op het circuit als in de virtuele wereld",
     "viewFullGallery": "Bekijk volledige galerij",
     "images": {
@@ -100,7 +102,7 @@
     },
     "contact": {
       "title": "Contacteer ons",
-      "email": "hello@aurigaracing.be",
+      "email": "hello@auriga-racing.be",
       "phone": "+32 474 79 39 24",
       "organization": "Auriga VZW"
     },
@@ -150,44 +152,15 @@
     "subtitle": "Wat komt er aan",
     "description": "Doe mee aan deze komende trackdays en simracing-evenementen waar Auriga Racing zal deelnemen",
     "fullCalendar": "Volledige racekalender",
-    "types": {
-      "track": "Circuit",
-      "sim": "SimRacing"
+    "track": "Circuit of {track}",
+    "event": {
+      "title": "Trackday at {track}"
     },
-    "items": [
-      {
-        "id": 1,
-        "event": "FUNCUP Kampioenschap 2024",
-        "date": "15-16 juni 2024",
-        "time": "9:00 - 17:00",
-        "location": "Spa-Francorchamps, België",
-        "type": "track"
-      },
-      {
-        "id": 2,
-        "event": "World SimRacing League - Ronde 3",
-        "date": "28 mei 2024",
-        "time": "20:00 - 22:00",
-        "location": "Virtuele Nürburgring",
-        "type": "sim"
-      },
-      {
-        "id": 3,
-        "event": "Europese Track Days Cup",
-        "date": "12-13 juli 2024",
-        "time": "10:00 - 18:00",
-        "location": "Monza, Italië",
-        "type": "track"
-      },
-      {
-        "id": 4,
-        "event": "Digitaal Race Kampioenschap - Seizoen 5",
-        "date": "5 juni 2024",
-        "time": "21:00 - 23:00",
-        "location": "Virtuele Silverstone",
-        "type": "sim"
-      }
-    ]
+    "countries": {
+      "belgium": "Belgium",
+      "france": "France",
+      "netherlands": "Netherlands"
+    }
   },
   "footer": {
     "tagline": "Grenzen verleggen op het circuit en online.",
