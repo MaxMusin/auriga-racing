@@ -10,7 +10,7 @@
       "teams": "Équipes",
       "gallery": "Galerie"
     },
-    "cta": "Prendre contact"
+    "cta": "Rejoignez-nous"
   },
   "hero": {
     "title": "Repousser les limites",
@@ -28,16 +28,20 @@
     "cta": "DÉCOUVREZ NOS SERVICES",
     "stats": {
       "trackdays": {
-        "label": "Événements Trackday"
+        "label": "Événements Trackday",
+        "suffix": "+"
       },
       "experience": {
-        "label": "Années d'expérience"
+        "label": "Années d'expérience",
+        "suffix": ""
       },
       "enthusiasts": {
-        "label": "Passionnés de course"
+        "label": "Passionnés de course",
+        "suffix": "+"
       },
       "laps": {
-        "label": "Tours complétés"
+        "label": "Tours complétés",
+        "suffix": "+"
       }
     },
     "imageAlt": "Équipe de course dans la voie des stands"
@@ -96,7 +100,7 @@
     },
     "contact": {
       "title": "Contactez-nous",
-      "email": "hello@aurigaracing.be",
+      "email": "hello@auriga-racing.be",
       "phone": "+32 474 79 39 24",
       "organization": "Auriga ASBL"
     },
@@ -147,8 +151,8 @@
     "description": "Rejoignez-nous lors de nos prochains trackdays où Auriga Racing participera.",
     "fullCalendar": "Calendrier complet des trackdays",
     "types": {
-      "trackday": "Trackday",
-      "simracing": "Simracing"
+      "track": "Circuit",
+      "sim": "SimRacing"
     },
     "items": [
       {
@@ -157,9 +161,7 @@
         "date": "26 mars 2025",
         "time": "9h30 - 18h00",
         "location": "Circuit de Spa-Francorchamps, Belgique",
-        "type": "trackday",
-        "track": "spa-francorchamps",
-        "country": "belgium"
+        "type": "trackday"
       },
       {
         "id": 2,
@@ -167,9 +169,7 @@
         "date": "27 mars 2025",
         "time": "9h30 - 18h00",
         "location": "Circuit de Spa-Francorchamps, Belgique",
-        "type": "trackday",
-        "track": "spa-francorchamps",
-        "country": "belgium"
+        "type": "trackday"
       },
       {
         "id": 3,
@@ -177,9 +177,7 @@
         "date": "29 avril 2025",
         "time": "9h00 - 18h00",
         "location": "Circuit de Mettet, Belgique",
-        "type": "trackday",
-        "track": "mettet",
-        "country": "belgium"
+        "type": "trackday"
       },
       {
         "id": 4,
@@ -187,49 +185,7 @@
         "date": "27 juin 2025",
         "time": "9h00 - 18h00",
         "location": "Circuit de Clastres, France",
-        "type": "trackday",
-        "track": "clastres",
-        "country": "france"
-      },
-      {
-        "id": 5,
-        "event": "Trackday à Magny-Court",
-        "date": "20 août 2025",
-        "time": "9h30 - 18h00",
-        "location": "Circuit de Magny-Court, France",
-        "type": "trackday",
-        "track": "magny-court",
-        "country": "france"     
-      },
-      {
-        "id": 6,
-        "event": "Trackday à Clastres",
-        "date": "28 août 2025",
-        "time": "9h00 - 18h00",
-        "location": "Circuit de Clastres, France",
-        "type": "trackday",
-        "track": "clastres",
-        "country": "france"
-      },
-      {
-        "id": 7,
-        "event": "Trackday à Clastres",
-        "date": "18 septembre 2025",
-        "time": "9h00 - 18h00",
-        "location": "Circuit de Clastres, France",
-        "type": "trackday",
-        "track": "clastres",
-        "country": "france"
-      },
-      {
-        "id": 8,
-        "event": "Trackday à Zandvoort",
-        "date": "17 octobre 2025",
-        "time": "9h30 - 18h00",
-        "location": "Circuit de Zandvoort, Pays-Bas",
-        "type": "trackday",
-        "track": "zandvoort",
-        "country": "netherlands"
+        "type": "trackday"
       }
     ]
   },
