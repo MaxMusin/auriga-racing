@@ -16,7 +16,7 @@
     "title": "Repousser les limites",
     "subtitle": "Sur piste et en ligne",
     "description": "Vivez le frisson du sport automobile avec nos initiations au sport automobile sur circuit et pourquoi ne pas rejoindre notre équipe Simracing ?",
-    "cta": "Rejoignez-nous en trackday",
+    "cta": "Nos trackdays",
     "pitlane": "Pitlane",
     "simracingTeam": "Équipe Simracing"
   },
@@ -146,10 +146,10 @@
     }
   },
   "events": {
-    "title": "Événements à venir",
-    "subtitle": "Prochainement",
-    "description": "Rejoignez-nous lors de ces prochains trackdays et événements de simracing où Auriga Racing participera",
-    "fullCalendar": "Calendrier complet des courses",
+    "title": "Trackdays à venir",
+    "subtitle": "On track",
+    "description": "Rejoignez-nous lors de ces prochains trackdays où Auriga Racing participera.",
+    "fullCalendar": "Calendrier complet des trackdays",
     "types": {
       "track": "Circuit",
       "sim": "SimRacing"
@@ -157,35 +157,35 @@
     "items": [
       {
         "id": 1,
-        "event": "Championnat FUNCUP 2024",
-        "date": "15-16 juin 2024",
-        "time": "9h00 - 17h00",
-        "location": "Spa-Francorchamps, Belgique",
-        "type": "track"
+        "event": "Trackday à Spa-Francorchamps",
+        "date": "26 mars 2025",
+        "time": "9h30 - 18h00",
+        "location": "Circuit de Spa-Francorchamps, Belgique",
+        "type": "trackday"
       },
       {
         "id": 2,
-        "event": "Ligue mondiale de SimRacing - Manche 3",
-        "date": "28 mai 2024",
-        "time": "20h00 - 22h00",
-        "location": "Nürburgring virtuel",
-        "type": "sim"
+        "event": "Trackday à Spa-Francorchamps",
+        "date": "27 mars 2025",
+        "time": "9h30 - 18h00",
+        "location": "Circuit de Spa-Francorchamps, Belgique",
+        "type": "trackday"
       },
       {
         "id": 3,
-        "event": "Coupe européenne des Track Days",
-        "date": "12-13 juillet 2024",
-        "time": "10h00 - 18h00",
-        "location": "Monza, Italie",
-        "type": "track"
+        "event": "Trackday à Mettet",
+        "date": "29 avril 2025",
+        "time": "9h00 - 18h00",
+        "location": "Circuit de Mettet, Belgique",
+        "type": "trackday"
       },
       {
         "id": 4,
-        "event": "Championnat de course numérique - Saison 5",
-        "date": "5 juin 2024",
-        "time": "21h00 - 23h00",
-        "location": "Silverstone virtuel",
-        "type": "sim"
+        "event": "Trackday à Clastres",
+        "date": "27 juin 2025",
+        "time": "9h00 - 18h00",
+        "location": "Circuit de Clastres, France",
+        "type": "trackday"
       }
     ]
   },
@@ -211,7 +211,7 @@
     },
     "newsletter": {
       "title": "Newsletter",
-      "description": "Abonnez-vous à notre newsletter pour les dernières mises à jour et actualités de course.",
+      "description": "Abonnez-vous à notre newsletter pour être tenu au courant des trackdays et des dernières actualités.",
       "placeholder": "Votre adresse e-mail",
       "button": "S'abonner",
       "submitting": "Inscription...",
