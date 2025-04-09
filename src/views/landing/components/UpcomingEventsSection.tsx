@@ -2,8 +2,8 @@
 
 import Header from '@/components/Header';
 import { Calendar, Clock, Flag, MapPin } from 'lucide-react';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 interface EventItem {
   id: number;
@@ -11,12 +11,20 @@ interface EventItem {
   date: string;
   time: string;
   location: string;
-  type: 'track' | 'sim';
+  type: 'trackday' | 'simracing';
+  track: string;
+  country: 'belgium' | 'france' | 'netherlands';
 }
+
+const countryFlags: Record<EventItem['country'], string> = {
+  belgium: '🇧🇪',
+  france: '🇫🇷',
+  netherlands: '🇳🇱',
+};
 
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
-  
+
   const upcomingEvents = t.raw('items') as EventItem[];
 
   return (
@@ -38,23 +46,27 @@ const UpcomingEventsSection = () => {
               <div className="h-48 overflow-hidden relative">
                 <Image
                   fill
-                  src={'/images/auriga-racing-car.jpg'}
+                  src={`/images/${event.track}.jpg`}
                   alt={event.event}
                   className="w-full h-full object-cover"
                   priority
                 />
                 <div
                   className={`absolute bottom-0 left-0 py-1 px-3 text-xs font-semibold ${
-                    event.type === 'track' ? 'bg-racing-red' : 'bg-racing-blue'
+                    event.type === 'trackday'
+                      ? 'bg-racing-red'
+                      : 'bg-racing-black'
                   } text-white`}
                 >
-                  {event.type === 'track' ? t('types.track') : t('types.sim')}
+                  {event.type === 'trackday'
+                    ? t('types.trackday')
+                    : t('types.simracing')}
                 </div>
               </div>
 
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2 line-clamp-1">
-                  {event.event}
+                  {event.event} {countryFlags[event.country]}
                 </h3>
 
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
