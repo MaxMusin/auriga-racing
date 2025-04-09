@@ -10,7 +10,7 @@
       "teams": "Équipes",
       "gallery": "Galerie"
     },
-    "cta": "Rejoignez-nous"
+    "cta": "Prendre contact"
   },
   "hero": {
     "title": "Repousser les limites",
@@ -24,8 +24,8 @@
     "title": "Passion pour la course",
     "subtitle": "Notre histoire",
     "paragraph1": "Fondée par des passionnés de sport automobile, notre équipe a évolué de pilotes du week-end à une organisation professionnelle de course avec des divisions de course réelles et virtuelles.",
-    "paragraph2": "Avec une équipe dédiée de pilotes expérimentés, d'ingénieurs et de stratèges, nous offrons des expériences de trackday extraordinaires et des équipes de simracing compétitives qui repoussent les limites du possible.",
-    "cta": "DÉCOUVREZ NOS SERVICES",
+    "paragraph2": "Avec une équipe dédiée de pilotes expérimentés, d'ingénieurs, de stratèges et de coachs, nous offrons des expériences de trackday extraordinaires et des équipes de simracing compétitives qui repoussent les limites du possible.",
+    "cta": "Découvrez nos services",
     "stats": {
       "trackdays": {
         "label": "Événements Trackday",
@@ -48,6 +48,7 @@
   },
   "teams": {
     "title": "Nos équipes",
+    "subtitle": "",
     "description": "Auriga Racing est actif dans de multiples disciplines, des événements réels de la Fun Cup aux compétitions de Sim racing",
     "track": {
       "title": "Fun Cup",
@@ -71,7 +72,8 @@
     }
   },
   "gallery": {
-    "title": "GALERIE",
+    "title": "Gallerie",
+    "subtitle": "",
     "description": "Moments capturés de nos aventures de course, à la fois sur piste et dans le monde virtuel",
     "viewFullGallery": "Voir la galerie complète",
     "images": {
@@ -147,47 +149,18 @@
   },
   "events": {
     "title": "Trackdays à venir",
-    "subtitle": "On track",
+    "subtitle": "Sur circuit",
     "description": "Rejoignez-nous lors de nos prochains trackdays où Auriga Racing participera.",
     "fullCalendar": "Calendrier complet des trackdays",
-    "types": {
-      "track": "Circuit",
-      "sim": "SimRacing"
+    "track": "Circuit de {track}",
+    "event": {
+      "title": "Trackday à {track}"
     },
-    "items": [
-      {
-        "id": 1,
-        "event": "Trackday à Spa-Francorchamps",
-        "date": "26 mars 2025",
-        "time": "9h30 - 18h00",
-        "location": "Circuit de Spa-Francorchamps, Belgique",
-        "type": "trackday"
-      },
-      {
-        "id": 2,
-        "event": "Trackday à Spa-Francorchamps",
-        "date": "27 mars 2025",
-        "time": "9h30 - 18h00",
-        "location": "Circuit de Spa-Francorchamps, Belgique",
-        "type": "trackday"
-      },
-      {
-        "id": 3,
-        "event": "Trackday à Mettet",
-        "date": "29 avril 2025",
-        "time": "9h00 - 18h00",
-        "location": "Circuit de Mettet, Belgique",
-        "type": "trackday"
-      },
-      {
-        "id": 4,
-        "event": "Trackday à Clastres",
-        "date": "27 juin 2025",
-        "time": "9h00 - 18h00",
-        "location": "Circuit de Clastres, France",
-        "type": "trackday"
-      }
-    ]
+    "countries": {
+      "belgium": "Belgique",
+      "france": "France",
+      "netherlands": "Pays-Bas"
+    }
   },
   "footer": {
     "tagline": "Repousser les limites sur piste et en ligne.",
