@@ -12,7 +12,15 @@ interface EventItem {
   time: string;
   location: string;
   type: 'trackday' | 'simracing';
+  track: string;
+  country: 'belgium' | 'france' | 'netherlands';
 }
+
+const countryFlags: Record<EventItem['country'], string> = {
+  belgium: '🇧🇪',
+  france: '🇫🇷',
+  netherlands: '🇳🇱',
+};
 
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
@@ -38,7 +46,7 @@ const UpcomingEventsSection = () => {
               <div className="h-48 overflow-hidden relative">
                 <Image
                   fill
-                  src={'/images/auriga-racing-car.jpg'}
+                  src={`/images/${event.track}.jpg`}
                   alt={event.event}
                   className="w-full h-full object-cover"
                   priority
@@ -58,7 +66,7 @@ const UpcomingEventsSection = () => {
 
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2 line-clamp-1">
-                  {event.event}
+                  {event.event} {countryFlags[event.country]}
                 </h3>
 
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
