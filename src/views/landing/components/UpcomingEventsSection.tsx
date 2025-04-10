@@ -93,10 +93,10 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <a href="#" className="btn-primary inline-flex items-center">
+          <Link href="/events" className="btn-primary inline-flex items-center">
             <Calendar className="mr-2 h-5 w-5" />
             {t('fullCalendar')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

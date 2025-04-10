@@ -1,9 +1,10 @@
-import { Calendar, Clock, Flag, MapPin, ArrowLeft, Users, Car, XCircle } from 'lucide-react';
+import { Calendar, Clock, Flag, MapPin, Users, Car, XCircle } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import RegisterButton from '@/components/RegisterButton';
+import BackButton from '@/components/BackButton';
 
 // Import the event data
 import { events, tracks, types, countryFlags, formatEventDate } from '@/data/events';
@@ -41,14 +42,8 @@ export default async function EventPage({ params }: { params: { id: string; loca
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
-      {/* Back button */}
-      <Link 
-        href="/#events" 
-        className="inline-flex items-center mb-8 text-racing-red hover:text-racing-red/80 transition-colors"
-      >
-        <ArrowLeft className="mr-2 h-4 w-4" />
-        {t('backToEvents')}
-      </Link>
+      {/* Back button - uses client-side component for navigation */}
+      <BackButton label={t('backToEvents')} fallbackUrl="/events" />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Event image */}
