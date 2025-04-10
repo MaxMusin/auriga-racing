@@ -37,7 +37,7 @@ export default function BackButton({ label, fallbackUrl }: BackButtonProps) {
   return (
     <button
       onClick={handleClick}
-      className="inline-flex items-center mb-8 text-racing-red hover:text-racing-red/80 transition-colors cursor-pointer"
+      className="inline-flex items-center mb-8 text-white/80 hover:text-white transition-colors cursor-pointer"
     >
       <ArrowLeft className="mr-2 h-4 w-4" />
       {label}

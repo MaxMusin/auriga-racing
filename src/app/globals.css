@@ -227,6 +227,14 @@
     background-color: var(--racing-red);
   }
 
+  .bg-racing-lightred {
+    background-color: var(--racing-lightred);
+  }
+
+  .bg-racing-darkred {
+    background-color: var(--racing-darkred);
+  }
+
   .text-racing-black {
     color: var(--racing-black);
   }

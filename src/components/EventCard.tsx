@@ -1,6 +1,6 @@
 'use client';
 
-import { Calendar, Clock, MapPin } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -20,6 +20,19 @@ interface EventCardProps {
 
 export default function EventCard({ event, locale, isPast = false }: EventCardProps) {
   const t = useTranslations('events');
+  
+  // Calculate fill percentage if capacity and registrations are available
+  const fillPercentage = event.capacity && event.registrations 
+    ? Math.min(Math.round((event.registrations / event.capacity) * 100), 100)
+    : null;
+  
+  // Determine color based on fill percentage
+  const getFillColor = () => {
+    if (!fillPercentage) return 'bg-racing-dark';
+    if (fillPercentage >= 90) return 'bg-racing-darkred';
+    if (fillPercentage >= 70) return 'bg-racing-red';
+    return 'bg-racing-lightred';
+  };
   
   return (
     <Link
@@ -43,7 +56,7 @@ export default function EventCard({ event, locale, isPast = false }: EventCardPr
           {types[event.type as 'trackday' | 'simracing']}
         </div>
 
-        {event.soldOut && (
+        {(event.soldOut || (fillPercentage && fillPercentage === 100)) && (
           <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-black text-white rotate-0 m-2 rounded">
             {t('event.soldOut')}
           </div>
@@ -66,12 +79,31 @@ export default function EventCard({ event, locale, isPast = false }: EventCardPr
           <span>{event.time}</span>
         </div>
 
-        <div className="flex items-center text-sm text-muted-foreground">
+        <div className="flex items-center text-sm text-muted-foreground mb-4">
           <MapPin className="h-4 w-4 mr-2" />
           <span className="line-clamp-1">{`${t('track', {
             track: tracks[event.track],
           })}, ${t('countries.' + event.country)}`}</span>
         </div>
+        
+        {/* Fill percentage indicator */}
+        {fillPercentage !== null && (
+          <div className="mt-2">
+            <div className="flex items-center justify-between text-xs mb-2">
+              <div className="flex items-center">
+                <Users className="h-3 w-3 mr-1" />
+                <p>{t('event.booked')}</p>
+              </div>
+              <span className="font-medium">{fillPercentage}%</span>
+            </div>
+            <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+              <div 
+                className={`h-full ${getFillColor()} rounded-full`} 
+                style={{ width: `${fillPercentage}%` }}
+              ></div>
+            </div>
+          </div>
+        )}
       </div>
     </Link>
   );

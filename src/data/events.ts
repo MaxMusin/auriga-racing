@@ -9,6 +9,8 @@ export interface EventItem {
   track: string;
   country: 'belgium' | 'france' | 'netherlands';
   soldOut?: boolean;
+  capacity?: number;
+  registrations?: number;
 }
 
 export const countryFlags: Record<EventItem['country'], string> = {
@@ -55,6 +57,8 @@ export const events: EventItem[] = [
     track: 'spa-francorchamps',
     country: 'belgium',
     soldOut: true,
+    capacity: 18,
+    registrations: 18,
   },
   {
     id: 'spa-2025-03-27',
@@ -64,6 +68,8 @@ export const events: EventItem[] = [
     track: 'spa-francorchamps',
     country: 'belgium',
     soldOut: true,
+    capacity: 18,
+    registrations: 18,
   },
   {
     id: 'mettet-2025-04-29',
@@ -73,6 +79,8 @@ export const events: EventItem[] = [
     track: 'mettet',
     country: 'belgium',
     soldOut: true,
+    capacity: 18,
+    registrations: 18,
   },
   {
     id: 'mettet-2025-05-26',
@@ -82,6 +90,8 @@ export const events: EventItem[] = [
     track: 'mettet',
     country: 'belgium',
     soldOut: false,
+    capacity: 18,
+    registrations: 4,
   },
   {
     id: 'clastres-2025-06-27',
@@ -91,6 +101,8 @@ export const events: EventItem[] = [
     track: 'clastres',
     country: 'france',
     soldOut: false,
+    capacity: 18,
+    registrations: 12,
   },
   {
     id: 'magny-cours-2025-08-20',
@@ -100,6 +112,8 @@ export const events: EventItem[] = [
     track: 'magny-cours',
     country: 'france',
     soldOut: false,
+    capacity: 18,
+    registrations: 8,
   },
   {
     id: 'clastres-2025-08-28',
@@ -109,6 +123,8 @@ export const events: EventItem[] = [
     track: 'clastres',
     country: 'france',
     soldOut: false,
+    capacity: 18,
+    registrations: 5,
   },
   {
     id: 'clastres-2025-09-18',
@@ -118,6 +134,8 @@ export const events: EventItem[] = [
     track: 'clastres',
     country: 'france',
     soldOut: false,
+    capacity: 18,
+    registrations: 3,
   },
   {
     id: 'zandvoort-2025-10-17',
@@ -127,5 +145,7 @@ export const events: EventItem[] = [
     track: 'zandvoort',
     country: 'netherlands',
     soldOut: false,
+    capacity: 18,
+    registrations: 9,
   },
 ];
