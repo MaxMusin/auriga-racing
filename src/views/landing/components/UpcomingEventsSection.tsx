@@ -35,7 +35,7 @@ const tracks: Record<string, string> = {
   zandvoort: 'Zandvoort',
 };
 
-const items = (t: ReturnType<typeof useTranslations>) => [
+const items = [
   {
     id: 1,
     date: '26 mars 2025',
@@ -124,7 +124,7 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items(t).map((event) => (
+          {items.map((event) => (
             <div
               key={event.id}
               className="bg-background rounded-lg overflow-hidden shadow-md card-hover"
@@ -144,13 +144,13 @@ const UpcomingEventsSection = () => {
                       : 'bg-racing-black'
                   } text-white`}
                 >
-                  {types[event.type]}
+                  {types[event.type as 'trackday' | 'simracing']}
                 </div>
               </div>
 
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2 line-clamp-1">
-                  {t('event.title', { track: tracks[event.track] })}{' '}
+                  {tracks[event.track]}{' '}
                   {countryFlags[event.country as EventItem['country']]}
                 </h3>
 
