@@ -21,12 +21,12 @@ export default function EventsPage() {
   // Sort all events by date (upcoming first)
   const currentDate = new Date(2025, 3, 10); // April 10, 2025
   const sortedEvents = [...events].sort(
-    (a, b) => a.date.getTime() - b.date.getTime()
+    (a, b) => a.date.getTime() - b.date.getTime(),
   );
 
   // Separate upcoming and past events
   const upcomingEvents = sortedEvents.filter(
-    (event) => event.date >= currentDate
+    (event) => event.date >= currentDate,
   );
   const pastEvents = sortedEvents.filter((event) => event.date < currentDate);
 
@@ -34,11 +34,7 @@ export default function EventsPage() {
     <div className="py-16 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <Header
-            title={t('fullCalendar')}
-            subtitle={t('subtitle')}
-            centered
-          />
+          <Header title={t('fullCalendar')} subtitle={t('subtitle')} centered />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('description')}
           </p>
@@ -46,9 +42,7 @@ export default function EventsPage() {
 
         {/* Upcoming Events Section */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-center">
-            {t('title')}
-          </h2>
+          <h2 className="text-2xl font-bold mb-8 text-center">{t('title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event: EventItem) => (
               <Link
@@ -111,9 +105,7 @@ export default function EventsPage() {
         {/* Past Events Section */}
         {pastEvents.length > 0 && (
           <div>
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Past Events
-            </h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">Past Events</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {pastEvents.map((event: EventItem) => (
                 <Link
@@ -137,6 +129,11 @@ export default function EventsPage() {
                     >
                       {types[event.type as 'trackday' | 'simracing']}
                     </div>
+                    {event.soldOut && (
+                      <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-black text-white rotate-0 m-2 rounded">
+                        {t('event.soldOut')}
+                      </div>
+                    )}
                   </div>
 
                   <div className="p-4">
