@@ -6,14 +6,26 @@ interface RegisterButtonProps {
 }
 
 export default function RegisterButton({ label, disabled }: RegisterButtonProps) {
+  const scrollToBooking = () => {
+    // Find the booking section element
+    const bookingSection = document.getElementById('booking');
+    
+    // If the element exists, scroll to it smoothly
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <button 
       className={`btn-primary w-full justify-center ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
       onClick={(e) => {
         e.preventDefault();
-        // In the future, this could open a registration modal or navigate to a form
         if (!disabled) {
-          console.log('Registration button clicked');
+          scrollToBooking();
         }
       }}
       disabled={disabled}

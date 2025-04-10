@@ -166,9 +166,6 @@ const bookingFormSchema = z.object({
   experience: z.string().min(1, {
     message: "Please select your experience level.",
   }),
-  carDetails: z.string().min(1, {
-    message: "Please provide your car details.",
-  }),
   message: z.string().optional(),
 });
 
@@ -189,7 +186,6 @@ const BookingForm = ({ event }: { event: EventItem }) => {
       email: '',
       phone: '',
       experience: '',
-      carDetails: '',
       message: '',
     },
   });
@@ -357,22 +353,6 @@ const BookingForm = ({ event }: { event: EventItem }) => {
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="carDetails"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-sm font-medium text-muted-foreground">
-                    {t('bookingSection.form.carDetails')}
-                  </FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder="Make, model, year" />
-                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
