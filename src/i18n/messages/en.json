@@ -153,6 +153,7 @@
     "description": "Join us at these upcoming trackdays and simracing events where Auriga Racing will compete",
     "fullCalendar": "Full Racing Calendar",
     "track": "Circuit of {track}",
+    "pastEvents": "Past Events",
     "event": {
       "title": "Trackday at {track}",
       "description": "Join us for a trackday at {track} on {date}",

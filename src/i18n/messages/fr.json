@@ -149,6 +149,7 @@
     "description": "Rejoignez-nous lors de ces prochains trackdays et événements de simracing où Auriga Racing sera présent",
     "fullCalendar": "Calendrier complet des courses",
     "track": "Circuit de {track}",
+    "pastEvents": "Événements passés",
     "event": {
       "title": "Trackday à {track}",
       "description": "Rejoignez-nous pour un trackday à {track} le {date}",

@@ -173,8 +173,8 @@ export default async function EventPage({
       </div>
       <div className="container mx-auto py-12 px-4 md:px-6">
         {/* Related events */}
-        <div className="mt-12">
-          <h2 className="text-xl font-bold mb-4">{t('relatedEvents')}</h2>
+        <div>
+          <h2 className="text-xl font-bold mb-8">{t('relatedEvents')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {events
               .filter((e) => e.id !== eventId && e.track === event.track)

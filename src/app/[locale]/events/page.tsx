@@ -47,7 +47,7 @@ export default function EventsPage() {
         {/* Past Events Section */}
         {pastEvents.length > 0 && (
           <div>
-            <h2 className="text-2xl font-bold mb-8">Past Events</h2>
+            <h2 className="text-2xl font-bold mb-8">{t('pastEvents')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {pastEvents.map((event: EventItem) => (
                 <EventCard key={event.id} event={event} locale={locale} isPast={true} />
