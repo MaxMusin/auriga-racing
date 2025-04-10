@@ -49,7 +49,7 @@ const UpcomingEventsSection = () => {
 
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2 line-clamp-1">
-                  {t('track', { track: tracks[event.track] })}{' '}
+                  {t('event.title', { track: tracks[event.track] })}{' '}
                   {countryFlags[event.country as EventItem['country']]}
                 </h3>
 
