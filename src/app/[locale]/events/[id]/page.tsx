@@ -1,4 +1,4 @@
-import { Calendar, Clock, Flag, MapPin, Users, Car, XCircle } from 'lucide-react';
+import { Calendar, Clock, Flag, MapPin, Users, Car } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
