@@ -8,6 +8,7 @@ export interface EventItem {
   type: 'trackday' | 'simracing';
   track: string;
   country: 'belgium' | 'france' | 'netherlands';
+  soldOut?: boolean;
 }
 
 export const countryFlags: Record<EventItem['country'], string> = {
@@ -53,6 +54,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'spa-francorchamps',
     country: 'belgium',
+    soldOut: true,
   },
   {
     id: 'spa-2025-03-27',
@@ -61,6 +63,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'spa-francorchamps',
     country: 'belgium',
+    soldOut: true,
   },
   {
     id: 'mettet-2025-04-29',
@@ -69,6 +72,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'mettet',
     country: 'belgium',
+    soldOut: true,
   },
   {
     id: 'mettet-2025-05-26',
@@ -77,6 +81,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'mettet',
     country: 'belgium',
+    soldOut: false,
   },
   {
     id: 'clastres-2025-06-27',
@@ -85,6 +90,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'clastres',
     country: 'france',
+    soldOut: false,
   },
   {
     id: 'magny-cours-2025-08-20',
@@ -93,6 +99,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'magny-cours',
     country: 'france',
+    soldOut: false,
   },
   {
     id: 'clastres-2025-08-28',
@@ -101,6 +108,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'clastres',
     country: 'france',
+    soldOut: false,
   },
   {
     id: 'clastres-2025-09-18',
@@ -109,6 +117,7 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'clastres',
     country: 'france',
+    soldOut: false,
   },
   {
     id: 'zandvoort-2025-10-17',
@@ -117,5 +126,6 @@ export const events: EventItem[] = [
     type: 'trackday',
     track: 'zandvoort',
     country: 'netherlands',
+    soldOut: false,
   },
 ];

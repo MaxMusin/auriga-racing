@@ -1,4 +1,4 @@
-import { Calendar, Clock, Flag, MapPin, ArrowLeft, Users, Car } from 'lucide-react';
+import { Calendar, Clock, Flag, MapPin, ArrowLeft, Users, Car, XCircle } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -66,15 +66,20 @@ export default async function EventPage({ params }: { params: { id: string; loca
             } text-white`}>
               {types[event.type]}
             </div>
+            
+            {event.soldOut && (
+              <div className="absolute top-4 right-4 py-2 px-4 text-sm font-bold bg-racing-black text-white rounded">
+                {t('event.soldOut')}
+              </div>
+            )}
           </div>
         </div>
 
         {/* Event details */}
         <div className="bg-card rounded-lg p-6 shadow-md">
           <h1 className="text-2xl font-bold mb-4">
-            {t('track', { track: trackName })} {countryFlags[event.country]}
+            {t('event.title', { track: trackName })} {countryFlags[event.country]}
           </h1>
-          
           <div className="space-y-4">
             <div className="flex items-center">
               <Calendar className="h-5 w-5 mr-3 text-racing-red" />
@@ -126,7 +131,10 @@ export default async function EventPage({ params }: { params: { id: string; loca
           </div>
 
           <div className="mt-8">
-            <RegisterButton label={t('registerForEvent')} />
+            <RegisterButton 
+              label={event.soldOut ? t('joinWaitingList') : t('registerForEvent')} 
+              disabled={event.soldOut}
+            />
           </div>
         </div>
       </div>
@@ -182,6 +190,12 @@ export default async function EventPage({ params }: { params: { id: string; loca
                   >
                     {types[relatedEvent.type]}
                   </div>
+                  
+                  {relatedEvent.soldOut && (
+                    <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-black text-white m-2 rounded">
+                      {t('event.soldOut')}
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-4">
@@ -194,6 +208,12 @@ export default async function EventPage({ params }: { params: { id: string; loca
                     <Calendar className="h-4 w-4 mr-2" />
                     <span>{formatEventDate(relatedEvent.date, params.locale)}</span>
                   </div>
+                  
+                  {relatedEvent.soldOut && (
+                    <div className="text-sm font-semibold text-racing-red mt-2">
+                      {t('event.soldOut')}
+                    </div>
+                  )}
                 </div>
               </Link>
             ))}

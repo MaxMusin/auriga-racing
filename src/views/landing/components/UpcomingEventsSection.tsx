@@ -11,6 +11,13 @@ const UpcomingEventsSection = () => {
   const t = useTranslations('events');
   const locale = useLocale();
 
+  // Filter upcoming events (after current date) and take only the next 4
+  const currentDate = new Date(2025, 3, 10); // April 10, 2025
+  const upcomingEvents = events
+    .filter((event) => event.date > currentDate)
+    .sort((a, b) => a.date.getTime() - b.date.getTime())
+    .slice(0, 4);
+
   return (
     <section id="events" className="section-padding bg-card clip-diagonal">
       <div className="container mx-auto">
@@ -22,7 +29,7 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {events.map((event: EventItem) => (
+          {upcomingEvents.map((event: EventItem) => (
             <Link
               key={event.id}
               href={`/events/${event.id}`}
@@ -45,6 +52,12 @@ const UpcomingEventsSection = () => {
                 >
                   {types[event.type as 'trackday' | 'simracing']}
                 </div>
+                
+                {event.soldOut && (
+                  <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-black text-white rotate-0 m-2 rounded">
+                    {t('event.soldOut')}
+                  </div>
+                )}
               </div>
 
               <div className="p-4">
