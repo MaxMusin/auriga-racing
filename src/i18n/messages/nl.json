@@ -190,7 +190,7 @@
         "community": "Word lid van een gemeenschap van gepassioneerde race-enthousiastelingen"
       },
       "eventDetails": "Evenementinformatie",
-      "spotsLeft": "{spots} plaatsen beschikbaar",
+      "sessionsLeft": "{sessions} plaatsen beschikbaar",
       "form": {
         "title": "Registratieformulier",
         "firstName": "Voornaam*",

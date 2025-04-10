@@ -1,7 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CalendarCheck, Check, Car, Users } from 'lucide-react';
+import { CalendarCheck, Check, MapPin, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -26,9 +26,9 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { EventItem, formatEventDate, tracks } from '@/data/events';
 import { useToast } from '@/hooks/use-toast';
 import { sendContactEmail } from '@/lib/actions';
-import { EventItem, formatEventDate, tracks } from '@/data/events';
 
 // Define props for the BookingSection component
 interface BookingSectionProps {
@@ -40,7 +40,7 @@ const BookingSection = ({ event, locale }: BookingSectionProps) => {
   const t = useTranslations('events');
   const trackName = tracks[event.track];
   const formattedDate = formatEventDate(event.date, locale);
-  
+
   return (
     <section
       id="booking"
@@ -66,10 +66,10 @@ const BookingSection = ({ event, locale }: BookingSectionProps) => {
             <div className="h-1 w-24 bg-white mb-8"></div>
 
             <p className="text-lg text-white/80 mb-8">
-              {t('bookingSection.description', { 
-                track: trackName, 
+              {t('bookingSection.description', {
+                track: trackName,
                 date: formattedDate,
-                fallback: `Book your spot for our event at ${trackName} on ${formattedDate}. Limited places available!`
+                fallback: `Book your spot for our event at ${trackName} on ${formattedDate}. Limited places available!`,
               })}
             </p>
 
@@ -117,19 +117,18 @@ const BookingSection = ({ event, locale }: BookingSectionProps) => {
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Car className="text-white mr-3 h-5 w-5" />
-                  <span className="text-white/80">
-                    {trackName}
-                  </span>
+                  <MapPin className="text-white mr-3 h-5 w-5" />
+                  <span className="text-white/80">{t('track', { track: trackName })}</span>
                 </div>
                 <div className="flex items-center">
                   <Users className="text-white mr-3 h-5 w-5" />
                   <span className="text-white/80">
-                    {t('bookingSection.spotsLeft', { 
-                      spots: event.capacity && event.registrations 
-                        ? event.capacity - event.registrations 
-                        : 'Limited',
-                      fallback: 'Limited spots available'
+                    {t('bookingSection.sessionsLeft', {
+                      sessions:
+                        event.capacity && event.registrations
+                          ? event.capacity - event.registrations
+                          : 'Limited',
+                      fallback: 'Limited spots available',
                     })}
                   </span>
                 </div>
@@ -149,22 +148,22 @@ const BookingSection = ({ event, locale }: BookingSectionProps) => {
   );
 };
 
-// Create a booking form schema 
+// Create a booking form schema
 const bookingFormSchema = z.object({
   firstName: z.string().min(2, {
-    message: "First name must be at least 2 characters.",
+    message: 'First name must be at least 2 characters.',
   }),
   lastName: z.string().min(2, {
-    message: "Last name must be at least 2 characters.",
+    message: 'Last name must be at least 2 characters.',
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: 'Please enter a valid email address.',
   }),
   phone: z.string().min(1, {
-    message: "Phone number is required for event registration.",
+    message: 'Phone number is required for event registration.',
   }),
   experience: z.string().min(1, {
-    message: "Please select your experience level.",
+    message: 'Please select your experience level.',
   }),
   message: z.string().optional(),
 });
@@ -199,7 +198,8 @@ const BookingForm = ({ event }: { event: EventItem }) => {
         ...values,
         interest: `Event Booking: ${tracks[event.track]} - ${formatEventDate(event.date)}`,
         // Ensure message is not undefined for the contact form schema
-        message: values.message || `Booking request for ${tracks[event.track]} event`,
+        message:
+          values.message || `Booking request for ${tracks[event.track]} event`,
       };
 
       const result = await sendContactEmail(contactFormData);
@@ -242,10 +242,7 @@ const BookingForm = ({ event }: { event: EventItem }) => {
           <p className="text-muted-foreground mb-6">
             {t('bookingSection.form.confirmationSent')}
           </p>
-          <Button
-            onClick={() => setIsSuccess(false)}
-            className="btn-secondary"
-          >
+          <Button onClick={() => setIsSuccess(false)} className="btn-secondary">
             {t('bookingSection.form.bookAnother')}
           </Button>
         </div>
@@ -334,7 +331,9 @@ const BookingForm = ({ event }: { event: EventItem }) => {
                     <FormControl>
                       <SelectTrigger>
                         <SelectValue
-                          placeholder={t('bookingSection.form.experience.placeholder')}
+                          placeholder={t(
+                            'bookingSection.form.experience.placeholder',
+                          )}
                         />
                       </SelectTrigger>
                     </FormControl>
@@ -380,12 +379,12 @@ const BookingForm = ({ event }: { event: EventItem }) => {
 
             <Button
               type="submit"
-              className="btn-primary w-full py-3"
+              className="btn-primary w-full py-3 !mt-8"
               disabled={isSubmitting || event.soldOut}
             >
-              {isSubmitting 
-                ? t('bookingSection.form.submitting') 
-                : event.soldOut 
+              {isSubmitting
+                ? t('bookingSection.form.submitting')
+                : event.soldOut
                   ? t('bookingSection.form.soldOut')
                   : t('bookingSection.form.submit')}
             </Button>

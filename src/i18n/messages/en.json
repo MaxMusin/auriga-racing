@@ -191,7 +191,7 @@
         "community": "Join a community of passionate racing enthusiasts"
       },
       "eventDetails": "Event Information",
-      "spotsLeft": "{spots} spots remaining",
+      "sessionsLeft": "{sessions} sessions remaining",
       "form": {
         "title": "Registration Form",
         "firstName": "First Name*",

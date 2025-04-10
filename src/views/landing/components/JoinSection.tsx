@@ -364,7 +364,7 @@ function ContactForm() {
 
           <Button
             type="submit"
-            className="btn-primary w-full py-3"
+            className="btn-primary w-full py-3 !mt-8"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Sending...' : t('form.submit')}

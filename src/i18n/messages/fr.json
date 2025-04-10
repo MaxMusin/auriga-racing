@@ -187,7 +187,7 @@
         "community": "Rejoignez une communauté de passionnés de course"
       },
       "eventDetails": "Informations sur l'événement",
-      "spotsLeft": "{spots} places restantes",
+      "sessionsLeft": "{sessions} sessions restantes",
       "form": {
         "title": "Formulaire d'inscription",
         "firstName": "Prénom*",
