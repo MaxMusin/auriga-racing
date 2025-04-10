@@ -31,7 +31,7 @@ const tracks: Record<string, string> = {
   'spa-francorchamps': 'Spa-Francorchamps',
   mettet: 'Mettet',
   clastres: 'Clastres',
-  'magny-court': 'Magny-Court',
+  'magny-cours': 'Magny-Cours',
   zandvoort: 'Zandvoort',
 };
 
@@ -81,7 +81,7 @@ const items = [
     date: '20 août 2025',
     time: '9h30 - 18h00',
     type: 'trackday',
-    track: 'magny-court',
+    track: 'magny-cours',
     country: 'france',
   },
   {
