@@ -62,6 +62,14 @@ const items = (t: ReturnType<typeof useTranslations>) => [
   },
   {
     id: 4,
+    date: '26 mai 2025',
+    time: '9h00 - 18h00',
+    type: 'trackday',
+    track: 'mettet',
+    country: 'belgium',
+  },
+  {
+    id: 5,
     date: '27 juin 2025',
     time: '9h00 - 18h00',
     type: 'trackday',
@@ -69,7 +77,7 @@ const items = (t: ReturnType<typeof useTranslations>) => [
     country: 'france',
   },
   {
-    id: 5,
+    id: 6,
     date: '20 août 2025',
     time: '9h30 - 18h00',
     type: 'trackday',
@@ -77,7 +85,7 @@ const items = (t: ReturnType<typeof useTranslations>) => [
     country: 'france',
   },
   {
-    id: 6,
+    id: 7,
     date: '28 août 2025',
     time: '9h00 - 18h00',
     type: 'trackday',
@@ -85,7 +93,7 @@ const items = (t: ReturnType<typeof useTranslations>) => [
     country: 'france',
   },
   {
-    id: 7,
+    id: 8,
     date: '18 septembre 2025',
     time: '9h00 - 18h00',
     type: 'trackday',
@@ -93,7 +101,7 @@ const items = (t: ReturnType<typeof useTranslations>) => [
     country: 'france',
   },
   {
-    id: 8,
+    id: 9,
     date: '17 octobre 2025',
     time: '9h30 - 18h00',
     type: 'trackday',
