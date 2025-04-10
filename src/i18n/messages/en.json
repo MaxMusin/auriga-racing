@@ -179,6 +179,50 @@
       "belgium": "Belgium",
       "france": "France",
       "netherlands": "Netherlands"
+    },
+    "bookingSection": {
+      "title": "Book Your Spot",
+      "description": "Secure your place for our event at {track} on {date}. Limited spots available!",
+      "whyBook": "Why book with us?",
+      "benefits": {
+        "coaching": "Professional coaching from experienced drivers",
+        "track": "Full day of track time at premium circuits",
+        "equipment": "Access to safety equipment and technical support",
+        "community": "Join a community of passionate racing enthusiasts"
+      },
+      "eventDetails": "Event Information",
+      "spotsLeft": "{spots} spots remaining",
+      "form": {
+        "title": "Registration Form",
+        "firstName": "First Name*",
+        "lastName": "Last Name*",
+        "email": "Email Address*",
+        "phone": "Phone Number*",
+        "carDetails": "Car Details (Make, Model, Year)*",
+        "experience": {
+          "label": "Your Racing Experience*",
+          "placeholder": "Select your experience level",
+          "none": "None (First Time)",
+          "beginner": "Beginner (0-3 events)",
+          "intermediate": "Intermediate (4-10 events)",
+          "experienced": "Experienced (10+ events)"
+        },
+        "message": {
+          "label": "Additional Information",
+          "placeholder": "Any specific requirements or questions..."
+        },
+        "submit": "Book Now",
+        "submitting": "Processing...",
+        "soldOut": "Sold Out",
+        "disclaimer": "By submitting this form, you agree to our Terms and Conditions for trackday participation.",
+        "thankYou": "Thank You!",
+        "confirmationSent": "Your booking request has been received. We'll send you a confirmation email with further details.",
+        "bookAnother": "Book Another Event",
+        "successTitle": "Booking Successful",
+        "successMessage": "Your booking has been confirmed. Check your email for details.",
+        "errorTitle": "Booking Error",
+        "errorMessage": "There was a problem processing your booking. Please try again."
+      }
     }
   },
   "footer": {

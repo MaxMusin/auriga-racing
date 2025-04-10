@@ -14,6 +14,7 @@ import {
   tracks,
   types,
 } from '@/data/events';
+import BookingSection from '@/views/events/components/BookingSection';
 
 export async function generateMetadata({
   params,
@@ -188,6 +189,9 @@ export default async function EventPage({
           </div>
         </div>
       </div>
+      
+      {/* Booking section */}
+      <BookingSection event={event} locale={locale} />
     </div>
   );
 }
