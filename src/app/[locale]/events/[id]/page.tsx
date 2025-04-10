@@ -9,8 +9,8 @@ import EventCard from '@/components/EventCard';
 // Import the event data
 import { events, tracks, types, countryFlags, formatEventDate } from '@/data/events';
 
-export async function generateMetadata({ params }: { params: { id: string; locale: string } }) {
-  const eventId = params.id;
+export async function generateMetadata({ params }: { params: Promise<{ id: string; locale: string }> }) {
+  const { id: eventId, locale } = await params;
   const event = events.find((e) => e.id === eventId);
 
   if (!event) {
@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: { params: { id: string; local
   
   return {
     title: t('event.title', { track: trackName }),
-    description: `${t('event.description', { track: trackName, date: formatEventDate(event.date, params.locale) })}`,
+    description: `${t('event.description', { track: trackName, date: formatEventDate(event.date, locale) })}`,
   };
 }
 
-export default async function EventPage({ params }: { params: { id: string; locale: string } }) {
-  const eventId = params.id;
+export default async function EventPage({ params }: { params: Promise<{ id: string; locale: string }> }) {
+  const { id: eventId, locale } = await params;
   const event = events.find((e) => e.id === eventId);
 
   if (!event) {
@@ -80,7 +80,7 @@ export default async function EventPage({ params }: { params: { id: string; loca
               <Calendar className="h-5 w-5 mr-3 text-racing-red" />
               <div>
                 <p className="text-sm text-muted-foreground">{t('date')}</p>
-                <p className="font-medium">{formatEventDate(event.date, params.locale)}</p>
+                <p className="font-medium">{formatEventDate(event.date, locale)}</p>
               </div>
             </div>
             
@@ -169,7 +169,7 @@ export default async function EventPage({ params }: { params: { id: string; loca
               <EventCard 
                 key={relatedEvent.id} 
                 event={relatedEvent} 
-                locale={params.locale} 
+                locale={locale} 
               />
             ))}
         </div>
