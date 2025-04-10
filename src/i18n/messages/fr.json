@@ -144,14 +144,30 @@
     }
   },
   "events": {
-    "title": "Trackdays à venir",
+    "title": "Événements à venir",
     "subtitle": "Sur circuit",
-    "description": "Rejoignez-nous lors de nos prochains trackdays où Auriga Racing participera.",
-    "fullCalendar": "Calendrier complet des trackdays",
+    "description": "Rejoignez-nous lors de ces prochains trackdays et événements de simracing où Auriga Racing sera présent",
+    "fullCalendar": "Calendrier complet",
     "track": "Circuit de {track}",
     "event": {
-      "title": "Trackday à {track}"
+      "title": "Trackday à {track}",
+      "description": "Rejoignez-nous pour un trackday à {track} le {date}",
+      "detailedDescription": "Rejoignez-nous pour un passionnant trackday à {track} en {country}. Vivez l'excitation de la course sur ce circuit incroyable avec Auriga Racing.",
+      "whatToExpect": "Pendant cet événement, vous aurez l'opportunité d'améliorer vos compétences de pilotage, de recevoir des conseils de pilotes expérimentés et de profiter d'une journée complète sur circuit dans un environnement sûr et contrôlé.",
+      "requirements": "Les participants doivent avoir un permis de conduire valide et leur propre véhicule en bon état. L'équipement de sécurité sera vérifié avant l'événement. Veuillez arriver au moins 30 minutes avant l'heure de début pour l'enregistrement et le briefing."
     },
+    "backToEvents": "Retour aux événements",
+    "date": "Date",
+    "time": "Horaire",
+    "location": "Lieu",
+    "eventType": "Type d'événement",
+    "participants": "Participants",
+    "maxParticipants": "Maximum {count} participants",
+    "trackLength": "Longueur du circuit",
+    "kilometers": "{length} km",
+    "registerForEvent": "S'inscrire à cet événement",
+    "eventDetails": "Détails de l'événement",
+    "relatedEvents": "Autres événements sur ce circuit",
     "countries": {
       "belgium": "Belgique",
       "france": "France",

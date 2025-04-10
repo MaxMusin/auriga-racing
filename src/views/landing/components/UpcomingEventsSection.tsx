@@ -4,111 +4,8 @@ import Header from '@/components/Header';
 import { Calendar, Clock, Flag, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-
-interface EventItem {
-  id: number;
-  event: string;
-  date: string;
-  time: string;
-  location: string;
-  type: 'trackday' | 'simracing';
-  track: string;
-  country: 'belgium' | 'france' | 'netherlands';
-}
-
-const countryFlags: Record<EventItem['country'], string> = {
-  belgium: '🇧🇪',
-  france: '🇫🇷',
-  netherlands: '🇳🇱',
-};
-
-const types = {
-  trackday: 'Trackday',
-  simracing: 'Simracing',
-};
-
-const tracks: Record<string, string> = {
-  'spa-francorchamps': 'Spa-Francorchamps',
-  mettet: 'Mettet',
-  clastres: 'Clastres',
-  'magny-cours': 'Magny-Cours',
-  zandvoort: 'Zandvoort',
-};
-
-const items = [
-  {
-    id: 1,
-    date: '26 mars 2025',
-    time: '9h30 - 18h00',
-    type: 'trackday',
-    track: 'spa-francorchamps',
-    country: 'belgium',
-  },
-  {
-    id: 2,
-    date: '27 mars 2025',
-    time: '9h30 - 18h00',
-    type: 'trackday',
-    track: 'spa-francorchamps',
-    country: 'belgium',
-  },
-  {
-    id: 3,
-    date: '29 avril 2025',
-    time: '9h00 - 18h00',
-    type: 'trackday',
-    track: 'mettet',
-    country: 'belgium',
-  },
-  {
-    id: 4,
-    date: '26 mai 2025',
-    time: '9h00 - 18h00',
-    type: 'trackday',
-    track: 'mettet',
-    country: 'belgium',
-  },
-  {
-    id: 5,
-    date: '27 juin 2025',
-    time: '9h00 - 18h00',
-    type: 'trackday',
-    track: 'clastres',
-    country: 'france',
-  },
-  {
-    id: 6,
-    date: '20 août 2025',
-    time: '9h30 - 18h00',
-    type: 'trackday',
-    track: 'magny-cours',
-    country: 'france',
-  },
-  {
-    id: 7,
-    date: '28 août 2025',
-    time: '9h00 - 18h00',
-    type: 'trackday',
-    track: 'clastres',
-    country: 'france',
-  },
-  {
-    id: 8,
-    date: '18 septembre 2025',
-    time: '9h00 - 18h00',
-    type: 'trackday',
-    track: 'clastres',
-    country: 'france',
-  },
-  {
-    id: 9,
-    date: '17 octobre 2025',
-    time: '9h30 - 18h00',
-    type: 'trackday',
-    track: 'zandvoort',
-    country: 'netherlands',
-  },
-];
+import Link from 'next/link';
+import { items, tracks, types, countryFlags, EventItem } from '@/data/events';
 
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
@@ -124,10 +21,11 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items.map((event) => (
-            <div
+          {items.map((event: EventItem) => (
+            <Link
               key={event.id}
-              className="bg-background rounded-lg overflow-hidden shadow-md card-hover"
+              href={`/events/${event.id}`}
+              className="block bg-background rounded-lg overflow-hidden shadow-md card-hover"
             >
               <div className="h-48 overflow-hidden relative">
                 <Image
@@ -169,7 +67,7 @@ const UpcomingEventsSection = () => {
                   <span className="line-clamp-1">{`${t('track', { track: tracks[event.track] })}, ${t('countries.' + event.country)}`}</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
