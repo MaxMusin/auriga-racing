@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import UpcomingEventsSection from './components/UpcomingEventsSection';
 import TeamsSection from './components/TeamsSection';
 import JoinSection from './components/JoinSection';
-import Footer from './components/Footer';
+import Footer from '../../components/Footer';
 import GallerySection from './components/GallerySection';
 
 const LandingView = () => {
@@ -17,7 +17,6 @@ const LandingView = () => {
       <TeamsSection />
       <GallerySection />
       <JoinSection />
-      <Footer />
     </>
   );
 };

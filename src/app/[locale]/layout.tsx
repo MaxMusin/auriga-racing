@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import '../globals.css';
 import { IntlProvider } from './providers';
+import Footer from '@/components/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -38,6 +39,7 @@ export default async function LocaleLayout(props: Props) {
       {/* This component checks for user language preferences and applies them */}
       <LanguageInitializer />
       {props.children}
+      <Footer />
     </IntlProvider>
   );
 }
