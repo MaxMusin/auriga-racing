@@ -156,10 +156,11 @@
     "event": {
       "title": "Trackday à {track}",
       "description": "Rejoignez-nous pour un trackday à {track} le {date}",
-      "detailedDescription": "Rejoignez-nous pour un trackday passionnant à {track} en {country}. Vivez l'expérience de la course sur ce circuit incroyable avec Auriga Racing.",
-      "whatToExpect": "Pendant cet événement, vous aurez l'opportunité d'améliorer vos compétences de conduite, de recevoir des conseils de pilotes expérimentés et de profiter d'une journée complète sur circuit dans un environnement sûr et contrôlé.",
+      "detailedDescription": "Rejoignez-nous pour un trackday passionnant à {track} en {country}. Vivez le frisson de la course sur ce circuit incroyable avec Auriga Racing.",
+      "whatToExpect": "Au cours de cet événement, vous aurez l'occasion d'améliorer vos compétences de conduite, de recevoir des conseils de pilotes expérimentés et de profiter d'une journée complète de temps de piste dans un environnement sûr et contrôlé.",
       "requirements": "Les participants doivent avoir un permis de conduire valide et leur propre véhicule en bon état. L'équipement de sécurité sera vérifié avant l'événement. Veuillez arriver au moins 30 minutes avant l'heure de début pour l'enregistrement et le briefing.",
-      "soldOut": "Complet"
+      "soldOut": "Complet",
+      "booked": "Réservé"
     },
     "backToEvents": "Retour aux événements",
     "date": "Date",
