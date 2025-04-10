@@ -1,6 +1,9 @@
+import { format, Locale } from 'date-fns';
+import { fr, enUS, nl } from 'date-fns/locale';
+
 export interface EventItem {
   id: string;
-  date: string;
+  date: Date;
   time: string;
   type: 'trackday' | 'simracing';
   track: string;
@@ -26,10 +29,26 @@ export const tracks: Record<string, string> = {
   zandvoort: 'Zandvoort',
 };
 
+/**
+ * Format a date using date-fns with the specified locale
+ * @param date The date to format
+ * @param localeCode The locale code (e.g., 'fr', 'en')
+ */
+export const formatEventDate = (date: Date, localeCode: string = 'en'): string => {
+  const locales: Record<string, Locale> = {
+    fr,
+    en: enUS,
+    nl,
+  };
+  
+  const locale = locales[localeCode] || enUS;
+  return format(date, 'd MMMM yyyy', { locale });
+};
+
 export const events: EventItem[] = [
   {
     id: 'spa-2025-03-26',
-    date: '26 mars 2025',
+    date: new Date(2025, 2, 26), // March is 2 (0-indexed)
     time: '9h30 - 18h00',
     type: 'trackday',
     track: 'spa-francorchamps',
@@ -37,7 +56,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'spa-2025-03-27',
-    date: '27 mars 2025',
+    date: new Date(2025, 2, 27),
     time: '9h30 - 18h00',
     type: 'trackday',
     track: 'spa-francorchamps',
@@ -45,7 +64,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'mettet-2025-04-29',
-    date: '29 avril 2025',
+    date: new Date(2025, 3, 29),
     time: '9h00 - 18h00',
     type: 'trackday',
     track: 'mettet',
@@ -53,7 +72,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'mettet-2025-05-26',
-    date: '26 mai 2025',
+    date: new Date(2025, 4, 26),
     time: '9h00 - 18h00',
     type: 'trackday',
     track: 'mettet',
@@ -61,7 +80,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'clastres-2025-06-27',
-    date: '27 juin 2025',
+    date: new Date(2025, 5, 27),
     time: '9h00 - 18h00',
     type: 'trackday',
     track: 'clastres',
@@ -69,7 +88,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'magny-cours-2025-08-20',
-    date: '20 août 2025',
+    date: new Date(2025, 7, 20),
     time: '9h30 - 18h00',
     type: 'trackday',
     track: 'magny-cours',
@@ -77,7 +96,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'clastres-2025-08-28',
-    date: '28 août 2025',
+    date: new Date(2025, 7, 28),
     time: '9h00 - 18h00',
     type: 'trackday',
     track: 'clastres',
@@ -85,7 +104,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'clastres-2025-09-18',
-    date: '18 septembre 2025',
+    date: new Date(2025, 8, 18),
     time: '9h00 - 18h00',
     type: 'trackday',
     track: 'clastres',
@@ -93,7 +112,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'zandvoort-2025-10-17',
-    date: '17 octobre 2025',
+    date: new Date(2025, 9, 17),
     time: '9h30 - 18h00',
     type: 'trackday',
     track: 'zandvoort',

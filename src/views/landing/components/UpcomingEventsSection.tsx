@@ -2,13 +2,14 @@
 
 import Header from '@/components/Header';
 import { Calendar, Clock, Flag, MapPin } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { events, tracks, types, countryFlags, EventItem } from '@/data/events';
+import { events, tracks, types, countryFlags, EventItem, formatEventDate } from '@/data/events';
 
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
+  const locale = useLocale();
 
   return (
     <section id="events" className="section-padding bg-card clip-diagonal">
@@ -54,7 +55,7 @@ const UpcomingEventsSection = () => {
 
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
                   <Calendar className="h-4 w-4 mr-2" />
-                  <span>{event.date}</span>
+                  <span>{formatEventDate(event.date, locale)}</span>
                 </div>
 
                 <div className="flex items-center text-sm text-muted-foreground mb-2">

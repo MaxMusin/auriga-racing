@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import RegisterButton from '@/components/RegisterButton';
 
 // Import the event data
-import { events, tracks, types, countryFlags } from '@/data/events';
+import { events, tracks, types, countryFlags, formatEventDate } from '@/data/events';
 
 export async function generateMetadata({ params }: { params: { id: string; locale: string } }) {
   const eventId = params.id;
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { id: string; local
   
   return {
     title: t('event.title', { track: trackName }),
-    description: `${t('event.description', { track: trackName, date: event.date })}`,
+    description: `${t('event.description', { track: trackName, date: formatEventDate(event.date, params.locale) })}`,
   };
 }
 
@@ -80,7 +80,7 @@ export default async function EventPage({ params }: { params: { id: string; loca
               <Calendar className="h-5 w-5 mr-3 text-racing-red" />
               <div>
                 <p className="text-sm text-muted-foreground">{t('date')}</p>
-                <p className="font-medium">{event.date}</p>
+                <p className="font-medium">{formatEventDate(event.date, params.locale)}</p>
               </div>
             </div>
             
@@ -192,7 +192,7 @@ export default async function EventPage({ params }: { params: { id: string; loca
 
                   <div className="flex items-center text-sm text-muted-foreground mb-2">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>{relatedEvent.date}</span>
+                    <span>{formatEventDate(relatedEvent.date, params.locale)}</span>
                   </div>
                 </div>
               </Link>
