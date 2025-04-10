@@ -26,7 +26,7 @@ export const tracks: Record<string, string> = {
   zandvoort: 'Zandvoort',
 };
 
-export const items: EventItem[] = [
+export const events: EventItem[] = [
   {
     id: 'spa-2025-03-26',
     date: '26 mars 2025',

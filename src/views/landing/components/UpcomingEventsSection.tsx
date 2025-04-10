@@ -5,7 +5,7 @@ import { Calendar, Clock, Flag, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { items, tracks, types, countryFlags, EventItem } from '@/data/events';
+import { events, tracks, types, countryFlags, EventItem } from '@/data/events';
 
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
@@ -21,7 +21,7 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items.map((event: EventItem) => (
+          {events.map((event: EventItem) => (
             <Link
               key={event.id}
               href={`/events/${event.id}`}

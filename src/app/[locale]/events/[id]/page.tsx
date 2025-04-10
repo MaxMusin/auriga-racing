@@ -6,11 +6,11 @@ import { notFound } from 'next/navigation';
 import RegisterButton from '@/components/RegisterButton';
 
 // Import the event data
-import { items, tracks, types, countryFlags } from '@/data/events';
+import { events, tracks, types, countryFlags } from '@/data/events';
 
 export async function generateMetadata({ params }: { params: { id: string; locale: string } }) {
   const eventId = params.id;
-  const event = items.find((e) => e.id === eventId);
+  const event = events.find((e) => e.id === eventId);
 
   if (!event) {
     return {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: { id: string; local
 
 export default async function EventPage({ params }: { params: { id: string; locale: string } }) {
   const eventId = params.id;
-  const event = items.find((e) => e.id === eventId);
+  const event = events.find((e) => e.id === eventId);
 
   if (!event) {
     notFound();
@@ -159,7 +159,7 @@ export default async function EventPage({ params }: { params: { id: string; loca
       <div className="mt-12">
         <h2 className="text-xl font-bold mb-4">{t('relatedEvents')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {items
+          {events
             .filter(e => e.id !== eventId && e.track === event.track)
             .slice(0, 3)
             .map(relatedEvent => (
