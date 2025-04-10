@@ -1,10 +1,10 @@
 import { Calendar, Clock, Flag, MapPin, Users, Car, XCircle } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import RegisterButton from '@/components/RegisterButton';
 import BackButton from '@/components/BackButton';
+import EventCard from '@/components/EventCard';
 
 // Import the event data
 import { events, tracks, types, countryFlags, formatEventDate } from '@/data/events';
@@ -166,51 +166,11 @@ export default async function EventPage({ params }: { params: { id: string; loca
             .filter(e => e.id !== eventId && e.track === event.track)
             .slice(0, 3)
             .map(relatedEvent => (
-              <Link
-                key={relatedEvent.id}
-                href={`/events/${relatedEvent.id}`}
-                className="block bg-background rounded-lg overflow-hidden shadow-md card-hover"
-              >
-                <div className="h-40 overflow-hidden relative">
-                  <Image
-                    fill
-                    src={`/images/${relatedEvent.track}.jpg`}
-                    alt={tracks[relatedEvent.track]}
-                    className="w-full h-full object-cover"
-                  />
-                  <div
-                    className={`absolute bottom-0 left-0 py-1 px-3 text-xs font-semibold ${
-                      relatedEvent.type === 'trackday' ? 'bg-racing-red' : 'bg-racing-black'
-                    } text-white`}
-                  >
-                    {types[relatedEvent.type]}
-                  </div>
-                  
-                  {relatedEvent.soldOut && (
-                    <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-black text-white m-2 rounded">
-                      {t('event.soldOut')}
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-4">
-                  <h3 className="text-lg font-bold mb-2 line-clamp-1">
-                    {t('track', { track: tracks[relatedEvent.track] })}{' '}
-                    {countryFlags[relatedEvent.country]}
-                  </h3>
-
-                  <div className="flex items-center text-sm text-muted-foreground mb-2">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>{formatEventDate(relatedEvent.date, params.locale)}</span>
-                  </div>
-                  
-                  {relatedEvent.soldOut && (
-                    <div className="text-sm font-semibold text-racing-red mt-2">
-                      {t('event.soldOut')}
-                    </div>
-                  )}
-                </div>
-              </Link>
+              <EventCard 
+                key={relatedEvent.id} 
+                event={relatedEvent} 
+                locale={params.locale} 
+              />
             ))}
         </div>
       </div>
