@@ -174,6 +174,81 @@
       "netherlands": "Pays-Bas"
     }
   },
+  "contact": {
+    "meta": {
+      "title": "Contactez-nous | Auriga Racing",
+      "description": "Prenez contact avec l'équipe Auriga Racing pour toute question concernant nos trackdays, notre équipe de simracing ou pour devenir partenaire."
+    },
+    "hero": {
+      "title": "Contactez-nous",
+      "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions"
+    },
+    "contactInfo": {
+      "title": "Restons en contact",
+      "description": "Que vous soyez intéressé par nos trackdays, notre équipe de simracing, ou si vous souhaitez simplement en savoir plus sur Auriga Racing, n'hésitez pas à nous contacter.",
+      "whyContactUs": "Comment pouvons-nous vous aider ?",
+      "reasons": {
+        "events": "Informations sur nos prochains événements et trackdays",
+        "membership": "Rejoindre notre équipe ou devenir membre",
+        "partnership": "Opportunités de partenariat et de sponsoring",
+        "support": "Support technique et questions générales"
+      },
+      "details": {
+        "title": "Coordonnées",
+        "address": "Auriga ASBL, Rue de Spa 1, 4970 Stavelot, Belgique"
+      }
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "firstName": {
+        "label": "Prénom",
+        "placeholder": "Votre prénom"
+      },
+      "lastName": {
+        "label": "Nom",
+        "placeholder": "Votre nom"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "votre.email@exemple.com"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "Votre numéro de téléphone"
+      },
+      "interest": {
+        "label": "Je suis intéressé par",
+        "placeholder": "Sélectionnez une option",
+        "trackday": "Trackdays",
+        "simracing": "Simracing",
+        "partnership": "Partenariat",
+        "other": "Autre"
+      },
+      "experience": {
+        "label": "Niveau d'expérience",
+        "placeholder": "Sélectionnez votre niveau",
+        "none": "Débutant",
+        "beginner": "Novice (1-2 ans)",
+        "intermediate": "Intermédiaire (3-5 ans)",
+        "experienced": "Expérimenté (5+ ans)"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Votre message..."
+      },
+      "submit": "Envoyer",
+      "submitting": "Envoi en cours...",
+      "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.",
+      "success": {
+        "title": "Message envoyé !",
+        "message": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+      },
+      "error": {
+        "title": "Erreur",
+        "message": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+      }
+    }
+  },
   "footer": {
     "tagline": "Repousser les limites sur piste et en ligne.",
     "description": "Vivez le frisson du sport automobile avec nos leçons de conduite sur circuit et une équipe de simulation de course soudée.",
