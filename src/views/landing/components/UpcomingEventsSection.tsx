@@ -1,11 +1,18 @@
 'use client';
 
 import Header from '@/components/Header';
-import { Calendar, Clock, Flag, MapPin } from 'lucide-react';
-import { useTranslations, useLocale } from 'next-intl';
+import {
+  countryFlags,
+  EventItem,
+  events,
+  formatEventDate,
+  tracks,
+  types,
+} from '@/data/events';
+import { Calendar, Clock, MapPin } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { events, tracks, types, countryFlags, EventItem, formatEventDate } from '@/data/events';
 
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
@@ -52,7 +59,7 @@ const UpcomingEventsSection = () => {
                 >
                   {types[event.type as 'trackday' | 'simracing']}
                 </div>
-                
+
                 {event.soldOut && (
                   <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-black text-white rotate-0 m-2 rounded">
                     {t('event.soldOut')}
@@ -87,7 +94,7 @@ const UpcomingEventsSection = () => {
 
         <div className="mt-10 text-center">
           <a href="#" className="btn-primary inline-flex items-center">
-            <Flag className="mr-2 h-5 w-5" />
+            <Calendar className="mr-2 h-5 w-5" />
             {t('fullCalendar')}
           </a>
         </div>
