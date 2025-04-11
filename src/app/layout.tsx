@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Analytics } from "@vercel/analytics/react"
+import { defaultLocale } from '@/i18n/i18n';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,9 +25,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // The middleware will handle the locale redirection
+  // We'll use the default locale for the initial render
+  // The [locale] layout will handle updating the lang attribute via DOM manipulation
   return (
-    <html lang="en">
+    <html lang={defaultLocale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

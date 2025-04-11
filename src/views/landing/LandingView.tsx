@@ -1,24 +1,20 @@
 import AboutSection from './components/AboutSection';
-import HeroSection from './components/HeroSection';
-import Navbar from '../../components/Navbar';
-import UpcomingEventsSection from './components/UpcomingEventsSection';
-import TeamsSection from './components/TeamsSection';
-import JoinSection from './components/JoinSection';
-import Footer from './components/Footer';
 import GallerySection from './components/GallerySection';
+import HeroSection from './components/HeroSection';
+import JoinSection from './components/JoinSection';
+import TeamsSection from './components/TeamsSection';
+import UpcomingEventsSection from './components/UpcomingEventsSection';
 
 const LandingView = () => {
   return (
-    <>
-      <Navbar />
+    <div>
       <HeroSection />
       <UpcomingEventsSection />
       <AboutSection />
       <TeamsSection />
       <GallerySection />
       <JoinSection />
-      <Footer />
-    </>
+    </div>
   );
 };
 

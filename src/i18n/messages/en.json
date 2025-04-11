@@ -5,18 +5,18 @@
   },
   "navbar": {
     "links": {
-      "events": "Events",
+      "events": "Trackdays",
       "about": "About",
       "teams": "Teams",
       "gallery": "Gallery"
     },
-    "cta": "Join Us"
+    "cta": "Get in touch"
   },
   "hero": {
     "title": "Pushing limits",
     "subtitle": "On track & online",
     "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
-    "cta": "Come in trackday",
+    "cta": "Our trackdays",
     "pitlane": "Pitlane",
     "simracingTeam": "Simracing Team"
   },
@@ -24,7 +24,7 @@
     "title": "Passion for racing",
     "subtitle": "Our Story",
     "paragraph1": "Founded by passionate motorsport enthusiasts, our team has evolved from weekend racers to a professional racing organization with both real-world and virtual racing divisions.",
-    "paragraph2": "With a dedicated crew of experienced drivers, engineers, and strategists, we provide extraordinary trackday experiences and competitive simracing teams that push the boundaries of what's possible.",
+    "paragraph2": "With a dedicated crew of experienced drivers, engineers, strategists and coaches, we provide extraordinary trackday experiences and competitive simracing teams that push the boundaries of what's possible.",
     "cta": "Discover Our Services",
     "stats": {
       "trackdays": {
@@ -48,6 +48,7 @@
   },
   "teams": {
     "title": "Our teams",
+    "subtitle": "",
     "description": "Auriga Racing is active across multiple disciplines, from real-world in Fun Cup events to serious simracing competitions",
     "track": {
       "title": "Fun Cup",
@@ -72,15 +73,23 @@
   },
   "gallery": {
     "title": "Gallery",
+    "subtitle": "",
     "description": "Moments captured from our racing adventures, both on the track and in the virtual world",
     "viewFullGallery": "View Full Gallery",
     "images": {
-      "image1": "Fun Cup Race at Silverstone",
-      "image2": "Team preparation before race day",
-      "image3": "Simracing competition finals",
-      "image4": "Pit stop during endurance race",
-      "image5": "Team celebration after podium finish",
-      "image6": "Simracing training session"
+      "image1": "Fun Cup is warming up",
+      "image2": "Ready to go",
+      "image3": "Last checks before the trackday starts",
+      "image4": "Coach is comfortable to go",
+      "image5": "Driver of the day is ready to jump on track",
+      "image6": "Our #333 in action",
+      "image7": "You can't miss where we are",
+      "image8": "The box",
+      "image9": "Friendly space",
+      "image10": "Catering for our drivers of the day",
+      "image11": "Time to switch driver of the day",
+      "image12": "Our #333 during the break",
+      "image13": "Team photo at end of the day"
     },
     "aria": {
       "prevSlide": "Previous slide",
@@ -147,47 +156,82 @@
   },
   "events": {
     "title": "Upcoming events",
-    "subtitle": "What's next",
+    "subtitle": "On track",
     "description": "Join us at these upcoming trackdays and simracing events where Auriga Racing will compete",
     "fullCalendar": "Full Racing Calendar",
-    "types": {
-      "track": "Track",
-      "sim": "SimRacing"
+    "track": "Circuit of {track}",
+    "pastEvents": "Past Events",
+    "event": {
+      "title": "Trackday at {track}",
+      "description": "Join us for a trackday at {track} on {date}",
+      "detailedDescription": "Join us for an exciting trackday at {track} in {country}. Experience the thrill of racing on this amazing circuit with Auriga Racing.",
+      "whatToExpect": "During this event, you will have the opportunity to improve your driving skills, receive coaching from experienced drivers, and enjoy a full day of track time in a safe and controlled environment.",
+      "requirements": "Participants must have a valid driver's license and their own vehicle in good condition. Safety equipment will be checked before the event. Please arrive at least 30 minutes before the start time for registration and briefing.",
+      "soldOut": "Sold Out",
+      "booked": "Booked"
     },
-    "items": [
-      {
-        "id": 1,
-        "event": "FUNCUP Championship 2024",
-        "date": "June 15-16, 2024",
-        "time": "9:00 AM - 5:00 PM",
-        "location": "Spa-Francorchamps, Belgium",
-        "type": "track"
+    "backToEvents": "Back to events",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "eventType": "Event Type",
+    "participants": "Participants",
+    "maxParticipants": "Maximum {count} participants",
+    "trackLength": "Track Length",
+    "kilometers": "{length} km",
+    "registerForEvent": "Register for this event",
+    "joinWaitingList": "Join Waiting List",
+    "eventDetails": "Event Details",
+    "relatedEvents": "Other events",
+    "countries": {
+      "belgium": "Belgium",
+      "france": "France",
+      "netherlands": "Netherlands"
+    },
+    "bookingSection": {
+      "title": "Book Your Spot",
+      "description": "Secure your place for our event at {track} on {date}. Limited spots available!",
+      "whyBook": "Why book with us?",
+      "benefits": {
+        "coaching": "Professional coaching from experienced drivers",
+        "track": "Full day of track time at premium circuits",
+        "equipment": "Access to safety equipment and technical support",
+        "community": "Join a community of passionate racing enthusiasts"
       },
-      {
-        "id": 2,
-        "event": "World SimRacing League - Round 3",
-        "date": "May 28, 2024",
-        "time": "8:00 PM - 10:00 PM",
-        "location": "Virtual Nürburgring",
-        "type": "sim"
-      },
-      {
-        "id": 3,
-        "event": "European Track Days Cup",
-        "date": "July 12-13, 2024",
-        "time": "10:00 AM - 6:00 PM",
-        "location": "Monza, Italy",
-        "type": "track"
-      },
-      {
-        "id": 4,
-        "event": "Digital Racing Championship - Season 5",
-        "date": "June 5, 2024",
-        "time": "9:00 PM - 11:00 PM",
-        "location": "Virtual Silverstone",
-        "type": "sim"
+      "eventDetails": "Event Information",
+      "sessionsLeft": "{sessions} sessions remaining",
+      "form": {
+        "title": "Registration Form",
+        "firstName": "First Name*",
+        "lastName": "Last Name*",
+        "email": "Email Address*",
+        "phone": "Phone Number*",
+        "carDetails": "Car Details (Make, Model, Year)*",
+        "experience": {
+          "label": "Your Racing Experience*",
+          "placeholder": "Select your experience level",
+          "none": "None (First Time)",
+          "beginner": "Beginner (0-3 events)",
+          "intermediate": "Intermediate (4-10 events)",
+          "experienced": "Experienced (10+ events)"
+        },
+        "message": {
+          "label": "Additional Information",
+          "placeholder": "Any specific requirements or questions..."
+        },
+        "submit": "Book Now",
+        "submitting": "Processing...",
+        "soldOut": "Sold Out",
+        "disclaimer": "By submitting this form, you agree to our Terms and Conditions for trackday participation.",
+        "thankYou": "Thank You!",
+        "confirmationSent": "Your booking request has been received. We'll send you a confirmation email with further details.",
+        "bookAnother": "Book Another Event",
+        "successTitle": "Booking Successful",
+        "successMessage": "Your booking has been confirmed. Check your email for details.",
+        "errorTitle": "Booking Error",
+        "errorMessage": "There was a problem processing your booking. Please try again."
       }
-    ]
+    }
   },
   "footer": {
     "tagline": "We are not just a racing team,",
@@ -196,6 +240,8 @@
     "quickLinks": {
       "title": "Quick Links",
       "home": "Home",
+      "trackdays": "Trackdays",
+      "about": "About",
       "teams": "Our Teams",
       "results": "Results",
       "gallery": "Gallery",

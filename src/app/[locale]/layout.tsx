@@ -1,20 +1,12 @@
+import Footer from '@/components/Footer';
+import HtmlLangSetter from '@/components/HtmlLangSetter';
 import LanguageInitializer from '@/components/LanguageInitializer';
+import Navbar from '@/components/Navbar';
 import { getMessages, Locale } from '@/i18n/i18n';
 import type { Metadata } from 'next';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css';
 import { IntlProvider } from './providers';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 type Props = {
   children: React.ReactNode;
@@ -45,16 +37,14 @@ export default async function LocaleLayout(props: Props) {
   const messages = await getMessages(locale);
 
   return (
-    <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <IntlProvider locale={locale} messages={messages}>
-          {/* This component checks for user language preferences and applies them */}
-          <LanguageInitializer />
-          {props.children}
-        </IntlProvider>
-      </body>
-    </html>
+    <IntlProvider locale={locale} messages={messages}>
+      {/* This component updates the HTML lang attribute on the client side */}
+      <HtmlLangSetter locale={locale} />
+      {/* This component checks for user language preferences and applies them */}
+      <LanguageInitializer />
+      <Navbar />
+      {props.children}
+      <Footer />
+    </IntlProvider>
   );
 }

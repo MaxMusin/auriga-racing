@@ -17,7 +17,7 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
     if (!resendApiKey || resendApiKey === 'test_api_key') {
       console.log('Using test mode - would have sent:');
       console.log({
-        from: 'Auriga Racing <onboarding@resend.dev>',
+        from: 'Auriga Racing <hello@aurigaracing.be>',
         to: ['hello@aurigaracing.be'],
         replyTo: email,
         subject: `Auriga Racing - Form: ${interest} | ${firstName} ${lastName}`,
@@ -28,7 +28,7 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
     }
     
     const { data, error } = await resend.emails.send({
-      from: 'Auriga Racing <onboarding@resend.dev>',
+      from: 'Auriga Racing <hello@aurigaracing.be>',
       to: ['hello@aurigaracing.be'],
       replyTo: email,
       subject: `Auriga Racing - Form: ${interest} | ${firstName} ${lastName}`,

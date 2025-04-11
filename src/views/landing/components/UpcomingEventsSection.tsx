@@ -1,31 +1,25 @@
 'use client';
 
 import Header from '@/components/Header';
-import { Calendar, Clock, Flag, MapPin } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-
-interface EventItem {
-  id: number;
-  event: string;
-  date: string;
-  time: string;
-  location: string;
-  type: 'trackday' | 'simracing';
-  track: string;
-  country: 'belgium' | 'france' | 'netherlands';
-}
-
-const countryFlags: Record<EventItem['country'], string> = {
-  belgium: '🇧🇪',
-  france: '🇫🇷',
-  netherlands: '🇳🇱',
-};
+import {
+  EventItem,
+  events,
+} from '@/data/events';
+import { Calendar } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import Link from 'next/link';
+import EventCard from '@/components/EventCard';
 
 const UpcomingEventsSection = () => {
   const t = useTranslations('events');
+  const locale = useLocale();
 
-  const upcomingEvents = t.raw('items') as EventItem[];
+  // Filter upcoming events (after current date) and take only the next 4
+  const currentDate = new Date(2025, 3, 10); // April 10, 2025
+  const upcomingEvents = events
+    .filter((event) => event.date > currentDate)
+    .sort((a, b) => a.date.getTime() - b.date.getTime())
+    .slice(0, 4);
 
   return (
     <section id="events" className="section-padding bg-card clip-diagonal">
@@ -38,61 +32,16 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {upcomingEvents.map((event) => (
-            <div
-              key={event.id}
-              className="bg-background rounded-lg overflow-hidden shadow-md card-hover"
-            >
-              <div className="h-48 overflow-hidden relative">
-                <Image
-                  fill
-                  src={`/images/${event.track}.jpg`}
-                  alt={event.event}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-                <div
-                  className={`absolute bottom-0 left-0 py-1 px-3 text-xs font-semibold ${
-                    event.type === 'trackday'
-                      ? 'bg-racing-red'
-                      : 'bg-racing-black'
-                  } text-white`}
-                >
-                  {event.type === 'trackday'
-                    ? t('types.trackday')
-                    : t('types.simracing')}
-                </div>
-              </div>
-
-              <div className="p-4">
-                <h3 className="text-lg font-bold mb-2 line-clamp-1">
-                  {event.event} {countryFlags[event.country]}
-                </h3>
-
-                <div className="flex items-center text-sm text-muted-foreground mb-2">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span>{event.date}</span>
-                </div>
-
-                <div className="flex items-center text-sm text-muted-foreground mb-2">
-                  <Clock className="h-4 w-4 mr-2" />
-                  <span>{event.time}</span>
-                </div>
-
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span className="line-clamp-1">{event.location}</span>
-                </div>
-              </div>
-            </div>
+          {upcomingEvents.map((event: EventItem) => (
+            <EventCard key={event.id} event={event} locale={locale} />
           ))}
         </div>
 
         <div className="mt-10 text-center">
-          <a href="#" className="btn-primary inline-flex items-center">
-            <Flag className="mr-2 h-5 w-5" />
+          <Link href="/events" className="btn-primary inline-flex items-center">
+            <Calendar className="mr-2 h-5 w-5" />
             {t('fullCalendar')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
