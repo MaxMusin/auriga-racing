@@ -16,7 +16,7 @@
     "title": "Pushing limits",
     "subtitle": "On track & online",
     "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
-    "cta": "Come in trackday",
+    "cta": "Our trackdays",
     "pitlane": "Pitlane",
     "simracingTeam": "Simracing Team"
   },
@@ -233,6 +233,8 @@
     "quickLinks": {
       "title": "Quick Links",
       "home": "Home",
+      "trackdays": "Trackdays",
+      "about": "About",
       "teams": "Our Teams",
       "results": "Results",
       "gallery": "Gallery",

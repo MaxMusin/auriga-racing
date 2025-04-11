@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useState, FormEvent } from 'react';
 import { subscribeToNewsletter } from '@/utils/brevo';
 import { useToast } from '@/hooks/use-toast';
+import Link from 'next/link';
 
 const Footer = () => {
   const t = useTranslations('footer');
@@ -95,53 +96,63 @@ const Footer = () => {
             </div>
           </div>
 
+          <div></div>
+
           <div>
             <h3 className="text-lg font-bold mb-2 md:mb-6">{t('quickLinks.title')}</h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#home"
+                <Link
+                  href="/"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
                   {t('quickLinks.home')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#teams"
+                <Link
+                  href="/events"
+                  className="text-muted-foreground hover:text-racing-red transition-colors"
+                >
+                  {t('quickLinks.trackdays')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#about"
+                  className="text-muted-foreground hover:text-racing-red transition-colors"
+                >
+                  {t('quickLinks.about')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#teams"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
                   {t('quickLinks.teams')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#results"
-                  className="text-muted-foreground hover:text-racing-red transition-colors"
-                >
-                  {t('quickLinks.results')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#gallery"
+                <Link
+                  href="/#gallery"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
                   {t('quickLinks.gallery')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#join"
+                <Link
+                  href="/#join"
                   className="text-muted-foreground hover:text-racing-red transition-colors"
                 >
                   {t('quickLinks.joinUs')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-lg font-bold mb-2 md:mb-6">{t('resources.title')}</h3>
             <ul className="space-y-3">
               <li>
@@ -185,7 +196,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-lg font-bold mb-2 md:mb-6">{t('newsletter.title')}</h3>
