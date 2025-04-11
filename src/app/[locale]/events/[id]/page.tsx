@@ -1,7 +1,16 @@
 import BackButton from '@/components/BackButton';
 import EventCard from '@/components/EventCard';
 import RegisterButton from '@/components/RegisterButton';
-import { Calendar, Car, Clock, Flag, MapPin, Users } from 'lucide-react';
+import {
+  BadgeEuro,
+  Calendar,
+  Car,
+  CircleDashed,
+  Clock,
+  Flag,
+  MapPin,
+  Users,
+} from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -136,6 +145,25 @@ export default async function EventPage({
                       })}
                     </p>
                   </div>
+
+                  <div className="flex items-center text-sm text-white/80 mb-2">
+                    <BadgeEuro className="h-4 w-4 mr-2" />
+                    <p className="font-semibold">
+                      {`${t('event.sessionPrice', { price: event.sessionPrice, session: event.sessionTime })}`}{' '}
+                      <span className='text-muted-foreground'>&#42;</span>
+                    </p>
+                  </div>
+                  {event.braceletPrice && (
+                    <div className="flex items-center text-sm text-white/80 mb-2">
+                      <CircleDashed className="h-4 w-4 mr-2" />
+                      <p className="font-semibold">
+                        {t('event.braceletPrice', {
+                          price: event.braceletPrice,
+                        })}{' '}
+                        <span className='text-muted-foreground'>&#42;</span>
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
               <div>
@@ -181,6 +209,9 @@ export default async function EventPage({
                         : t('registerForEvent')
                     }
                   />
+                  <p className="text-xs text-muted-foreground text-center mt-4">
+                    * {t('disclaimerPrice')}
+                  </p>
                 </div>
               </div>
             </div>

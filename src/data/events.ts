@@ -1,5 +1,5 @@
 import { format, Locale } from 'date-fns';
-import { fr, enUS, nl } from 'date-fns/locale';
+import { enUS, fr, nl } from 'date-fns/locale';
 
 export interface EventItem {
   id: string;
@@ -11,6 +11,9 @@ export interface EventItem {
   soldOut?: boolean;
   capacity?: number;
   registrations?: number;
+  sessionPrice?: number;
+  sessionTime?: string;
+  braceletPrice?: number;
 }
 
 export const countryFlags: Record<EventItem['country'], string> = {
@@ -37,13 +40,16 @@ export const tracks: Record<string, string> = {
  * @param date The date to format
  * @param localeCode The locale code (e.g., 'fr', 'en')
  */
-export const formatEventDate = (date: Date, localeCode: string = 'en'): string => {
+export const formatEventDate = (
+  date: Date,
+  localeCode: string = 'en',
+): string => {
   const locales: Record<string, Locale> = {
     fr,
     en: enUS,
     nl,
   };
-  
+
   const locale = locales[localeCode] || enUS;
   return format(date, 'd MMMM yyyy', { locale });
 };
@@ -59,6 +65,9 @@ export const events: EventItem[] = [
     soldOut: true,
     capacity: 18,
     registrations: 18,
+    sessionPrice: 200,
+    sessionTime: '20 min',
+    braceletPrice: 50,
   },
   {
     id: 'spa-2025-03-27',
@@ -70,6 +79,9 @@ export const events: EventItem[] = [
     soldOut: true,
     capacity: 18,
     registrations: 18,
+    sessionPrice: 200,
+    sessionTime: '20 min',
+    braceletPrice: 50,
   },
   {
     id: 'mettet-2025-04-29',
@@ -81,6 +93,9 @@ export const events: EventItem[] = [
     soldOut: true,
     capacity: 18,
     registrations: 18,
+    sessionPrice: 150,
+    sessionTime: '20 min',
+    braceletPrice: 50,
   },
   {
     id: 'mettet-2025-05-26',
@@ -92,6 +107,9 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 4,
+    sessionPrice: 150,
+    sessionTime: '20 min',
+    braceletPrice: 50,
   },
   {
     id: 'clastres-2025-06-27',
@@ -103,6 +121,8 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 12,
+    sessionPrice: 150,
+    sessionTime: '20 min',
   },
   {
     id: 'magny-cours-2025-08-20',
@@ -114,6 +134,9 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 8,
+    sessionPrice: 200,
+    sessionTime: '20min',
+    braceletPrice: 50,
   },
   {
     id: 'clastres-2025-08-28',
@@ -125,6 +148,8 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 5,
+    sessionPrice: 150,
+    sessionTime: '20min',
   },
   {
     id: 'clastres-2025-09-18',
@@ -136,6 +161,8 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 3,
+    sessionPrice: 150,
+    sessionTime: '20min',
   },
   {
     id: 'zandvoort-2025-10-17',
@@ -147,5 +174,8 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 9,
+    sessionPrice: 200,
+    sessionTime: '20min',
+    braceletPrice: 50,
   },
 ];

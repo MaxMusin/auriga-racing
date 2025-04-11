@@ -168,7 +168,9 @@
       "whatToExpect": "Tijdens dit evenement krijg je de kans om je rijvaardigheden te verbeteren, coaching te ontvangen van ervaren coureurs en te genieten van een volledige dag circuittijd in een veilige en gecontroleerde omgeving.",
       "requirements": "Deelnemers moeten een geldig rijbewijs hebben en een eigen voertuig in goede staat. Veiligheidsuitrusting wordt voor het evenement gecontroleerd. Kom minstens 30 minuten voor de starttijd aan voor registratie en briefing.",
       "soldOut": "Uitverkocht",
-      "booked": "Geboekt"
+      "booked": "Geboekt",
+      "sessionPrice": "{price}€ / {session}",
+      "braceletPrice": "{price}€ / pilotenarmband voor de dag"
     },
     "backToEvents": "Terug naar evenementen",
     "date": "Datum",
