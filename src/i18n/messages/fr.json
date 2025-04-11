@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Auriga Racing",
-    "description": "Vivez le frisson du sport automobile avec nos initiations au sport automobile sur circuit et pourquoi ne pas rejoindre notre équipe Simracing ?"
+    "description": "Vivez le frisson du sport automobile avec nos initiations sur circuit et rejoignez notre équipe de Simracing pour prolongez l'expérience à la maison."
   },
   "navbar": {
     "links": {
@@ -23,8 +23,8 @@
   "about": {
     "title": "Passion pour la course",
     "subtitle": "Notre histoire",
-    "paragraph1": "Fondée par des passionnés de sport automobile, notre équipe a évolué de pilotes du week-end à une organisation professionnelle de course avec des divisions de course réelles et virtuelles.",
-    "paragraph2": "Avec une équipe dédiée de pilotes expérimentés, d'ingénieurs, de stratèges et de coachs, nous offrons des expériences de trackday extraordinaires et des équipes de simracing compétitives qui repoussent les limites du possible.",
+    "paragraph1": "Fondée par des passionnés de sport automobile, notre équipe a évoluée de pilotes du week-end à une organisation professionnelle de course avec des divisions de course réelles et virtuelles.",
+    "paragraph2": "Avec une équipe dédiée de pilotes expérimentés, d'ingénieurs, de stratèges et de coachs, nous offrons des expériences de trackday extraordinaires et des équipes de Simracing compétitives qui repoussent les limites du possible.",
     "cta": "Découvrez nos services",
     "stats": {
       "trackdays": {
@@ -45,26 +45,26 @@
   "teams": {
     "title": "Nos équipes",
     "subtitle": "",
-    "description": "Auriga Racing est actif dans de multiples disciplines, des événements réels de la Fun Cup aux compétitions de Sim racing",
+    "description": "Auriga Racing est actif dans de multiples disciplines : Des évènements réels Fun Cup jusqu'aux compétitions de Simracing.",
     "track": {
       "title": "Fun Cup",
-      "description": "Notre équipe Fun Cup participe à des événements dans toute l'Europe, démontrant son habileté et sa précision sur certains des circuits les plus difficiles.",
+      "description": "Notre équipe Fun Cup est active à travers l'Europe, où elle met en avant son talent et sa précision sur certain des circuits les plus exigeants.",
       "features": {
-        "drivers": "Professional drivers with years of experience",
-        "equipment": "State-of-the-art cars and equipment",
-        "training": "Regular trackdays and training sessions"
+        "drivers": "Pilotes expérimentés avec des années d'expérience",
+        "equipment": "Voitures et équipements de pointe",
+        "training": "Sessions de trackday et de formation régulières"
       },
       "cta": "Rejoinez-nous en trackday"
     },
     "simracing": {
-      "title": "Sim racing",
-      "description": "Notre division Sim racing rivalise à un niveau respectable dans les sports auto virtuels avec un engagement sérieux basé sur les principes et les valeurs qui construisent l'équipe.",
+      "title": "Simracing",
+      "description": "Notre division Sim acing rivalise à un niveau respectable dans les sports auto virtuels avec un engagement sérieux basé sur les principes et les valeurs qui construisent l'équipe.",
       "features": {
         "leagues": "Participez à la compétition dans les ligues internationales de sport sur iRacing",
         "equipment": "Professional simulation rigs and equipment",
         "coaching": "Coaching et équipe stratégique dédiés"
       },
-      "cta": "Rejoignez notre équipe Sim racing"
+      "cta": "Rejoignez notre équipe Simracing"
     }
   },
   "gallery": {
@@ -95,7 +95,7 @@
   },
   "join": {
     "title": "Rejoindre l'équipe",
-    "description": "Que vous soyez expérimenté ou débutant, nous sommes toujours à la recherche de passionnées pour nous rejoindre en trackday ou dans notre équipe de Sim racing. Auriga Racing offre des possibilités à la fois aux amateurs de course sur piste et de simracing.",
+    "description": "Que vous soyez expérimenté ou débutant, nous sommes toujours à la recherche de passionnées pour nous rejoindre en trackday ou dans notre équipe de Simracing. Auriga Racing offre des possibilités à la fois aux amateurs de course sur piste et de simracing.",
     "whyJoinUs": "Pourquoi nous rejoindre sur circuit ou/et en ligne ?",
     "benefits": {
       "coaching": "Accéder à un coaching professionnel et au développement technique de la conduite du sport automobile",
@@ -119,7 +119,7 @@
         "label": "Je suis intéressé par *",
         "placeholder": "Sélectionnez une option",
         "trackday": "Trackday",
-        "simracing": "Sim racing",
+        "simracing": "Simracing",
         "both": "Les deux"
       },
       "experience": {
@@ -153,7 +153,7 @@
   "events": {
     "title": "Événements à venir",
     "subtitle": "Sur circuit",
-    "description": "Rejoignez-nous lors de ces prochains trackdays et événements de simracing où Auriga Racing sera présent",
+    "description": "Rejoignez-nous lors de ces prochains trackdays et événements de Simracing où Auriga Racing sera présent",
     "fullCalendar": "Calendrier complet des courses",
     "track": "Circuit de {track}",
     "pastEvents": "Événements passés",
@@ -234,7 +234,7 @@
   "contact": {
     "meta": {
       "title": "Contactez-nous | Auriga Racing",
-      "description": "Prenez contact avec l'équipe Auriga Racing pour toute question concernant nos trackdays, notre équipe de simracing ou pour devenir partenaire."
+      "description": "Prenez contact avec l'équipe Auriga Racing pour toute question concernant nos trackdays, notre équipe de Simracing ou pour devenir partenaire."
     },
     "hero": {
       "title": "Contactez-nous",
@@ -242,7 +242,7 @@
     },
     "contactInfo": {
       "title": "Restons en contact",
-      "description": "Que vous soyez intéressé par nos trackdays, notre équipe de simracing, ou si vous souhaitez simplement en savoir plus sur Auriga Racing, n'hésitez pas à nous contacter.",
+      "description": "Que vous soyez intéressé par nos trackdays, notre équipe de Simracing, ou si vous souhaitez simplement en savoir plus sur Auriga Racing, n'hésitez pas à nous contacter.",
       "whyContactUs": "Comment pouvons-nous vous aider ?",
       "reasons": {
         "events": "Informations sur nos prochains événements et trackdays",
