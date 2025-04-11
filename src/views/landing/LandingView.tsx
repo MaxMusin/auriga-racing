@@ -8,15 +8,15 @@ import UpcomingEventsSection from './components/UpcomingEventsSection';
 
 const LandingView = () => {
   return (
-    <>
+    <div className="-mt-10">
       <HeroSection />
       <UpcomingEventsSection />
       <AboutSection />
       <TeamsSection />
       <GallerySection />
       <JoinSection />
-    </>
+    </div>
   );
 };
 
-export default LandingView;
+export default LandingView; 
