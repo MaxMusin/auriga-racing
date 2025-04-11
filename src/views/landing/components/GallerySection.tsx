@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { TouchEvent, useEffect, useRef, useState, useMemo } from 'react';
+import { TouchEvent, useEffect, useMemo, useRef, useState } from 'react';
 
 const GallerySection = () => {
   const t = useTranslations('gallery');
@@ -16,83 +16,86 @@ const GallerySection = () => {
   const minSwipeDistance = 50;
 
   // Group images into slides with max 3 images per slide
-  const MAX_IMAGES_PER_SLIDE = 3;
-  
-  const images = useMemo(() => [
-    {
-      id: 1,
-      url: '/images/gallery/photo_1.jpg',
-      caption: t('images.image1'),
-    },
-    {
-      id: 2,
-      url: '/images/gallery/photo_2.jpg',
-      caption: t('images.image2'),
-    },
-    {
-      id: 3,
-      url: '/images/gallery/photo_3.jpg',
-      caption: t('images.image3'),
-    },
-    {
-      id: 4,
-      url: '/images/gallery/photo_4.jpg',
-      caption: t('images.image4'),
-    },
-    {
-      id: 5,
-      url: '/images/gallery/photo_5.jpg',
-      caption: t('images.image5'),
-    },
-    {
-      id: 6,
-      url: '/images/gallery/photo_6.jpg',
-      caption: t('images.image6'),
-    },
-    {
-      id: 7,
-      url: '/images/gallery/photo_7.jpg',
-      caption: t('images.image7'),
-    },
-    {
-      id: 8,
-      url: '/images/gallery/photo_8.jpg',
-      caption: t('images.image8'),
-    },
-    {
-      id: 9,
-      url: '/images/gallery/photo_9.jpg',
-      caption: t('images.image9'),
-    },
-    {
-      id: 10,
-      url: '/images/gallery/photo_10.jpg',
-      caption: t('images.image10'),
-    },
-    {
-      id: 11,
-      url: '/images/gallery/photo_11.jpg',
-      caption: t('images.image11'),
-    },
-    {
-      id: 12,
-      url: '/images/gallery/photo_12.jpg',
-      caption: t('images.image12'),
-    },
-    {
-      id: 13,
-      url: '/images/gallery/photo_13.jpg',
-      caption: t('images.image13'),
-    },
-  ], [t]);
+  const [imagesPerSlide, setImagesPerSlide] = useState(3);
+
+  const images = useMemo(
+    () => [
+      {
+        id: 1,
+        url: '/images/gallery/photo_1.jpg',
+        caption: t('images.image1'),
+      },
+      {
+        id: 2,
+        url: '/images/gallery/photo_2.jpg',
+        caption: t('images.image2'),
+      },
+      {
+        id: 3,
+        url: '/images/gallery/photo_3.jpg',
+        caption: t('images.image3'),
+      },
+      {
+        id: 4,
+        url: '/images/gallery/photo_4.jpg',
+        caption: t('images.image4'),
+      },
+      {
+        id: 5,
+        url: '/images/gallery/photo_5.jpg',
+        caption: t('images.image5'),
+      },
+      {
+        id: 6,
+        url: '/images/gallery/photo_6.jpg',
+        caption: t('images.image6'),
+      },
+      {
+        id: 7,
+        url: '/images/gallery/photo_7.jpg',
+        caption: t('images.image7'),
+      },
+      {
+        id: 8,
+        url: '/images/gallery/photo_8.jpg',
+        caption: t('images.image8'),
+      },
+      {
+        id: 9,
+        url: '/images/gallery/photo_9.jpg',
+        caption: t('images.image9'),
+      },
+      {
+        id: 10,
+        url: '/images/gallery/photo_10.jpg',
+        caption: t('images.image10'),
+      },
+      {
+        id: 11,
+        url: '/images/gallery/photo_11.jpg',
+        caption: t('images.image11'),
+      },
+      {
+        id: 12,
+        url: '/images/gallery/photo_12.jpg',
+        caption: t('images.image12'),
+      },
+      {
+        id: 13,
+        url: '/images/gallery/photo_13.jpg',
+        caption: t('images.image13'),
+      },
+    ],
+    [t],
+  );
 
   const slides = useMemo(() => {
     const result = [];
-    for (let i = 0; i < images.length; i += MAX_IMAGES_PER_SLIDE) {
-      result.push(images.slice(i, i + MAX_IMAGES_PER_SLIDE));
+    for (let i = 0; i < images.length; i += imagesPerSlide) {
+      result.push(images.slice(i, i + imagesPerSlide));
     }
     return result;
-  }, [images]);
+  }, [images, imagesPerSlide]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1); // Now this represents number of slides visible, not images
@@ -100,6 +103,15 @@ const GallerySection = () => {
   // Update slides per view based on screen size
   useEffect(() => {
     const handleResize = () => {
+      // Set images per slide based on screen width
+      if (window.innerWidth < 640) {
+        setImagesPerSlide(1); // Mobile: 1 image per slide
+      } else if (window.innerWidth < 1024) {
+        setImagesPerSlide(2); // Tablet: 2 images per slide
+      } else {
+        setImagesPerSlide(3); // Desktop: 3 images per slide
+      }
+
       if (window.innerWidth < 1024) {
         setSlidesPerView(1);
       } else {
@@ -189,7 +201,13 @@ const GallerySection = () => {
             >
               {slides.map((slide, slideIndex) => (
                 <div key={`slide-${slideIndex}`} className="min-w-full px-2">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className={`grid ${
+                    slide.length === 1 
+                      ? 'grid-cols-1' 
+                      : slide.length === 2 
+                        ? 'grid-cols-1 sm:grid-cols-2' 
+                        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+                  } gap-4`}>
                     {slide.map((image) => (
                       <div
                         key={image.id}
