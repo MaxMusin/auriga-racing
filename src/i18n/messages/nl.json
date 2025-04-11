@@ -153,6 +153,7 @@
     "description": "Doe mee aan deze aankomende trackdays en simracing-evenementen waar Auriga Racing aan zal deelnemen",
     "fullCalendar": "Volledige racekalender",
     "track": "Circuit van {track}",
+    "pastEvents": "Voorbije evenementen",
     "event": {
       "title": "Trackday op {track}",
       "description": "Doe mee aan een trackday op {track} op {date}",
@@ -174,11 +175,55 @@
     "registerForEvent": "Registreren voor dit evenement",
     "joinWaitingList": "Join Waiting List",
     "eventDetails": "Evenementdetails",
-    "relatedEvents": "Andere evenementen op dit circuit",
+    "relatedEvents": "Andere evenementen",
     "countries": {
       "belgium": "België",
       "france": "Frankrijk",
       "netherlands": "Nederland"
+    },
+    "bookingSection": {
+      "title": "Reserveer je plek",
+      "description": "Verzeker je deelname aan ons evenement op {track} op {date}. Beperkt aantal plaatsen beschikbaar!",
+      "whyBook": "Waarom bij ons boeken?",
+      "benefits": {
+        "coaching": "Professionele coaching van ervaren coureurs",
+        "track": "Volledige dag circuittijd op premium circuits",
+        "equipment": "Toegang tot veiligheidsuitrusting en technische ondersteuning",
+        "community": "Word lid van een gemeenschap van gepassioneerde race-enthousiastelingen"
+      },
+      "eventDetails": "Evenementinformatie",
+      "sessionsLeft": "{sessions} plaatsen beschikbaar",
+      "form": {
+        "title": "Registratieformulier",
+        "firstName": "Voornaam*",
+        "lastName": "Achternaam*",
+        "email": "E-mailadres*",
+        "phone": "Telefoonnummer*",
+        "carDetails": "Voertuiggegevens (Merk, Model, Jaar)*",
+        "experience": {
+          "label": "Je race-ervaring*",
+          "placeholder": "Selecteer je ervaringsniveau",
+          "none": "Geen (Eerste keer)",
+          "beginner": "Beginner (0-3 evenementen)",
+          "intermediate": "Gemiddeld (4-10 evenementen)",
+          "experienced": "Ervaren (10+ evenementen)"
+        },
+        "message": {
+          "label": "Aanvullende informatie",
+          "placeholder": "Specifieke vereisten of vragen..."
+        },
+        "submit": "Nu boeken",
+        "submitting": "Verwerken...",
+        "soldOut": "Uitverkocht",
+        "disclaimer": "Door dit formulier in te dienen, ga je akkoord met onze algemene voorwaarden voor deelname aan trackdays.",
+        "thankYou": "Bedankt!",
+        "confirmationSent": "Je boekingsaanvraag is ontvangen. We sturen je een bevestigingsmail met meer details.",
+        "bookAnother": "Boek een ander evenement",
+        "successTitle": "Boeking succesvol",
+        "successMessage": "Je boeking is bevestigd. Controleer je e-mail voor details.",
+        "errorTitle": "Boekingsfout",
+        "errorMessage": "Er is een probleem opgetreden bij het verwerken van je boeking. Probeer het opnieuw."
+      }
     }
   },
   "footer": {
@@ -188,6 +233,8 @@
     "quickLinks": {
       "title": "Snelle links",
       "home": "Home",
+      "trackdays": "Trackdays",
+      "about": "Over ons",
       "teams": "Onze teams",
       "results": "Resultaten",
       "gallery": "Galerij",
