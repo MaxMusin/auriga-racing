@@ -1,12 +1,12 @@
 'use client';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { usePathname } from '@/navigation';
 import { scrollToAnchor } from '@/utils';
 import { navLinks } from '@/utils/config';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { usePathname } from '@/navigation';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,7 +32,7 @@ const Header = () => {
     href: string,
   ) => {
     e.preventDefault();
-    
+
     if (isHomePage) {
       // On home page, just scroll to the anchor
       scrollToAnchor(href);
@@ -40,7 +40,7 @@ const Header = () => {
       // On other pages, navigate to home page with the anchor
       window.location.href = `/${href}`;
     }
-    
+
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
@@ -59,7 +59,7 @@ const Header = () => {
           <a
             href="#home"
             className="relative h-10 w-40"
-            onClick={(e) => handleNavClick(e, 'home')}
+            onClick={(e) => handleNavClick(e, '#home')}
           >
             <Image
               src="/images/auriga_racing__logo.svg"

@@ -1,11 +1,11 @@
+import Footer from '@/components/Footer';
 import LanguageInitializer from '@/components/LanguageInitializer';
+import Navbar from '@/components/Navbar';
 import { getMessages, Locale } from '@/i18n/i18n';
 import type { Metadata } from 'next';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import '../globals.css';
 import { IntlProvider } from './providers';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 
 type Props = {
   children: React.ReactNode;
@@ -40,9 +40,7 @@ export default async function LocaleLayout(props: Props) {
       {/* This component checks for user language preferences and applies them */}
       <LanguageInitializer />
       <Navbar />
-      <div className="pt-10">
-        {props.children}
-      </div>
+      {props.children}
       <Footer />
     </IntlProvider>
   );

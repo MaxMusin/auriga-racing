@@ -25,7 +25,7 @@ export default function EventsPage() {
   const pastEvents = sortedEvents.filter((event) => event.date < currentDate);
 
   return (
-    <div className="py-16 bg-card">
+    <div className="pt-[144px] bg-card pb-16">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <Header title={t('fullCalendar')} subtitle={t('subtitle')} centered />

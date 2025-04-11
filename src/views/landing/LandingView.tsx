@@ -8,7 +8,7 @@ import UpcomingEventsSection from './components/UpcomingEventsSection';
 
 const LandingView = () => {
   return (
-    <div className="-mt-10">
+    <div>
       <HeroSection />
       <UpcomingEventsSection />
       <AboutSection />
