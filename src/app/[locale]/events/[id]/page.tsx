@@ -60,7 +60,7 @@ export default async function EventPage({
       <div className="bg-background clip-diagonal pt-20">
         <div className="container mx-auto py-12 px-4 md:px-6">
           {/* Back button - uses client-side component for navigation */}
-          <BackButton label={t('backToEvents')} fallbackUrl="/events" />
+          <BackButton label={t('backToEvents')} fallbackUrl={`/events`} />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Event image */}
