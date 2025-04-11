@@ -1,4 +1,3 @@
-import Navbar from '../../components/Navbar';
 import AboutSection from './components/AboutSection';
 import GallerySection from './components/GallerySection';
 import HeroSection from './components/HeroSection';
@@ -19,4 +18,4 @@ const LandingView = () => {
   );
 };
 
-export default LandingView; 
+export default LandingView;
