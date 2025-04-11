@@ -5,6 +5,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import '../globals.css';
 import { IntlProvider } from './providers';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 type Props = {
   children: React.ReactNode;
@@ -38,7 +39,10 @@ export default async function LocaleLayout(props: Props) {
     <IntlProvider locale={locale} messages={messages}>
       {/* This component checks for user language preferences and applies them */}
       <LanguageInitializer />
-      {props.children}
+      <Navbar />
+      <div className="pt-10">
+        {props.children}
+      </div>
       <Footer />
     </IntlProvider>
   );

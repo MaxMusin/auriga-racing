@@ -1,3 +1,4 @@
+'use client';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { scrollToAnchor } from '@/utils';
 import { navLinks } from '@/utils/config';

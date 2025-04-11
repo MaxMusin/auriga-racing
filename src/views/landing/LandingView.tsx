@@ -9,7 +9,6 @@ import UpcomingEventsSection from './components/UpcomingEventsSection';
 const LandingView = () => {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <UpcomingEventsSection />
       <AboutSection />
