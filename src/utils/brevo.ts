@@ -5,10 +5,13 @@ import axios from 'axios';
 // Brevo API configuration
 const BREVO_API_KEY = process.env.BREVO_API_KEY || '';
 const BREVO_API_URL = 'https://api.brevo.com/v3';
+// Use environment variable for list ID with fallback to 2
+const BREVO_LIST_ID = parseInt(process.env.BREVO_LIST_ID || '2', 10);
 
 // Log pour débogage en production
 console.log('Environment check on server load:');
 console.log('- BREVO_API_KEY configured:', BREVO_API_KEY ? 'Yes' : 'No');
+console.log('- BREVO_LIST_ID:', BREVO_LIST_ID);
 console.log('- Node environment:', process.env.NODE_ENV);
 
 /**
@@ -42,7 +45,7 @@ export async function subscribeToNewsletter(
       {
         email,
         attributes,
-        listIds: [2],
+        listIds: [BREVO_LIST_ID],
         updateEnabled: true, // Update contact if it already exists
       },
       {
@@ -54,6 +57,7 @@ export async function subscribeToNewsletter(
     );
 
     console.log('Brevo API response status:', response.status);
+    console.log('Brevo API response data:', JSON.stringify(response.data, null, 2));
     
     if (response.status === 201 || response.status === 204) {
       return { 
@@ -71,7 +75,7 @@ export async function subscribeToNewsletter(
     
     if (axios.isAxiosError(error)) {
       console.error('API Error:', error.message);
-      console.error('Response data:', error.response?.data);
+      console.error('Response data:', JSON.stringify(error.response?.data, null, 2));
       console.error('Response status:', error.response?.status);
       
       // Handle specific error cases
@@ -80,6 +84,14 @@ export async function subscribeToNewsletter(
         return { 
           success: true, 
           message: 'You are already subscribed to our newsletter.' 
+        };
+      }
+      
+      // Return more specific error message if available
+      if (error.response?.data?.message) {
+        return {
+          success: false,
+          message: `Subscription error: ${error.response.data.message}`
         };
       }
     } else {
