@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer';
+import HtmlLangSetter from '@/components/HtmlLangSetter';
 import LanguageInitializer from '@/components/LanguageInitializer';
 import Navbar from '@/components/Navbar';
 import { getMessages, Locale } from '@/i18n/i18n';
@@ -37,6 +38,8 @@ export default async function LocaleLayout(props: Props) {
 
   return (
     <IntlProvider locale={locale} messages={messages}>
+      {/* This component updates the HTML lang attribute on the client side */}
+      <HtmlLangSetter locale={locale} />
       {/* This component checks for user language preferences and applies them */}
       <LanguageInitializer />
       <Navbar />

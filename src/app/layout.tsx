@@ -25,8 +25,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // The root layout is only used for non-localized routes
-  // The [locale] layout will handle localized routes with the correct lang attribute
+  // We'll use the default locale for the initial render
+  // The [locale] layout will handle updating the lang attribute via DOM manipulation
   return (
     <html lang={defaultLocale}>
       <body
