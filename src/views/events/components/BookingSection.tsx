@@ -380,13 +380,11 @@ const BookingForm = ({ event }: { event: EventItem }) => {
             <Button
               type="submit"
               className="btn-primary w-full py-3 !mt-8"
-              disabled={isSubmitting || event.soldOut}
+              disabled={isSubmitting}
             >
               {isSubmitting
                 ? t('bookingSection.form.submitting')
-                : event.soldOut
-                  ? t('bookingSection.form.soldOut')
-                  : t('bookingSection.form.submit')}
+                : t('bookingSection.form.submit')}
             </Button>
 
             <p className="text-xs text-muted-foreground text-center mt-4">

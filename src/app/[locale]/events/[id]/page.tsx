@@ -141,7 +141,6 @@ export default async function EventPage({
                   label={
                     event.soldOut ? t('joinWaitingList') : t('registerForEvent')
                   }
-                  disabled={event.soldOut}
                 />
               </div>
             </div>
