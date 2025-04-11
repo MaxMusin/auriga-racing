@@ -175,7 +175,7 @@
     "registerForEvent": "Register for this event",
     "joinWaitingList": "Join Waiting List",
     "eventDetails": "Event Details",
-    "relatedEvents": "Other events at this track",
+    "relatedEvents": "Other events",
     "countries": {
       "belgium": "Belgium",
       "france": "France",

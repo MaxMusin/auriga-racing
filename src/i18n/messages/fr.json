@@ -171,7 +171,7 @@
     "registerForEvent": "S'inscrire à cet événement",
     "joinWaitingList": "Rejoindre la liste d'attente",
     "eventDetails": "Détails de l'événement",
-    "relatedEvents": "Autres événements sur ce circuit",
+    "relatedEvents": "Autres événements",
     "countries": {
       "belgium": "Belgique",
       "france": "France",

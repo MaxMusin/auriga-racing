@@ -176,16 +176,60 @@ export default async function EventPage({
         <div>
           <h2 className="text-xl font-bold mb-8">{t('relatedEvents')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {events
-              .filter((e) => e.id !== eventId && e.track === event.track)
-              .slice(0, 3)
-              .map((relatedEvent) => (
+            {(() => {
+              // Get the current date
+              const currentDate = new Date();
+              
+              // Filter events from the same track that are upcoming and not sold out
+              const sameTrackEvents = events.filter(
+                (e) => e.id !== eventId && 
+                       e.track === event.track && 
+                       e.date >= currentDate &&
+                       !e.soldOut &&
+                       (!e.capacity || !e.registrations || e.capacity > e.registrations)
+              );
+              
+              // Sort same track events by date (ascending)
+              const sortedSameTrackEvents = [...sameTrackEvents].sort(
+                (a, b) => a.date.getTime() - b.date.getTime()
+              );
+              
+              // Take up to 3 events from the same track
+              const sameTrackToShow = sortedSameTrackEvents.slice(0, 3);
+              
+              // If we have less than 3 events from the same track, fill with other upcoming events
+              let relatedEvents = [...sameTrackToShow];
+              
+              if (relatedEvents.length < 3) {
+                // Get all upcoming events from other tracks that are not sold out
+                const otherTrackEvents = events.filter(
+                  (e) => e.id !== eventId && 
+                         e.track !== event.track && 
+                         e.date >= currentDate &&
+                         !e.soldOut &&
+                         (!e.capacity || !e.registrations || e.capacity > e.registrations)
+                );
+                
+                // Sort other track events by date (ascending)
+                const sortedOtherTrackEvents = [...otherTrackEvents].sort(
+                  (a, b) => a.date.getTime() - b.date.getTime()
+                );
+                
+                // Add enough events to fill up to 3 total
+                relatedEvents = [
+                  ...relatedEvents,
+                  ...sortedOtherTrackEvents.slice(0, 3 - relatedEvents.length)
+                ];
+              }
+              
+              return relatedEvents.map((relatedEvent) => (
                 <EventCard
                   key={relatedEvent.id}
                   event={relatedEvent}
                   locale={locale}
                 />
-              ))}
+              ));
+            })()}
           </div>
         </div>
       </div>
