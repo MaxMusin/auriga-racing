@@ -6,6 +6,19 @@ import type { Metadata } from 'next';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import '../globals.css';
 import { IntlProvider } from './providers';
+import { Geist, Geist_Mono } from 'next/font/google';
+import { Toaster } from '@/components/ui/toaster';
+import { Analytics } from "@vercel/analytics/react";
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
 
 type Props = {
   children: React.ReactNode;
@@ -36,12 +49,20 @@ export default async function LocaleLayout(props: Props) {
   const messages = await getMessages(locale);
 
   return (
-    <IntlProvider locale={locale} messages={messages}>
-      {/* This component checks for user language preferences and applies them */}
-      <LanguageInitializer />
-      <Navbar />
-      {props.children}
-      <Footer />
-    </IntlProvider>
+    <html lang={locale}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <IntlProvider locale={locale} messages={messages}>
+          {/* This component checks for user language preferences and applies them */}
+          <LanguageInitializer />
+          <Navbar />
+          <div className="min-h-screen overflow-x-hidden">
+            {props.children}
+          </div>
+          <Footer />
+        </IntlProvider>
+        <Toaster />
+        <Analytics />
+      </body>
+    </html>
   );
 }
