@@ -45,6 +45,13 @@ export async function generateMetadata({
   return {
     title: t('event.title', { track: trackName }),
     description: `${t('event.description', { track: trackName, date: formatEventDate(event.date, locale) })}`,
+    icons: {
+      icon: '/images/auriga_racing__logo.svg',
+    },
+    other: {
+      'thumbnail': '/images/auriga-racing-car.jpg',
+      'image': '/images/auriga-racing-car.jpg',
+    },
   };
 }
 
