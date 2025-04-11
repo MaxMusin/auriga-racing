@@ -7,6 +7,23 @@ import {
 } from '@/data/events';
 import { useLocale, useTranslations } from 'next-intl';
 import EventCard from '@/components/EventCard';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata() {
+  const t = await getTranslations('events');
+
+  return {
+    title: t('fullCalendar'),
+    description: t('description'),
+    icons: {
+      icon: '/images/auriga_racing__logo.svg',
+    },
+    other: {
+      'thumbnail': '/images/auriga-racing-car.jpg',
+      'image': '/images/auriga-racing-car.jpg',
+    },
+  };
+}
 
 export default function EventsPage() {
   const t = useTranslations('events');
