@@ -217,13 +217,15 @@ const BookingForm = ({ event }: { event: EventItem }) => {
           description: t('bookingSection.form.errorMessage'),
           variant: 'destructive',
         });
+        console.error('Form submission error:', result.error);
       }
-    } catch {
+    } catch (error) {
       toast({
         title: t('bookingSection.form.errorTitle'),
         description: t('bookingSection.form.errorMessage'),
         variant: 'destructive',
       });
+      console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
     }
