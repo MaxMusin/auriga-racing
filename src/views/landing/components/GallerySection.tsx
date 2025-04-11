@@ -18,33 +18,68 @@ const GallerySection = () => {
   const images = [
     {
       id: 1,
-      url: '/images/auriga-racing-car.jpg',
+      url: '/images/gallery/photo_1.jpg',
       caption: t('images.image1'),
     },
     {
       id: 2,
-      url: '/images/auriga-racing-car.jpg',
+      url: '/images/gallery/photo_2.jpg',
       caption: t('images.image2'),
     },
     {
       id: 3,
-      url: '/images/auriga-racing-car.jpg',
+      url: '/images/gallery/photo_3.jpg',
       caption: t('images.image3'),
     },
     {
       id: 4,
-      url: '/images/auriga-racing-car.jpg',
+      url: '/images/gallery/photo_4.jpg',
       caption: t('images.image4'),
     },
     {
       id: 5,
-      url: '/images/auriga-racing-car.jpg',
+      url: '/images/gallery/photo_5.jpg',
       caption: t('images.image5'),
     },
     {
       id: 6,
-      url: '/images/auriga-racing-car.jpg',
+      url: '/images/gallery/photo_6.jpg',
       caption: t('images.image6'),
+    },
+    {
+      id: 7,
+      url: '/images/gallery/photo_7.jpg',
+      caption: t('images.image7'),
+    },
+    {
+      id: 8,
+      url: '/images/gallery/photo_8.jpg',
+      caption: t('images.image8'),
+    },
+    {
+      id: 9,
+      url: '/images/gallery/photo_9.jpg',
+      caption: t('images.image9'),
+    },
+    {
+      id: 10,
+      url: '/images/gallery/photo_10.jpg',
+      caption: t('images.image10'),
+    },
+    {
+      id: 11,
+      url: '/images/gallery/photo_11.jpg',
+      caption: t('images.image11'),
+    },
+    {
+      id: 12,
+      url: '/images/gallery/photo_12.jpg',
+      caption: t('images.image12'),
+    },
+    {
+      id: 13,
+      url: '/images/gallery/photo_13.jpg',
+      caption: t('images.image13'),
     },
   ];
 

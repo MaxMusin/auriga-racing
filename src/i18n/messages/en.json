@@ -77,12 +77,19 @@
     "description": "Moments captured from our racing adventures, both on the track and in the virtual world",
     "viewFullGallery": "View Full Gallery",
     "images": {
-      "image1": "Fun Cup Race at Silverstone",
-      "image2": "Team preparation before race day",
-      "image3": "Simracing competition finals",
-      "image4": "Pit stop during endurance race",
-      "image5": "Team celebration after podium finish",
-      "image6": "Simracing training session"
+      "image1": "Fun Cup is warming up",
+      "image2": "Ready to go",
+      "image3": "Last checks before the trackday starts",
+      "image4": "Coach is comfortable to go",
+      "image5": "Driver of the day is ready to jump on track",
+      "image6": "Our #333 in action",
+      "image7": "You can't miss where we are",
+      "image8": "The box",
+      "image9": "Friendly space",
+      "image10": "Catering for our drivers of the day",
+      "image11": "Time to switch driver of the day",
+      "image12": "Our #333 during the break",
+      "image13": "Team photo at end of the day"
     },
     "aria": {
       "prevSlide": "Previous slide",
