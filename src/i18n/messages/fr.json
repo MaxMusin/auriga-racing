@@ -153,12 +153,13 @@
     "description": "Rejoignez-nous lors de ces prochains trackdays et événements de simracing où Auriga Racing sera présent",
     "fullCalendar": "Calendrier complet",
     "track": "Circuit de {track}",
+    "pastEvents": "Événements passés",
     "event": {
       "title": "Trackday à {track}",
       "description": "Rejoignez-nous pour un trackday à {track} le {date}",
-      "detailedDescription": "Rejoignez-nous pour un trackday passionnant à {track} en {country}. Vivez le frisson de la course sur ce circuit incroyable avec Auriga Racing.",
+      "detailedDescription": "Rejoignez-nous pour un passionnant trackday à {track} en {country}. Vivez le frisson de la course sur ce circuit incroyable avec Auriga Racing.",
       "whatToExpect": "Au cours de cet événement, vous aurez l'occasion d'améliorer vos compétences de conduite, de recevoir des conseils de pilotes expérimentés et de profiter d'une journée complète de temps de piste dans un environnement sûr et contrôlé.",
-      "requirements": "Les participants doivent avoir un permis de conduire valide et leur propre véhicule en bon état. L'équipement de sécurité sera vérifié avant l'événement. Veuillez arriver au moins 30 minutes avant l'heure de début pour l'enregistrement et le briefing.",
+      "requirements": "Les participants doivent avoir un permis de conduire valide et leur propre véhicule en bon état. L'équipement de sécurité sera vérifié avant l'événement. Veuillez arriver au moins 30 minutes avant l'heure de début pour l'inscription et le briefing.",
       "soldOut": "Complet",
       "booked": "Réservé"
     },
@@ -174,11 +175,55 @@
     "registerForEvent": "S'inscrire à cet événement",
     "joinWaitingList": "Rejoindre la liste d'attente",
     "eventDetails": "Détails de l'événement",
-    "relatedEvents": "Autres événements sur ce circuit",
+    "relatedEvents": "Autres événements",
     "countries": {
       "belgium": "Belgique",
       "france": "France",
       "netherlands": "Pays-Bas"
+    },
+    "bookingSection": {
+      "title": "Réservez votre place",
+      "description": "Assurez votre participation à notre événement à {track} le {date}. Places limitées !",
+      "whyBook": "Pourquoi réserver avec nous ?",
+      "benefits": {
+        "coaching": "Coaching professionnel par des pilotes expérimentés",
+        "track": "Journée complète sur circuit premium",
+        "equipment": "Accès à l'équipement de sécurité et support technique",
+        "community": "Rejoignez une communauté de passionnés de course"
+      },
+      "eventDetails": "Informations sur l'événement",
+      "sessionsLeft": "{sessions} sessions restantes",
+      "form": {
+        "title": "Formulaire d'inscription",
+        "firstName": "Prénom*",
+        "lastName": "Nom*",
+        "email": "Adresse e-mail*",
+        "phone": "Numéro de téléphone*",
+        "carDetails": "Détails du véhicule (Marque, Modèle, Année)*",
+        "experience": {
+          "label": "Votre expérience en course*",
+          "placeholder": "Sélectionnez votre niveau d'expérience",
+          "none": "Aucune (Première fois)",
+          "beginner": "Débutant (0-3 événements)",
+          "intermediate": "Intermédiaire (4-10 événements)",
+          "experienced": "Expérimenté (10+ événements)"
+        },
+        "message": {
+          "label": "Informations supplémentaires",
+          "placeholder": "Exigences spécifiques ou questions..."
+        },
+        "submit": "Réserver maintenant",
+        "submitting": "Traitement en cours...",
+        "soldOut": "Complet",
+        "disclaimer": "En soumettant ce formulaire, vous acceptez nos conditions générales de participation aux trackdays.",
+        "thankYou": "Merci !",
+        "confirmationSent": "Votre demande de réservation a été reçue. Nous vous enverrons un e-mail de confirmation avec plus de détails.",
+        "bookAnother": "Réserver un autre événement",
+        "successTitle": "Réservation réussie",
+        "successMessage": "Votre réservation a été confirmée. Consultez votre e-mail pour les détails.",
+        "errorTitle": "Erreur de réservation",
+        "errorMessage": "Un problème est survenu lors du traitement de votre réservation. Veuillez réessayer."
+      }
     }
   },
   "footer": {
@@ -188,6 +233,8 @@
     "quickLinks": {
       "title": "Liens rapides",
       "home": "Accueil",
+      "trackdays": "Trackdays",
+      "about": "À propos",
       "teams": "Nos équipes",
       "results": "Résultats",
       "gallery": "Galerie",
