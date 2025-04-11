@@ -77,12 +77,19 @@
     "description": "Moments capturés de nos aventures de course, à la fois sur piste et dans le monde virtuel",
     "viewFullGallery": "Voir la galerie complète",
     "images": {
-      "image1": "Course FUNCUP à Silverstone",
-      "image2": "Préparation de l'équipe avant le jour de course",
-      "image3": "Finales de compétition SimRacing",
-      "image4": "Arrêt aux stands pendant une course d'endurance",
-      "image5": "Célébration de l'équipe après une place sur le podium",
-      "image6": "Session d'entraînement SimRacing"
+      "image1": "La Fun Cup se chauffe",
+      "image2": "Prêt à partir",
+      "image3": "Dernières vérifications avant le début du trackday",
+      "image4": "Le coach est prêt à démarrer",
+      "image5": "Le pilote du jour est prêt à prendre la piste",
+      "image6": "Notre #333 en action",
+      "image7": "Impossible de manquer où nous sommes",
+      "image8": "Le box",
+      "image9": "Espace convivial",
+      "image10": "Restauration pour nos pilotes du jour",
+      "image11": "Changement de pilote",
+      "image12": "Notre #333 pendant la pause",
+      "image13": "Photo d'équipe à la fin de la journée"
     },
     "aria": {
       "prevSlide": "Diapositive précédente",
