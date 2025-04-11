@@ -87,7 +87,7 @@ const Header = () => {
           <a
             href="#join"
             className="btn-primary lg:mx-2"
-            onClick={(e) => handleNavClick(e, 'join')}
+            onClick={(e) => handleNavClick(e, '#join')}
           >
             {t('cta')}
           </a>
@@ -124,7 +124,7 @@ const Header = () => {
             <a
               href="#join"
               className="btn-primary lg:mx-2"
-              onClick={(e) => handleNavClick(e, 'join')}
+              onClick={(e) => handleNavClick(e, '#join')}
             >
               {t('cta')}
             </a>
