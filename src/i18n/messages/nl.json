@@ -109,7 +109,7 @@
     },
     "contact": {
       "title": "Contacteer ons",
-      "email": "hello@aurigaracing.be",
+      "email": "hello@auriga-racing.be",
       "phone": "+32 474 79 39 24",
       "organization": "Auriga VZW"
     },
@@ -180,6 +180,7 @@
     "trackLength": "Circuitlengte",
     "kilometers": "{length} km",
     "registerForEvent": "Registreren voor dit evenement",
+    "joinWaitingList": "Join Waiting List",
     "eventDetails": "Evenementdetails",
     "relatedEvents": "Andere evenementen",
     "countries": {
@@ -230,45 +231,7 @@
         "errorTitle": "Boekingsfout",
         "errorMessage": "Er is een probleem opgetreden bij het verwerken van je boeking. Probeer het opnieuw."
       }
-    },
-    "types": {
-      "track": "Circuit",
-      "sim": "SimRacing"
-    },
-    "items": [
-      {
-        "id": 1,
-        "event": "FUNCUP Kampioenschap 2024",
-        "date": "15-16 juni 2024",
-        "time": "9:00 - 17:00",
-        "location": "Spa-Francorchamps, België",
-        "type": "track"
-      },
-      {
-        "id": 2,
-        "event": "World SimRacing League - Ronde 3",
-        "date": "28 mei 2024",
-        "time": "20:00 - 22:00",
-        "location": "Virtuele Nürburgring",
-        "type": "sim"
-      },
-      {
-        "id": 3,
-        "event": "Europese Track Days Cup",
-        "date": "12-13 juli 2024",
-        "time": "10:00 - 18:00",
-        "location": "Monza, Italië",
-        "type": "track"
-      },
-      {
-        "id": 4,
-        "event": "Digitaal Race Kampioenschap - Seizoen 5",
-        "date": "5 juni 2024",
-        "time": "21:00 - 23:00",
-        "location": "Virtuele Silverstone",
-        "type": "sim"
-      }
-    ]
+    }
   },
   "footer": {
     "tagline": "Grenzen verleggen op het circuit en online.",

@@ -28,16 +28,20 @@
     "cta": "Découvrez nos services",
     "stats": {
       "trackdays": {
-        "label": "Événements Trackday"
+        "label": "Événements Trackday",
+        "suffix": "+"
       },
       "experience": {
-        "label": "Années d'expérience"
+        "label": "Années d'expérience",
+        "suffix": ""
       },
       "enthusiasts": {
-        "label": "Passionnés de course"
+        "label": "Passionnés de course",
+        "suffix": "+"
       },
       "laps": {
-        "label": "Tours complétés"
+        "label": "Tours complétés",
+        "suffix": "+"
       }
     },
     "imageAlt": "Équipe de course dans la voie des stands"
@@ -105,7 +109,7 @@
     },
     "contact": {
       "title": "Contactez-nous",
-      "email": "hello@aurigaracing.be",
+      "email": "hello@auriga-racing.be",
       "phone": "+32 474 79 39 24",
       "organization": "Auriga ASBL"
     },
@@ -151,17 +155,17 @@
     }
   },
   "events": {
-    "title": "Événements à venir",
+    "title": "Trackdays à venir",
     "subtitle": "Sur circuit",
     "description": "Rejoignez-nous lors de ces prochains trackdays et événements de simracing où Auriga Racing sera présent",
-    "fullCalendar": "Calendrier complet des courses",
+    "fullCalendar": "Calendrier complet",
     "track": "Circuit de {track}",
     "pastEvents": "Événements passés",
     "event": {
       "title": "Trackday à {track}",
       "description": "Rejoignez-nous pour un trackday à {track} le {date}",
       "detailedDescription": "Rejoignez-nous pour un passionnant trackday à {track} en {country}. Vivez le frisson de la course sur ce circuit incroyable avec Auriga Racing.",
-      "whatToExpect": "Pendant cet événement, vous aurez l'opportunité d'améliorer vos compétences de conduite, de recevoir des conseils de pilotes expérimentés et de profiter d'une journée complète sur circuit dans un environnement sûr et contrôlé.",
+      "whatToExpect": "Au cours de cet événement, vous aurez l'occasion d'améliorer vos compétences de conduite, de recevoir des conseils de pilotes expérimentés et de profiter d'une journée complète de temps de piste dans un environnement sûr et contrôlé.",
       "requirements": "Les participants doivent avoir un permis de conduire valide et leur propre véhicule en bon état. L'équipement de sécurité sera vérifié avant l'événement. Veuillez arriver au moins 30 minutes avant l'heure de début pour l'inscription et le briefing.",
       "soldOut": "Complet",
       "booked": "Réservé"
@@ -226,81 +230,6 @@
         "successMessage": "Votre réservation a été confirmée. Consultez votre e-mail pour les détails.",
         "errorTitle": "Erreur de réservation",
         "errorMessage": "Un problème est survenu lors du traitement de votre réservation. Veuillez réessayer."
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "Contactez-nous | Auriga Racing",
-      "description": "Prenez contact avec l'équipe Auriga Racing pour toute question concernant nos trackdays, notre équipe de simracing ou pour devenir partenaire."
-    },
-    "hero": {
-      "title": "Contactez-nous",
-      "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions"
-    },
-    "contactInfo": {
-      "title": "Restons en contact",
-      "description": "Que vous soyez intéressé par nos trackdays, notre équipe de simracing, ou si vous souhaitez simplement en savoir plus sur Auriga Racing, n'hésitez pas à nous contacter.",
-      "whyContactUs": "Comment pouvons-nous vous aider ?",
-      "reasons": {
-        "events": "Informations sur nos prochains événements et trackdays",
-        "membership": "Rejoindre notre équipe ou devenir membre",
-        "partnership": "Opportunités de partenariat et de sponsoring",
-        "support": "Support technique et questions générales"
-      },
-      "details": {
-        "title": "Coordonnées",
-        "address": "Auriga ASBL, Rue de Spa 1, 4970 Stavelot, Belgique"
-      }
-    },
-    "form": {
-      "title": "Envoyez-nous un message",
-      "firstName": {
-        "label": "Prénom",
-        "placeholder": "Votre prénom"
-      },
-      "lastName": {
-        "label": "Nom",
-        "placeholder": "Votre nom"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "votre.email@exemple.com"
-      },
-      "phone": {
-        "label": "Téléphone",
-        "placeholder": "Votre numéro de téléphone"
-      },
-      "interest": {
-        "label": "Je suis intéressé par",
-        "placeholder": "Sélectionnez une option",
-        "trackday": "Trackdays",
-        "simracing": "Simracing",
-        "partnership": "Partenariat",
-        "other": "Autre"
-      },
-      "experience": {
-        "label": "Niveau d'expérience",
-        "placeholder": "Sélectionnez votre niveau",
-        "none": "Débutant",
-        "beginner": "Novice (1-2 ans)",
-        "intermediate": "Intermédiaire (3-5 ans)",
-        "experienced": "Expérimenté (5+ ans)"
-      },
-      "message": {
-        "label": "Message",
-        "placeholder": "Votre message..."
-      },
-      "submit": "Envoyer",
-      "submitting": "Envoi en cours...",
-      "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.",
-      "success": {
-        "title": "Message envoyé !",
-        "message": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
-      },
-      "error": {
-        "title": "Erreur",
-        "message": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
       }
     }
   },
