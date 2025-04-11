@@ -19,6 +19,14 @@ const GallerySection = () => {
   const [imagesPerSlide, setImagesPerSlide] = useState(3);
   const [prevImagesPerSlide, setPrevImagesPerSlide] = useState(3);
 
+  // Define the image type
+  type GalleryImage = {
+    id: number | string;
+    url: string;
+    caption: string;
+    isPlaceholder?: boolean;
+  };
+
   const images = useMemo(
     () => [
       {
@@ -93,7 +101,23 @@ const GallerySection = () => {
   const slides = useMemo(() => {
     const result = [];
     for (let i = 0; i < images.length; i += imagesPerSlide) {
-      result.push(images.slice(i, i + imagesPerSlide));
+      const slideImages = images.slice(i, i + imagesPerSlide) as GalleryImage[];
+      
+      // If this is the last slide and doesn't have the full number of images,
+      // add placeholder objects to maintain grid layout
+      if (slideImages.length < imagesPerSlide && i + imagesPerSlide > images.length) {
+        const placeholdersNeeded = imagesPerSlide - slideImages.length;
+        for (let j = 0; j < placeholdersNeeded; j++) {
+          slideImages.push({
+            id: `placeholder-${j}`,
+            url: '',
+            caption: '',
+            isPlaceholder: true
+          });
+        }
+      }
+      
+      result.push(slideImages);
     }
     return result;
   }, [images, imagesPerSlide]);
@@ -231,20 +255,24 @@ const GallerySection = () => {
                         key={image.id}
                         className="bg-card rounded-lg overflow-hidden shadow-md h-60 sm:h-64 md:h-72 card-hover"
                       >
-                        <div className="h-full relative group">
-                          <Image
-                            src={image.url}
-                            alt={image.caption}
-                            fill
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            className="object-cover transform group-hover:scale-105 transition-transform duration-500"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent sm:opacity-0 sm:group-hover:opacity-100 opacity-100 transition-opacity duration-300 flex items-end">
-                            <p className="text-white p-3 md:p-4 text-sm md:text-base font-medium">
-                              {image.caption}
-                            </p>
+                        {!image.isPlaceholder ? (
+                          <div className="h-full relative group">
+                            <Image
+                              src={image.url}
+                              alt={image.caption}
+                              fill
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent sm:opacity-0 sm:group-hover:opacity-100 opacity-100 transition-opacity duration-300 flex items-end">
+                              <p className="text-white p-3 md:p-4 text-sm md:text-base font-medium">
+                                {image.caption}
+                              </p>
+                            </div>
                           </div>
-                        </div>
+                        ) : (
+                          <div className="h-full bg-muted/20"></div>
+                        )}
                       </div>
                     ))}
                   </div>
