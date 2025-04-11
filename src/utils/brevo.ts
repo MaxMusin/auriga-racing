@@ -27,6 +27,7 @@ export async function subscribeToNewsletter(
   // Log pour débogage
   console.log('Attempting to subscribe email:', email);
   console.log('API Key configured:', BREVO_API_KEY ? 'Yes' : 'No');
+  console.log('List ID configured:', BREVO_LIST_ID);
   console.log('Server environment:', process.env.NODE_ENV);
   
   if (!BREVO_API_KEY) {
@@ -40,12 +41,20 @@ export async function subscribeToNewsletter(
   try {
     console.log('Making API request to Brevo...');
     
+    // Validate email format before sending to API
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      return {
+        success: false,
+        message: 'Please enter a valid email address'
+      };
+    }
+    
     const response = await axios.post(
       `${BREVO_API_URL}/contacts`,
       {
         email,
         attributes,
-        listIds: [BREVO_LIST_ID],
+        listIds: [2],
         updateEnabled: true, // Update contact if it already exists
       },
       {
@@ -84,6 +93,23 @@ export async function subscribeToNewsletter(
         return { 
           success: true, 
           message: 'You are already subscribed to our newsletter.' 
+        };
+      }
+      
+      // Handle rate limiting
+      if (error.response?.status === 429) {
+        return {
+          success: false,
+          message: 'Too many subscription attempts. Please try again later.'
+        };
+      }
+      
+      // Handle authentication errors
+      if (error.response?.status === 401 || error.response?.status === 403) {
+        console.error('Authentication error with Brevo API');
+        return {
+          success: false,
+          message: 'Newsletter service authentication error. Please contact support.'
         };
       }
       
