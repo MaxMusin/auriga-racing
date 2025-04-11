@@ -1,7 +1,7 @@
 import BackButton from '@/components/BackButton';
 import EventCard from '@/components/EventCard';
 import RegisterButton from '@/components/RegisterButton';
-import { Calendar, Car, Clock, Flag, MapPin } from 'lucide-react';
+import { Calendar, Car, Clock, Flag, MapPin, Users } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -138,12 +138,50 @@ export default async function EventPage({
                   </div>
                 </div>
               </div>
-              <div className="mt-8">
-                <RegisterButton
-                  label={
-                    event.soldOut ? t('joinWaitingList') : t('registerForEvent')
-                  }
-                />
+              <div>
+                {/* Fill percentage indicator */}
+                {event.capacity && event.registrations && (
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between text-sm mb-2">
+                      <div className="flex items-center text-xs">
+                        <Users className="h-3 w-3 mr-2" />
+                        <p className="font-medium">{t('event.booked')}</p>
+                      </div>
+                      <span className="font-medium text-xs">
+                        {Math.min(
+                          Math.round(
+                            (event.registrations / event.capacity) * 100,
+                          ),
+                          100,
+                        )}
+                        %
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+                      <div
+                        className={`h-full rounded-full ${
+                          event.registrations / event.capacity >= 0.9
+                            ? 'bg-racing-darkred'
+                            : event.registrations / event.capacity >= 0.7
+                              ? 'bg-racing-red'
+                              : 'bg-racing-lightred'
+                        }`}
+                        style={{
+                          width: `${Math.min(Math.round((event.registrations / event.capacity) * 100), 100)}%`,
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                )}
+                <div className="mt-8">
+                  <RegisterButton
+                    label={
+                      event.soldOut
+                        ? t('joinWaitingList')
+                        : t('registerForEvent')
+                    }
+                  />
+                </div>
               </div>
             </div>
           </div>
