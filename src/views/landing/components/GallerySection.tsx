@@ -17,6 +17,7 @@ const GallerySection = () => {
 
   // Group images into slides with max 3 images per slide
   const [imagesPerSlide, setImagesPerSlide] = useState(3);
+  const [prevImagesPerSlide, setPrevImagesPerSlide] = useState(3);
 
   const images = useMemo(
     () => [
@@ -103,6 +104,9 @@ const GallerySection = () => {
   // Update slides per view based on screen size
   useEffect(() => {
     const handleResize = () => {
+      // Store previous value to detect changes
+      setPrevImagesPerSlide(imagesPerSlide);
+      
       // Set images per slide based on screen width
       if (window.innerWidth < 640) {
         setImagesPerSlide(1); // Mobile: 1 image per slide
@@ -127,7 +131,21 @@ const GallerySection = () => {
 
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [imagesPerSlide]); // Add imagesPerSlide as dependency
+
+  // Handle slide index adjustment when imagesPerSlide changes
+  useEffect(() => {
+    if (prevImagesPerSlide !== imagesPerSlide) {
+      // Calculate the first image index of the current slide
+      const firstImageIndex = currentIndex * prevImagesPerSlide;
+      
+      // Calculate what slide that image would be in with the new imagesPerSlide
+      const newSlideIndex = Math.floor(firstImageIndex / imagesPerSlide);
+      
+      // Update the current index to keep roughly the same images in view
+      setCurrentIndex(Math.min(newSlideIndex, Math.ceil(images.length / imagesPerSlide) - 1));
+    }
+  }, [imagesPerSlide, prevImagesPerSlide, currentIndex, images.length]);
 
   const totalSlides = slides.length;
   const maxIndex = Math.max(0, totalSlides - slidesPerView);
