@@ -4,6 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { CalendarCheck, Check, MapPin, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -153,6 +154,7 @@ const BookingSection = ({ event, locale }: BookingSectionProps) => {
 const BookingForm = ({ event }: { event: EventItem }) => {
   const t = useTranslations('events');
   const { toast } = useToast();
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -221,7 +223,7 @@ const BookingForm = ({ event }: { event: EventItem }) => {
           <p className="text-muted-foreground mb-6">
             {t('bookingSection.form.confirmationSent')}
           </p>
-          <Button onClick={() => setIsSuccess(false)} className="btn-secondary">
+          <Button onClick={() => router.push('/events')} className="btn-secondary">
             {t('bookingSection.form.bookAnother')}
           </Button>
         </div>
