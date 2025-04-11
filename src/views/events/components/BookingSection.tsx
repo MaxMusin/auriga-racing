@@ -29,6 +29,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { EventItem, formatEventDate, tracks } from '@/data/events';
 import { useToast } from '@/hooks/use-toast';
 import { sendContactEmail } from '@/lib/actions';
+import { bookingFormSchema } from '@/lib/schemas';
 
 // Define props for the BookingSection component
 interface BookingSectionProps {
@@ -148,36 +149,15 @@ const BookingSection = ({ event, locale }: BookingSectionProps) => {
   );
 };
 
-// Create a booking form schema
-const bookingFormSchema = z.object({
-  firstName: z.string().min(2, {
-    message: 'First name must be at least 2 characters.',
-  }),
-  lastName: z.string().min(2, {
-    message: 'Last name must be at least 2 characters.',
-  }),
-  email: z.string().email({
-    message: 'Please enter a valid email address.',
-  }),
-  phone: z.string().min(1, {
-    message: 'Phone number is required for event registration.',
-  }),
-  experience: z.string().min(1, {
-    message: 'Please select your experience level.',
-  }),
-  message: z.string().optional(),
-});
-
-type BookingFormValues = z.infer<typeof bookingFormSchema>;
-
 // Booking form component with React Hook Form
 const BookingForm = ({ event }: { event: EventItem }) => {
+  const t = useTranslations('events');
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const { toast } = useToast();
-  const t = useTranslations('events');
 
-  const form = useForm<BookingFormValues>({
+  // Initialize form with React Hook Form and Zod validation
+  const form = useForm<z.infer<typeof bookingFormSchema>>({
     resolver: zodResolver(bookingFormSchema),
     defaultValues: {
       firstName: '',
@@ -190,7 +170,7 @@ const BookingForm = ({ event }: { event: EventItem }) => {
   });
 
   // Handle form submission
-  const onSubmit = async (values: BookingFormValues) => {
+  const onSubmit = async (values: z.infer<typeof bookingFormSchema>) => {
     setIsSubmitting(true);
     try {
       // Adapt the booking form values to match the contact form schema
