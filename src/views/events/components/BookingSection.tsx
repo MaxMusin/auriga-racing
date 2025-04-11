@@ -137,7 +137,7 @@ const BookingSection = ({ event, locale }: BookingSectionProps) => {
             </div>
           </div>
 
-          <div className="bg-card rounded-lg p-6 shadow-lg">
+          <div className="bg-card rounded-lg p-6 shadow-lg flex flex-col">
             <h3 className="text-xl font-bold mb-6">
               {t('bookingSection.form.title')}
             </h3>
@@ -214,10 +214,7 @@ const BookingForm = ({ event }: { event: EventItem }) => {
   return (
     <>
       {isSuccess ? (
-        <div className="text-center py-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
-            <Check className="h-8 w-8 text-green-600" />
-          </div>
+        <div className="text-center flex flex-col items-center justify-center h-full">
           <h4 className="text-xl font-bold mb-2">
             {t('bookingSection.form.thankYou')}
           </h4>
