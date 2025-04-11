@@ -6,11 +6,14 @@ import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { usePathname } from '@/navigation';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations('navbar');
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +32,15 @@ const Header = () => {
     href: string,
   ) => {
     e.preventDefault();
-    scrollToAnchor(href);
+    
+    if (isHomePage) {
+      // On home page, just scroll to the anchor
+      scrollToAnchor(href);
+    } else {
+      // On other pages, navigate to home page with the anchor
+      window.location.href = `/${href}`;
+    }
+    
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
