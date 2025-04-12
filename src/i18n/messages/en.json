@@ -166,7 +166,7 @@
       "description": "Join us for a trackday at {track} on {date}",
       "detailedDescription": "Join us for an exciting trackday at {track} in {country}. Experience the thrill of racing on this amazing circuit with Auriga Racing.",
       "whatToExpect": "During this event, you will have the opportunity to improve your driving skills, receive coaching from experienced drivers, and enjoy a full day of track time in a safe and controlled environment.",
-      "requirements": "Participants must have a valid driver's license and their own vehicle in good condition. Safety equipment will be checked before the event. Please arrive at least 30 minutes before the start time for registration and briefing.",
+      "requirements": "Please arrive at least 1 hour before the start time for registration and briefing.",
       "soldOut": "Sold Out",
       "booked": "Booked",
       "sessionPrice": "{price}€ / {session}",
