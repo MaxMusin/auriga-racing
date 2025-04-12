@@ -24,6 +24,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   return {
     title: t('title'),
     description: t('description'),
+    icons: {
+      icon: '/images/auriga_racing__logo.svg',
+    },
+    other: {
+      'thumbnail': '/images/auriga-racing-car.jpg',
+      'image': '/images/auriga-racing-car.jpg',
+    },
   };
 }
 

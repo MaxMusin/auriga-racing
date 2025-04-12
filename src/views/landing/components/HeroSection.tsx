@@ -73,7 +73,7 @@ const HeroSection = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="relative w-full h-40 mb-12">
+        <div className="relative w-full h-20 md:h-40 mb-4 md:mb-12">
           <Image
             src="/images/auriga_racing__logo.svg"
             alt="Auriga Racing Logo"
@@ -87,7 +87,7 @@ const HeroSection = () => {
           />
         </div>
         <h1
-          className={`text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 transition-all duration-1000 delay-400 uppercase ${
+          className={`text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 md:mb-6 transition-all duration-1000 delay-400 uppercase ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -95,7 +95,7 @@ const HeroSection = () => {
           <span className="bg-racing-black">{t('subtitle')}</span>
         </h1>
         <p
-          className={`max-w-2xl mx-auto text-lg md:text-xl text-white/80 mb-8 mx-auto transition-all duration-1000 delay-400 font-medium ${
+          className={`max-w-2xl mx-auto text-lg md:text-xl text-white/80 mb-4 md:mb-8 mx-auto transition-all duration-1000 delay-400 font-medium ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
