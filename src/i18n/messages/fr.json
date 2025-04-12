@@ -172,6 +172,7 @@
       "sessionPrice": "{price}€ / {session}",
       "braceletPrice": "{price}€ / bracelet pilote à la journée"
     },
+    "disclaimerPrice": "Prix affiché hors taxes",
     "backToEvents": "Retour aux événements",
     "date": "Date",
     "time": "Horaire",

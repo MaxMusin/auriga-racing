@@ -172,6 +172,7 @@
       "sessionPrice": "{price}€ / {session}",
       "braceletPrice": "{price}€ / pilotenarmband voor de dag"
     },
+    "disclaimerPrice": "Prijzen zijn exclusief btw",
     "backToEvents": "Terug naar evenementen",
     "date": "Datum",
     "time": "Tijd",
