@@ -168,8 +168,11 @@
       "whatToExpect": "During this event, you will have the opportunity to improve your driving skills, receive coaching from experienced drivers, and enjoy a full day of track time in a safe and controlled environment.",
       "requirements": "Participants must have a valid driver's license and their own vehicle in good condition. Safety equipment will be checked before the event. Please arrive at least 30 minutes before the start time for registration and briefing.",
       "soldOut": "Sold Out",
-      "booked": "Booked"
+      "booked": "Booked",
+      "sessionPrice": "{price}€ / {session}",
+      "braceletPrice": "{price}€ / pilot bracelet for the day"
     },
+    "disclaimerPrice": "Price displayed excluding taxes",
     "backToEvents": "Back to events",
     "date": "Date",
     "time": "Time",
