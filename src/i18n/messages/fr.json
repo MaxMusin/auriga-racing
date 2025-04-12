@@ -52,23 +52,23 @@
       "features": {
         "drivers": "Pilotes expérimentés avec des années d'expérience",
         "equipment": "Voitures et équipements de pointe",
-        "training": "Sessions de trackday et de formation régulières"
+        "training": "Sessions de trackday régulières"
       },
-      "cta": "Rejoinez-nous en trackday"
+      "cta": "Rejoignez-nous en trackday"
     },
     "simracing": {
       "title": "Simracing",
-      "description": "Notre division Sim acing rivalise à un niveau respectable dans les sports auto virtuels avec un engagement sérieux basé sur les principes et les valeurs qui construisent l'équipe.",
+      "description": "De l'apprentissage jusqu'au Top Split, notre division Simracing fait preuve d'un engagement sérieux basé sur les principes et valeurs qui sont le fondement d'Auriga.",
       "features": {
         "leagues": "Participez à la compétition dans les ligues internationales de sport sur iRacing",
-        "equipment": "Professional simulation rigs and equipment",
+        "equipment": "Equipement de simulation professionnel",
         "coaching": "Coaching et équipe stratégique dédiés"
       },
       "cta": "Rejoignez notre équipe Simracing"
     }
   },
   "gallery": {
-    "title": "Gallerie",
+    "title": "Galerie",
     "subtitle": "",
     "description": "Moments capturés de nos aventures de course, à la fois sur piste et dans le monde virtuel",
     "viewFullGallery": "Voir la galerie complète",
@@ -98,9 +98,9 @@
     "description": "Que vous soyez expérimenté ou débutant, nous sommes toujours à la recherche de passionnées pour nous rejoindre en trackday ou dans notre équipe de Simracing. Auriga Racing offre des possibilités à la fois aux amateurs de course sur piste et de simracing.",
     "whyJoinUs": "Pourquoi nous rejoindre sur circuit ou/et en ligne ?",
     "benefits": {
-      "coaching": "Accéder à un coaching professionnel et au développement technique de la conduite du sport automobile",
-      "equipment": "State-of-the-art equipment and facilities",
-      "events": "Conduisez dans des événements nationaux et internationaux",
+      "coaching": "Obtenir un coaching professionnel et développer ses techniques de pilotage et de gestion de course",
+      "equipment": "Voitures et installations de première qualité",
+      "events": "Pilotez lors d'évènements nationaux et internationaux",
       "community": "Faites partie d'une communauté de passionnés"
     },
     "contact": {
@@ -307,8 +307,8 @@
     }
   },
   "footer": {
-    "tagline": "Repousser les limites sur piste et en ligne.",
-    "description": "Vivez le frisson du sport automobile avec nos leçons de conduite sur circuit et une équipe de simulation de course soudée.",
+    "tagline": "Repoussez les limites, sur piste comme en ligne.",
+    "description": "Plongez au cœur du sport automobile avec nos lecons de pilotage sur circuit et une équipe de Simracing passionnée..",
     "logoAlt": "Logo Auriga Racing",
     "quickLinks": {
       "title": "Liens rapides",
