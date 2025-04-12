@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Auriga Racing",
-    "description": "Vivez le frisson du sport automobile avec nos initiations sur circuit et rejoignez notre équipe de Simracing pour prolongez l'expérience à la maison."
+    "description": "Vivez le frisson du sport automobile avec nos initiations au sport automobile sur circuit et pourquoi ne pas rejoindre notre équipe Simracing ?"
   },
   "navbar": {
     "links": {
@@ -15,7 +15,7 @@
   "hero": {
     "title": "Repousser les limites",
     "subtitle": "Sur piste et en ligne",
-    "description": "Vivez le frisson du sport automobile avec nos initiations sur circuit et rejoignez notre équipe de Simracing pour prolongez l'expérience à la maison.",
+    "description": "Vivez le frisson du sport automobile avec nos initiations au sport automobile sur circuit et pourquoi ne pas rejoindre notre équipe Simracing ?",
     "cta": "Nos trackdays",
     "pitlane": "Pitlane",
     "simracingTeam": "Équipe Simracing"
@@ -61,7 +61,7 @@
       "cta": "Rejoignez-nous en trackday"
     },
     "simracing": {
-      "title": "Simracing",
+      "title": "Sim racing",
       "description": "De l'apprentissage jusqu'au Top Split, notre division Simracing fait preuve d'un engagement sérieux basé sur les principes et valeurs qui sont le fondement d'Auriga.",
       "features": {
         "leagues": "Participez à la compétition dans les ligues internationales de sport sur iRacing",
@@ -99,12 +99,12 @@
   },
   "join": {
     "title": "Rejoindre l'équipe",
-    "description": "Que vous soyez expérimenté ou débutant, nous sommes toujours à la recherche de passionnées pour nous rejoindre en trackday ou dans notre équipe de Simracing. Auriga Racing offre des possibilités à la fois aux amateurs de course sur piste et de simracing.",
+    "description": "Que vous soyez expérimenté ou débutant, nous sommes toujours à la recherche de passionnées pour nous rejoindre en trackday ou dans notre équipe de Sim racing. Auriga Racing offre des possibilités à la fois aux amateurs de course sur piste et de simracing.",
     "whyJoinUs": "Pourquoi nous rejoindre sur circuit ou/et en ligne ?",
     "benefits": {
-      "coaching": "Obtenir un coaching professionnel et développer ses techniques de pilotage et de gestion de course",
+      "coaching": "Accéder à un coaching professionnel et au développement technique de la conduite du sport automobile",
       "equipment": "Voitures et installations de première qualité",
-      "events": "Pilotez lors d'évènements nationaux et internationaux",
+      "events": "Conduisez dans des événements nationaux et internationaux",
       "community": "Faites partie d'une communauté de passionnés"
     },
     "contact": {
@@ -123,7 +123,7 @@
         "label": "Je suis intéressé par *",
         "placeholder": "Sélectionnez une option",
         "trackday": "Trackday",
-        "simracing": "Simracing",
+        "simracing": "Sim racing",
         "both": "Les deux"
       },
       "experience": {
@@ -233,81 +233,6 @@
         "successMessage": "Votre réservation a été confirmée. Consultez votre e-mail pour les détails.",
         "errorTitle": "Erreur de réservation",
         "errorMessage": "Un problème est survenu lors du traitement de votre réservation. Veuillez réessayer."
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "Contactez-nous | Auriga Racing",
-      "description": "Prenez contact avec l'équipe Auriga Racing pour toute question concernant nos trackdays, notre équipe de Simracing ou pour devenir partenaire."
-    },
-    "hero": {
-      "title": "Contactez-nous",
-      "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions"
-    },
-    "contactInfo": {
-      "title": "Restons en contact",
-      "description": "Que vous soyez intéressé par nos trackdays, notre équipe de Simracing, ou si vous souhaitez simplement en savoir plus sur Auriga Racing, n'hésitez pas à nous contacter.",
-      "whyContactUs": "Comment pouvons-nous vous aider ?",
-      "reasons": {
-        "events": "Informations sur nos prochains événements et trackdays",
-        "membership": "Rejoindre notre équipe ou devenir membre",
-        "partnership": "Opportunités de partenariat et de sponsoring",
-        "support": "Support technique et questions générales"
-      },
-      "details": {
-        "title": "Coordonnées",
-        "address": "Auriga ASBL, Rue de Spa 1, 4970 Stavelot, Belgique"
-      }
-    },
-    "form": {
-      "title": "Envoyez-nous un message",
-      "firstName": {
-        "label": "Prénom",
-        "placeholder": "Votre prénom"
-      },
-      "lastName": {
-        "label": "Nom",
-        "placeholder": "Votre nom"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "votre.email@exemple.com"
-      },
-      "phone": {
-        "label": "Téléphone",
-        "placeholder": "Votre numéro de téléphone"
-      },
-      "interest": {
-        "label": "Je suis intéressé par",
-        "placeholder": "Sélectionnez une option",
-        "trackday": "Trackdays",
-        "simracing": "Simracing",
-        "partnership": "Partenariat",
-        "other": "Autre"
-      },
-      "experience": {
-        "label": "Niveau d'expérience",
-        "placeholder": "Sélectionnez votre niveau",
-        "none": "Débutant",
-        "beginner": "Novice (1-2 ans)",
-        "intermediate": "Intermédiaire (3-5 ans)",
-        "experienced": "Expérimenté (5+ ans)"
-      },
-      "message": {
-        "label": "Message",
-        "placeholder": "Votre message..."
-      },
-      "submit": "Envoyer",
-      "submitting": "Envoi en cours...",
-      "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.",
-      "success": {
-        "title": "Message envoyé !",
-        "message": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
-      },
-      "error": {
-        "title": "Erreur",
-        "message": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
       }
     }
   },
