@@ -31,6 +31,7 @@ export const tracks: Record<string, string> = {
   'spa-francorchamps': 'Spa-Francorchamps',
   mettet: 'Mettet',
   clastres: 'Clastres',
+  dijon: 'Dijon',
   'magny-cours': 'Magny-Cours',
   zandvoort: 'Zandvoort',
 };
@@ -123,6 +124,20 @@ export const events: EventItem[] = [
     registrations: 12,
     sessionPrice: 150,
     sessionTime: '20 min',
+  },
+  {
+    id: 'dijon-2025-08-18',
+    date: new Date(2025, 7, 18),
+    time: '9h30 - 18h00',
+    type: 'trackday',
+    track: 'dijon',
+    country: 'france',
+    soldOut: false,
+    capacity: 18,
+    registrations: 3,
+    sessionPrice: 200,
+    sessionTime: '20min',
+    braceletPrice: 50,
   },
   {
     id: 'magny-cours-2025-08-20',
