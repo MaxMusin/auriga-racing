@@ -240,10 +240,7 @@ export default async function EventPage({
               })}
             </p>
             <p>
-              {t('event.requirements', {
-                fallback:
-                  "Participants must have a valid driver's license and their own vehicle in good condition. Safety equipment will be checked before the event. Please arrive at least 30 minutes before the start time for registration and briefing.",
-              })}
+              {t('event.requirements')}
             </p>
           </div>
         </div>
