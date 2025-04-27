@@ -271,7 +271,60 @@
     "legalLinks": {
       "privacy": "Privacybeleid",
       "terms": "Servicevoorwaarden",
-      "cookies": "Cookiebeleid"
+      "cookies": "Cookiebeleid",
+      "termsOfSale": "Terms of Sale"
+    }
+  },
+  "termsOfSale": {
+    "meta": {
+      "title": "Terms of Sale | Auriga Racing",
+      "description": "View Auriga Racing's terms of sale for our trackdays, events and services."
+    },
+    "hero": {
+      "title": "Terms of Sale",
+      "subtitle": "Last updated: April 26, 2025"
+    },
+    "sections": {
+      "article1": {
+        "title": "1. Purpose",
+        "content": "These general terms and conditions govern the sale of supervised driving sessions (trackdays) offered by Auriga ASBL, where participants use racing vehicles provided by the Organizer under the supervision of a professional coach."
+      },
+      "article2": {
+        "title": "2. Included Services",
+        "content": "* Provision of a race car prepared for the track\n* Personalized coaching by qualified instructors\n* Provision of mandatory safety equipment:\n  * Approved helmet with integrated communication system\n  * HANS system with compatible attachments\n  * Balaclava loaned for the day\n\nNote:\nThe balaclava must be returned after the last session of the day\nAny damage, loss or non-return of equipment (helmet, HANS, balaclava) will be charged to the participant at its replacement value"
+      },
+      "article3": {
+        "title": "3. Participation Requirements",
+        "content": "* Be at least 16 years old on the date of the event\n* No driver's license required\n* Be in good physical condition\n* Wear the provided safety equipment during all driving phases\n* Sign the liability waiver provided by the Organizer before participation"
+      },
+      "article4": {
+        "title": "4. Event Proceedings",
+        "content": "* The participant agrees to follow all instructions from coaches and supervisory staff\n* Any dangerous driving, non-compliance with safety instructions, or inappropriate behavior may result in immediate exclusion from the event without possibility of refund"
+      },
+      "article5": {
+        "title": "5. Personal Liability",
+        "content": "* The participant acknowledges being fully aware of the risks associated with automobile driving on a circuit\n* They expressly waive any recourse against the Organizer, its employees, partners, or suppliers for any bodily, material, or immaterial damage suffered during the event\n* This waiver is formalized by the prior signing of the liability release"
+      },
+      "article6": {
+        "title": "6. Vehicle Damage",
+        "content": "* In case of damage to the provided vehicle, the participant will be systematically responsible for repairs, whether or not they caused the incident\n* As the circuit is a private venue and considered a non-right place for automobile civil liability, no recourse between participants is possible\n* The participant expressly agrees to cover all costs of restoring the vehicle unless they have subscribed to specific insurance (see article 7)\n* This rule also applies in case of an incident involving a third party"
+      },
+      "article7": {
+        "title": "7. Insurance",
+        "content": "An optional insurance formula may be offered by the Organizer before the event:\n* Rate: €125 excluding VAT per day\n* Deductible: €1,000 excluding VAT\n* Maximum coverage: €15,000 excluding VAT\n\nIn case of an incident, the participant remains responsible for the deductible amount as well as any damage exceeding the compensation ceiling.\n\nSubscription to this insurance does not exempt the participant from the obligation to take all necessary precautions to preserve the integrity of the vehicle."
+      },
+      "article8": {
+        "title": "8. Rates and Payment Terms",
+        "content": "* Rates are publicly displayed on the Organizer's website\n* A deposit is required to confirm the reservation. The deposit amount is freely determined by the Organizer and specified at the time of reservation\n* The balance of the total amount must be paid no later than 10 days before the trackday date"
+      },
+      "article9": {
+        "title": "9. Cancellation and Refund",
+        "content": "* In case of cancellation by the participant more than 30 days before the event: full refund\n* In case of cancellation by the participant between 30 and 15 days before the event: 50% refund of the total amount\n* In case of cancellation by the participant less than 15 days before the event: no refund\n* In case of cancellation by the Organizer (extreme weather conditions, major technical problems, etc.): postponement of the event to a later date or full refund at the participant's choice"
+      },
+      "article10": {
+        "title": "10. Applicable Law and Jurisdiction",
+        "content": "* These general terms and conditions are subject to Belgian law\n* Any dispute relating to their interpretation or execution falls under the exclusive jurisdiction of the Brussels courts"
+      }
     }
   }
 }
