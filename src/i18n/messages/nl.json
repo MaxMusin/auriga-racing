@@ -271,7 +271,60 @@
     "legalLinks": {
       "privacy": "Privacybeleid",
       "terms": "Servicevoorwaarden",
-      "cookies": "Cookiebeleid"
+      "cookies": "Cookiebeleid",
+      "termsOfSale": "Verkoopvoorwaarden"
+    }
+  },
+  "termsOfSale": {
+    "meta": {
+      "title": "Verkoopvoorwaarden | Auriga Racing",
+      "description": "Bekijk de verkoopvoorwaarden van Auriga Racing voor onze trackdays, evenementen en diensten."
+    },
+    "hero": {
+      "title": "Verkoopvoorwaarden",
+      "subtitle": "Laatst bijgewerkt: 26 april 2025"
+    },
+    "sections": {
+      "article1": {
+        "title": "1. Doel",
+        "content": "Deze algemene voorwaarden regelen de verkoop van begeleide rijsessies (trackdays) aangeboden door Auriga ASBL, waarbij deelnemers gebruik maken van racevoertuigen die door de Organisator ter beschikking worden gesteld onder toezicht van een professionele coach."
+      },
+      "article2": {
+        "title": "2. Inbegrepen diensten",
+        "content": "* Terbeschikkingstelling van een voor het circuit voorbereide raceauto\n* Gepersonaliseerde coaching door gekwalificeerde instructeurs\n* Terbeschikkingstelling van verplichte veiligheidsuitrusting:\n  * Goedgekeurde helm met geïntegreerd communicatiesysteem\n  * HANS-systeem met compatibele bevestigingen\n  * Balaclava geleend voor de dag\n\nOpmerking:\nDe balaclava moet na de laatste sessie van de dag worden teruggebracht\nElke beschadiging, verlies of niet-teruggave van uitrusting (helm, HANS, balaclava) wordt aan de deelnemer in rekening gebracht tegen de vervangingswaarde"
+      },
+      "article3": {
+        "title": "3. Deelnemingsvoorwaarden",
+        "content": "* Minimaal 16 jaar oud zijn op de datum van het evenement\n* Geen rijbewijs vereist\n* In goede fysieke conditie verkeren\n* De verstrekte veiligheidsuitrusting dragen tijdens alle rijfasen\n* Voor deelname de door de Organisator verstrekte aansprakelijkheidsverklaring ondertekenen"
+      },
+      "article4": {
+        "title": "4. Verloop van het evenement",
+        "content": "* De deelnemer stemt ermee in alle instructies van coaches en toezichthoudend personeel op te volgen\n* Gevaarlijk rijgedrag, niet-naleving van veiligheidsinstructies of ongepast gedrag kan leiden tot onmiddellijke uitsluiting van het evenement zonder mogelijkheid tot terugbetaling"
+      },
+      "article5": {
+        "title": "5. Persoonlijke aansprakelijkheid",
+        "content": "* De deelnemer erkent zich volledig bewust te zijn van de risico's die verbonden zijn aan het autorijden op een circuit\n* Hij/zij ziet uitdrukkelijk af van elk verhaal tegen de Organisator, zijn medewerkers, partners of leveranciers voor lichamelijke, materiële of immateriële schade geleden tijdens het evenement\n* Deze afstand wordt geformaliseerd door de voorafgaande ondertekening van de aansprakelijkheidsverklaring"
+      },
+      "article6": {
+        "title": "6. Schade aan het voertuig",
+        "content": "* In geval van schade aan het ter beschikking gestelde voertuig is de deelnemer systematisch verantwoordelijk voor reparaties, ongeacht of hij/zij de oorzaak van het incident is\n* Aangezien het circuit een privéterrein is en beschouwd wordt als een plaats zonder recht voor burgerlijke aansprakelijkheid voor motorvoertuigen, is geen verhaal tussen deelnemers mogelijk\n* De deelnemer stemt er uitdrukkelijk mee in alle kosten voor het herstel van het voertuig te dekken, tenzij hij/zij een specifieke verzekering heeft afgesloten (zie artikel 7)\n* Deze regel is ook van toepassing in geval van een incident waarbij een derde partij betrokken is"
+      },
+      "article7": {
+        "title": "7. Verzekering",
+        "content": "Een optionele verzekeringsformule kan door de Organisator worden aangeboden voor het evenement:\n* Tarief: €125 exclusief BTW per dag\n* Eigen risico: €1.000 exclusief BTW\n* Maximale dekking: €15.000 exclusief BTW\n\nIn geval van een incident blijft de deelnemer verantwoordelijk voor het bedrag van het eigen risico en voor eventuele schade die het vergoedingsplafond overschrijdt.\n\nHet afsluiten van deze verzekering ontslaat de deelnemer niet van de verplichting om alle nodige voorzorgsmaatregelen te nemen om de integriteit van het voertuig te bewaren."
+      },
+      "article8": {
+        "title": "8. Tarieven en betalingsvoorwaarden",
+        "content": "* Tarieven worden openbaar weergegeven op de website van de Organisator\n* Een aanbetaling is vereist om de reservering te bevestigen. Het bedrag van de aanbetaling wordt vrij bepaald door de Organisator en gespecificeerd op het moment van reservering\n* Het saldo van het totaalbedrag moet uiterlijk 10 dagen voor de datum van de trackday worden betaald"
+      },
+      "article9": {
+        "title": "9. Annulering en terugbetaling",
+        "content": "* In geval van annulering door de deelnemer meer dan 30 dagen voor het evenement: volledige terugbetaling\n* In geval van annulering door de deelnemer tussen 30 en 15 dagen voor het evenement: 50% terugbetaling van het totaalbedrag\n* In geval van annulering door de deelnemer minder dan 15 dagen voor het evenement: geen terugbetaling\n* In geval van annulering door de Organisator (extreme weersomstandigheden, grote technische problemen, enz.): uitstel van het evenement naar een latere datum of volledige terugbetaling naar keuze van de deelnemer"
+      },
+      "article10": {
+        "title": "10. Toepasselijk recht en bevoegde rechtbank",
+        "content": "* Deze algemene voorwaarden zijn onderworpen aan het Belgische recht\n* Elk geschil met betrekking tot de interpretatie of uitvoering ervan valt onder de exclusieve bevoegdheid van de rechtbanken van Brussel"
+      }
     }
   }
 }

@@ -346,7 +346,60 @@
     "legalLinks": {
       "privacy": "Politique de confidentialité",
       "terms": "Conditions d'utilisation",
-      "cookies": "Politique des cookies"
+      "cookies": "Politique des cookies",
+      "termsOfSale": "Conditions générales de vente"
+    }
+  },
+  "termsOfSale": {
+    "meta": {
+      "title": "Conditions Générales de Vente | Auriga Racing",
+      "description": "Consultez les conditions générales de vente d'Auriga Racing pour nos trackdays, événements et services."
+    },
+    "hero": {
+      "title": "Conditions Générales de Vente",
+      "subtitle": "Dernière mise à jour : 26 avril 2025"
+    },
+    "sections": {
+      "article1": {
+        "title": "1. Objet",
+        "content": "Les présentes conditions générales régissent la vente de sessions de pilotage encadrées (trackdays) proposées par Auriga ASBL, où les participants utilisent les véhicules de course fournis par l'Organisateur sous la supervision d'un coach professionnel."
+      },
+      "article2": {
+        "title": "2. Prestations incluses",
+        "content": "* Mise à disposition d'un véhicule de course préparé pour la piste\n* Coaching personnalisé par des instructeurs qualifiés\n* Mise à disposition de l'équipement de sécurité obligatoire :\n  * Casque homologué avec système de communication intégré\n  * Système Hans avec attaches compatibles\n  * Cagoule prêtée pour la journée\n\nNote :\nLa cagoule doit être rendue après la dernière session de la journée\nToute dégradation, perte ou non-retour de l'équipement (casque, Hans, cagoule) sera facturée au participant à sa valeur de remplacement"
+      },
+      "article3": {
+        "title": "3. Conditions de participation",
+        "content": "* Être âgé d'au moins 16 ans à la date de l'événement\n* Aucun permis de conduire requis\n* Être en bonne condition physique\n* Porter l'équipement de sécurité fourni pendant toutes les phases de roulage\n* Signer avant toute participation la décharge de responsabilité fournie par l'Organisateur"
+      },
+      "article4": {
+        "title": "4. Déroulement de l'événement",
+        "content": "* Le participant s'engage à suivre toutes les instructions des coaches et du personnel d'encadrement\n* Toute conduite dangereuse, non-respect des consignes de sécurité ou comportement inapproprié pourra entraîner l'exclusion immédiate de l'événement sans possibilité de remboursement"
+      },
+      "article5": {
+        "title": "5. Responsabilité personnelle",
+        "content": "* Le participant reconnaît être pleinement conscient des risques liés à la pratique du pilotage automobile sur circuit\n* Il renonce expressément à tout recours contre l'Organisateur, ses préposés, partenaires ou fournisseurs pour tout dommage corporel, matériel ou immatériel subi lors de l'événement\n* Cette renonciation est formalisée par la signature préalable de la décharge de responsabilité"
+      },
+      "article6": {
+        "title": "6. Dommages au véhicule",
+        "content": "* En cas de dommages au véhicule fourni, le participant sera systématiquement responsable des réparations, qu'il soit ou non à l'origine du sinistre\n* Le circuit étant un lieu privé et considéré comme lieu de non-droit pour la responsabilité civile automobile, aucun recours entre participants n'est possible\n* Le participant accepte expressément de couvrir l'intégralité des frais de remise en état du véhicule sauf s'il a souscrit une assurance spécifique (voir article 7)\n* Cette règle s'applique également en cas d'incident impliquant un tiers"
+      },
+      "article7": {
+        "title": "7. Assurance",
+        "content": "Une formule d'assurance facultative peut être proposée par l'Organisateur avant l'événement :\n* Tarif : 125 € HTVA par jour\n* Franchise : 1 000 € HTVA\n* Couverture maximale : 15 000 € HTVA\n\nEn cas de sinistre, le participant reste responsable du montant de la franchise ainsi que de tout dommage excédant le plafond d'indemnisation.\n\nL'adhésion à cette assurance ne dispense pas le participant de l'obligation de prendre toutes les précautions nécessaires pour préserver l'intégrité du véhicule."
+      },
+      "article8": {
+        "title": "8. Tarifs et modalités de paiement",
+        "content": "* Les tarifs sont affichés publiquement sur le site internet de l'Organisateur\n* Un acompte est requis pour confirmer la réservation. Le montant de l'acompte est librement déterminé par l'Organisateur et précisé lors de la réservation\n* Le solde du montant total doit être réglé au plus tard 10 jours avant la date du trackday"
+      },
+      "article9": {
+        "title": "9. Annulation et remboursement",
+        "content": "* En cas d'annulation par le participant plus de 30 jours avant l'événement : remboursement intégral\n* En cas d'annulation par le participant entre 30 et 15 jours avant l'événement : remboursement de 50% du montant total\n* En cas d'annulation par le participant moins de 15 jours avant l'événement : aucun remboursement\n* En cas d'annulation par l'Organisateur (conditions météorologiques extrêmes, problèmes techniques majeurs, etc.) : report de l'événement à une date ultérieure ou remboursement intégral au choix du participant"
+      },
+      "article10": {
+        "title": "10. Droit applicable et juridiction compétente",
+        "content": "* Les présentes conditions générales sont soumises au droit belge\n* Tout litige relatif à leur interprétation ou à leur exécution relève de la compétence exclusive des tribunaux de Bruxelles"
+      }
     }
   }
 }

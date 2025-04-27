@@ -311,9 +311,36 @@
     z-index: 1;
   }
 
+  /* Styles pour le contenu Markdown */
+  .markdown-content {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .markdown-content p {
+    @apply mb-4;
+  }
+
+  .markdown-content ul {
+    @apply list-disc ml-6 mb-4;
+  }
+
+  .markdown-content li {
+    @apply mb-2;
+  }
+
+  .markdown-content li:last-child {
+    @apply mb-0;
+  }
+
+  .markdown-content ul ul {
+    @apply mt-2 mb-0;
+  }
+
+  /* Espacement entre les paragraphes */
+  .markdown-content > *:last-child {
+    @apply mb-0;
+  }
 }
-
-
 
 @layer base {
   * {

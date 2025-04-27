@@ -1,52 +1,52 @@
 'use client';
 
+import { useToast } from '@/hooks/use-toast';
+import { subscribeToNewsletter } from '@/utils/brevo';
 import { Facebook, Instagram } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useState, FormEvent } from 'react';
-import { subscribeToNewsletter } from '@/utils/brevo';
-import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
+import { FormEvent, useState } from 'react';
 
 const Footer = () => {
   const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
   const { toast } = useToast();
-  
+
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubscribe = async (e: FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !email.includes('@')) {
       toast({
-        variant: "destructive",
+        variant: 'destructive',
         title: t('newsletter.invalidEmail'),
         duration: 3000,
       });
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
       // Appel direct à la fonction serveur
       const result = await subscribeToNewsletter(email);
-      
+
       toast({
-        variant: result.success ? "default" : "destructive",
+        variant: result.success ? 'default' : 'destructive',
         title: result.message,
         duration: 3000,
       });
-      
+
       if (result.success) {
         setEmail('');
       }
     } catch (error) {
       console.error('Newsletter subscription error:', error);
       toast({
-        variant: "destructive",
+        variant: 'destructive',
         title: t('newsletter.error'),
         duration: 3000,
       });
@@ -99,7 +99,9 @@ const Footer = () => {
           <div></div>
 
           <div>
-            <h3 className="text-lg font-bold mb-2 md:mb-6">{t('quickLinks.title')}</h3>
+            <h3 className="text-lg font-bold mb-2 md:mb-6">
+              {t('quickLinks.title')}
+            </h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -199,7 +201,9 @@ const Footer = () => {
           </div> */}
 
           <div>
-            <h3 className="text-lg font-bold mb-2 md:mb-6">{t('newsletter.title')}</h3>
+            <h3 className="text-lg font-bold mb-2 md:mb-6">
+              {t('newsletter.title')}
+            </h3>
             <p className="text-muted-foreground mb-4">
               {t('newsletter.description')}
             </p>
@@ -215,13 +219,15 @@ const Footer = () => {
                   disabled={isSubmitting}
                 />
               </div>
-              
-              <button 
-                type="submit" 
+
+              <button
+                type="submit"
                 className={`btn-primary w-full ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                 disabled={isSubmitting}
               >
-                {isSubmitting ? t('newsletter.submitting') : t('newsletter.button')}
+                {isSubmitting
+                  ? t('newsletter.submitting')
+                  : t('newsletter.button')}
               </button>
             </form>
           </div>
@@ -232,26 +238,32 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground mb-4 md:mb-0">
               {t('copyright', { year: currentYear })}
             </p>
-            {/* <div className="flex space-x-6">
-              <a
+            <div className="flex space-x-6">
+              {/* <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-racing-red transition-colors"
               >
                 {t('legalLinks.privacy')}
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-racing-red transition-colors"
               >
                 {t('legalLinks.terms')}
-              </a>
-              <a
+              </a> */}
+              <Link
+                href="/terms-of-sale"
+                className="text-sm text-muted-foreground hover:text-racing-red transition-colors"
+              >
+                {t('legalLinks.termsOfSale')}
+              </Link>
+              {/* <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-racing-red transition-colors"
               >
                 {t('legalLinks.cookies')}
-              </a>
-            </div> */}
+              </a> */}
+            </div>
           </div>
         </div>
       </div>
