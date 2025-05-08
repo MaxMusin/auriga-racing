@@ -3,6 +3,7 @@
 import { useToast } from '@/hooks/use-toast';
 import { subscribeToNewsletter } from '@/utils/brevo';
 import { Facebook, Instagram } from 'lucide-react';
+import TikTokIcon from './icons/TikTokIcon';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -92,6 +93,14 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@aurigaracing/"
+                className="text-muted-foreground hover:text-racing-red transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TikTokIcon className="h-5 w-5" />
               </a>
             </div>
           </div>
