@@ -15,7 +15,7 @@ const UpcomingEventsSection = () => {
   const locale = useLocale();
 
   // Filter upcoming events (after current date) and take only the next 4
-  const currentDate = new Date(2025, 3, 10); // April 10, 2025
+  const currentDate = new Date(); // Use the actual current date
   const upcomingEvents = events
     .filter((event) => event.date > currentDate)
     .sort((a, b) => a.date.getTime() - b.date.getTime())

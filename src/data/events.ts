@@ -121,7 +121,7 @@ export const events: EventItem[] = [
     country: 'france',
     soldOut: false,
     capacity: 18,
-    registrations: 12,
+    registrations: 16,
     sessionPrice: 150,
     sessionTime: '20 min',
   },

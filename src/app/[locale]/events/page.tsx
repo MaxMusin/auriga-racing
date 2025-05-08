@@ -13,7 +13,7 @@ export default function EventsPage() {
   const locale = useLocale();
 
   // Sort all events by date (upcoming first)
-  const currentDate = new Date(2025, 3, 10); // April 10, 2025
+  const currentDate = new Date(); // Use the actual current date
   const sortedEvents = [...events].sort(
     (a, b) => a.date.getTime() - b.date.getTime(),
   );
