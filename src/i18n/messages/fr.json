@@ -307,7 +307,7 @@
       },
       "error": {
         "title": "Erreur",
-        "message": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+        "message": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer."
       }
     }
   },
@@ -401,5 +401,66 @@
         "content": "* Les présentes conditions générales sont soumises au droit belge\n* Tout litige relatif à leur interprétation ou à leur exécution relève de la compétence exclusive des tribunaux de Bruxelles"
       }
     }
+  },
+  "DocumentForm": {
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "birthDate": "Date de naissance",
+    "address": "Adresse",
+    "submitting": "Envoi en cours...",
+    "continue": "Continuer"
+  },
+  "SignatureCanvas": {
+    "clear": "Effacer",
+    "save": "Enregistrer"
+  },
+  "SignDocument": {
+    "title": "Signature du document",
+    "signatureTitle": "Votre signature",
+    "confirmationTitle": "Confirmation",
+    "personalInfo": "Informations personnelles",
+    "signature": "Signature",
+    "back": "Retour",
+    "confirm": "Confirmer",
+    "submitting": "Envoi en cours...",
+    "completed": "Document signé",
+    "documentSigned": "Votre document a été signé avec succès.",
+    "thankYou": "Merci pour votre participation.",
+    "error": "Erreur",
+    "genericError": "Une erreur est survenue lors du traitement de votre demande.",
+    "documentExpired": "Ce lien a expiré ou n'est plus valide.",
+    "loading": "Chargement...",
+    "welcomeUser": "Bienvenue, {name}"
+  },
+  "DocumentRequests": {
+    "title": "Suivi des signatures",
+    "selectEvent": "Sélectionner un événement",
+    "selectEventPlaceholder": "Choisir un événement",
+    "total": "Total",
+    "pending": "En attente",
+    "viewed": "Consultés",
+    "completed": "Signés",
+    "expired": "Expirés",
+    "recipient": "Destinataire",
+    "email": "Email",
+    "status": "Statut",
+    "created": "Créé le",
+    "completedDate": "Signé le",
+    "actions": "Actions",
+    "view": "Voir",
+    "loading": "Chargement...",
+    "noRequests": "Aucune demande de signature pour cet événement"
+  },
+  "SendDocumentRequest": {
+    "title": "Envoyer une demande de signature",
+    "event": "Événement",
+    "selectEvent": "Sélectionner un événement",
+    "recipientName": "Nom du destinataire",
+    "recipientEmail": "Email du destinataire",
+    "message": "Message (optionnel)",
+    "messagePlaceholder": "Message personnalisé à inclure dans l'email",
+    "sending": "Envoi en cours...",
+    "send": "Envoyer",
+    "requestSent": "La demande de signature a été envoyée avec succès."
   }
 }
