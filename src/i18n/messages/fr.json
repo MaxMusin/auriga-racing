@@ -139,19 +139,19 @@
         "placeholder": "Partagez votre expérience de course, vos accomplissements ou pourquoi vous voulez nous contacter..."
       },
       "subject": {
-        "label": "Subject*",
-        "placeholder": "Select a subject",
-        "general": "General Inquiry",
-        "trackday": "Trackday Information",
-        "simracing": "Simracing Team",
-        "sponsorship": "Sponsorship",
-        "other": "Other"
+        "label": "Sujet*",
+        "placeholder": "Sélectionnez un sujet",
+        "general": "Demande générale",
+        "trackday": "Information Trackday",
+        "simracing": "Équipe Simracing",
+        "sponsorship": "Parrainage",
+        "other": "Autre"
       },
-      "name": "Full Name*",
+      "name": "Nom complet*",
       "submit": "Envoyer",
       "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.",
-      "success": "Your message has been sent successfully! We'll get back to you soon.",
-      "error": "There was an error sending your message. Please try again."
+      "success": "Votre message a été envoyé avec succès ! Nous vous répondrons bientôt.",
+      "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
     }
   },
   "events": {

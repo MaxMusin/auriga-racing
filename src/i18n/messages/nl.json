@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Auriga Racing",
-    "description": ""
+    "description": "Ervaar de sensatie van motorsport met onze initiaties op het circuit en waarom niet aansluiten bij ons Simracing team?"
   },
   "navbar": {
     "links": {
@@ -13,9 +13,9 @@
     "cta": "Doe mee"
   },
   "hero": {
-    "title": "",
+    "title": "Grenzen verleggen",
     "subtitle": "Op track & online",
-    "description": "Experience the thrill of motorsport with our motorsport initiations on the circuit and why not join our Simracing team?",
+    "description": "Ervaar de sensatie van motorsport met onze initiaties op het circuit en waarom niet aansluiten bij ons Simracing team?",
     "cta": "Kom op de trackday",
     "pitlane": "Pitlane",
     "simracingTeam": "Simracing Team"
@@ -49,26 +49,26 @@
   "teams": {
     "title": "Onze teams",
     "subtitle": "",
-    "description": "Auriga Racing is active across multiple disciplines, from real-world Fun Cup events to serious simracing competitions",
+    "description": "Auriga Racing is actief in meerdere disciplines, van real-world Fun Cup evenementen tot serieuze simracing competities",
     "track": {
       "title": "Fun Cup",
-      "description": "Our track team competes in FUNCUP events across Europe, showcasing skill and precision in some of the most challenging circuits.",
+      "description": "Ons Fun Cup team neemt deel aan evenementen in heel Europa, waarbij vaardigheid en precisie worden getoond op enkele van de meest uitdagende circuits.",
       "features": {
-        "drivers": "Professional drivers with years of experience",
-        "equipment": "State-of-the-art cars and equipment",
-        "training": "Regular trackdays and training sessions"
+        "drivers": "Professionele coureurs met jarenlange ervaring",
+        "equipment": "Geavanceerde auto's en apparatuur",
+        "training": "Regelmatige trackdays en trainingssessies"
       },
-      "cta": "Join Track Team"
+      "cta": "Doe mee aan trackday"
     },
     "simracing": {
       "title": "Sim racing",
-      "description": "Our sim racing division competes at a respectable level in virtual motorsports with serious engagement based on the principles and values ​​that build the team.",
+      "description": "Onze Sim racing divisie concurreert op een respectabel niveau in virtuele motorsport met serieuze betrokkenheid gebaseerd op de principes en waarden die het team opbouwen.",
       "features": {
-        "leagues": "Compete in international e-motorsport leagues",
-        "equipment": "Professional simulation rigs and equipment",
-        "coaching": "Dedicated coaching and strategy team"
+        "leagues": "Neem deel aan internationale iRacing-competities",
+        "equipment": "Professionele simulatie-opstellingen en apparatuur",
+        "coaching": "Toegewijd coaching- en strategieteam"
       },
-      "cta": "Join our Sim racing team"
+      "cta": "Word lid van ons Sim racing team"
     }
   },
   "gallery": {
@@ -98,14 +98,14 @@
     }
   },
   "join": {
-    "title": "Join the team",
-    "description": "Whether you're an experienced racer or just starting out, we're always looking for passionate individuals to join our teams. Auriga Racing provides opportunities for both track racing and simracing enthusiasts.",
-    "whyJoinUs": "Why join us on track or/and online?",
+    "title": "Word lid van het team",
+    "description": "Of je nu een ervaren racer bent of net begint, we zijn altijd op zoek naar gepassioneerde individuen om lid te worden van onze teams. Auriga Racing biedt mogelijkheden voor zowel circuitracers als simracing-enthousiastelingen.",
+    "whyJoinUs": "Waarom bij ons aansluiten op circuit of/en online?",
     "benefits": {
-      "coaching": "Access to professional coaching and development",
-      "equipment": "State-of-the-art equipment and facilities",
-      "events": "Drive in national and international events",
-      "community": "Be part of a passionate community of racers"
+      "coaching": "Toegang tot professionele coaching en ontwikkeling",
+      "equipment": "Geavanceerde apparatuur en faciliteiten",
+      "events": "Rijden in nationale en internationale evenementen",
+      "community": "Deel uitmaken van een gepassioneerde gemeenschap van racers"
     },
     "contact": {
       "title": "Contacteer ons",
@@ -131,27 +131,27 @@
         "placeholder": "Selecteer een optie",
         "none": "Geen",
         "beginner": "Beginner (0-3 jaar)",
-        "intermediate": "Intermediate (3-5 years)",
-        "experienced": "Experienced (5+ years)"
+        "intermediate": "Gemiddeld (3-5 jaar)",
+        "experienced": "Ervaren (5+ jaar)"
       },
       "message": {
-        "label": "Message",
-        "placeholder": "Share your racing background, achievements, or why you want to contact us..."
+        "label": "Bericht",
+        "placeholder": "Deel je race-achtergrond, prestaties of waarom je contact met ons wilt opnemen..."
       },
       "subject": {
-        "label": "Subject*",
-        "placeholder": "Select a subject",
-        "general": "General Inquiry",
-        "trackday": "Trackday Information",
+        "label": "Onderwerp*",
+        "placeholder": "Selecteer een onderwerp",
+        "general": "Algemene vraag",
+        "trackday": "Trackday informatie",
         "simracing": "Simracing Team",
-        "sponsorship": "Sponsorship",
-        "other": "Other"
+        "sponsorship": "Sponsoring",
+        "other": "Anders"
       },
-      "name": "Full Name*",
+      "name": "Volledige naam*",
       "submit": "Versturen",
       "disclaimer": "Door het indienen van dit formulier, gaat u akkoord met ons privacybeleid en de algemene voorwaarden.",
-      "success": "Your message has been sent successfully! We'll get back to you soon.",
-      "error": "There was an error sending your message. Please try again."
+      "success": "Je bericht is succesvol verzonden! We nemen zo snel mogelijk contact met je op.",
+      "error": "Er is een fout opgetreden bij het verzenden van je bericht. Probeer het opnieuw."
     }
   },
   "events": {
@@ -183,7 +183,7 @@
     "trackLength": "Circuitlengte",
     "kilometers": "{length} km",
     "registerForEvent": "Registreren voor dit evenement",
-    "joinWaitingList": "Join Waiting List",
+    "joinWaitingList": "Voeg toe aan wachtlijst",
     "eventDetails": "Evenementdetails",
     "relatedEvents": "Andere evenementen",
     "countries": {
