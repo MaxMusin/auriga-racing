@@ -110,7 +110,7 @@ export const events: EventItem[] = [
     registrations: 4,
     sessionPrice: 150,
     sessionTime: '20 min',
-    braceletPrice: 50,
+    braceletPrice: 33,
   },
   {
     id: 'clastres-2025-06-27',
