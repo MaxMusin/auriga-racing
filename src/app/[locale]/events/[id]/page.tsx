@@ -333,8 +333,10 @@ export default async function EventPage({
         </div>
       </div>
 
-      {/* Booking section */}
-      <BookingSection event={event} locale={locale} />
+      {/* Booking section - only show for upcoming events that are not canceled */}
+      {event.date >= new Date() && !event.cancel && (
+        <BookingSection event={event} locale={locale} />
+      )}
     </div>
   );
 }
