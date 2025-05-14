@@ -170,7 +170,10 @@
       "soldOut": "Complet",
       "booked": "Réservé",
       "sessionPrice": "{price}€ / {session}",
-      "braceletPrice": "{price}€ / bracelet pilote à la journée"
+      "braceletPrice": "{price}€ / bracelet pilote à la journée",
+      "canceled": "Annulé",
+      "canceledNotice": "Cet événement a été annulé",
+      "eventCanceled": "Événement annulé"
     },
     "disclaimerPrice": "Prix affiché hors taxes",
     "backToEvents": "Retour aux événements",

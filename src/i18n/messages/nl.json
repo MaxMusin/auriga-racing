@@ -170,7 +170,10 @@
       "soldOut": "Uitverkocht",
       "booked": "Geboekt",
       "sessionPrice": "{price}€ / {session}",
-      "braceletPrice": "{price}€ / pilotenarmband voor de dag"
+      "braceletPrice": "{price}€ / pilotenarmband voor de dag",
+      "canceled": "Geannuleerd",
+      "canceledNotice": "Dit evenement is geannuleerd",
+      "eventCanceled": "Evenement geannuleerd"
     },
     "disclaimerPrice": "Prijzen zijn exclusief btw",
     "backToEvents": "Terug naar evenementen",

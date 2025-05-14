@@ -170,7 +170,10 @@
       "soldOut": "Sold Out",
       "booked": "Booked",
       "sessionPrice": "{price}€ / {session}",
-      "braceletPrice": "{price}€ / pilot bracelet for the day"
+      "braceletPrice": "{price}€ / pilot bracelet for the day",
+      "canceled": "Canceled",
+      "canceledNotice": "This event has been canceled",
+      "eventCanceled": "Event Canceled"
     },
     "disclaimerPrice": "Price displayed excluding taxes",
     "backToEvents": "Back to events",

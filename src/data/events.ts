@@ -14,6 +14,7 @@ export interface EventItem {
   sessionPrice?: number;
   sessionTime?: string;
   braceletPrice?: number;
+  cancel?: boolean;
 }
 
 export const countryFlags: Record<EventItem['country'], string> = {
@@ -138,6 +139,7 @@ export const events: EventItem[] = [
     sessionPrice: 200,
     sessionTime: '20min',
     braceletPrice: 50,
+    cancel: true,
   },
   {
     id: 'magny-cours-2025-08-20',
@@ -152,6 +154,7 @@ export const events: EventItem[] = [
     sessionPrice: 200,
     sessionTime: '20min',
     braceletPrice: 50,
+    cancel: true,
   },
   {
     id: 'clastres-2025-08-28',

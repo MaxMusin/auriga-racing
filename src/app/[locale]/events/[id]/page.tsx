@@ -6,6 +6,7 @@ import {
   Calendar,
   Car,
   CircleDashed,
+  CircleX,
   Clock,
   Flag,
   MapPin,
@@ -49,8 +50,8 @@ export async function generateMetadata({
       icon: '/images/auriga_racing__logo.svg',
     },
     other: {
-      'thumbnail': '/images/auriga-racing-car.jpg',
-      'image': '/images/auriga-racing-car.jpg',
+      thumbnail: '/images/auriga-racing-car.jpg',
+      image: '/images/auriga-racing-car.jpg',
     },
   };
 }
@@ -89,19 +90,28 @@ export default async function EventPage({
                   className="object-cover"
                   priority
                 />
+                {event.cancel && (
+                  <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+                )}
                 <div
                   className={`absolute bottom-0 left-0 py-2 px-4 text-sm font-semibold ${
                     event.type === 'trackday'
                       ? 'bg-racing-red'
                       : 'bg-racing-black'
-                  } text-white`}
+                  } text-white z-20`}
                 >
                   {types[event.type]}
                 </div>
 
-                {event.soldOut && (
+                {event.soldOut && !event.cancel && (
                   <div className="absolute top-4 right-4 py-2 px-4 text-sm font-bold bg-racing-black text-white rounded">
-                    {t('event.soldOut')}
+                    <p>{t('event.soldOut')}</p>
+                  </div>
+                )}
+
+                {event.cancel && (
+                  <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-red text-white rotate-0 m-2 rounded z-20">
+                    <p className="uppercase">{t('event.canceled')}</p>
                   </div>
                 )}
               </div>
@@ -110,6 +120,14 @@ export default async function EventPage({
             {/* Event details */}
             <div className="bg-card rounded-lg p-6 shadow-md flex flex-col justify-between">
               <div>
+                {event.cancel && (
+                  <div className="mb-4 p-2 bg-racing-red bg-opacity-10 rounded-md">
+                    <p className="tex-sm text-white font-semibold flex items-center">
+                      <CircleX className="h-4 w-4 mr-2" />
+                      {t('event.canceledNotice')}
+                    </p>
+                  </div>
+                )}
                 <h1 className="text-2xl font-bold mb-4">
                   {t('event.title', { track: trackName })}{' '}
                   {countryFlags[event.country]}
@@ -157,7 +175,7 @@ export default async function EventPage({
                     <BadgeEuro className="h-4 w-4 mr-2" />
                     <p className="font-semibold">
                       {`${t('event.sessionPrice', { price: event.sessionPrice, session: event.sessionTime })}`}{' '}
-                      <span className='text-muted-foreground'>&#42;</span>
+                      <span className="text-muted-foreground">&#42;</span>
                     </p>
                   </div>
                   {event.braceletPrice && (
@@ -167,7 +185,7 @@ export default async function EventPage({
                         {t('event.braceletPrice', {
                           price: event.braceletPrice,
                         })}{' '}
-                        <span className='text-muted-foreground'>&#42;</span>
+                        <span className="text-muted-foreground">&#42;</span>
                       </p>
                     </div>
                   )}
@@ -210,10 +228,13 @@ export default async function EventPage({
                 )}
                 <div className="mt-8">
                   <RegisterButton
+                    disabled={event.soldOut || event.cancel}
                     label={
-                      event.soldOut
-                        ? t('joinWaitingList')
-                        : t('registerForEvent')
+                      event.cancel
+                        ? t('event.eventCanceled')
+                        : event.soldOut
+                          ? t('joinWaitingList')
+                          : t('registerForEvent')
                     }
                   />
                   <p className="text-xs text-muted-foreground text-center mt-4">
@@ -239,9 +260,7 @@ export default async function EventPage({
                   'During this event, you will have the opportunity to improve your driving skills, receive coaching from experienced drivers, and enjoy a full day of track time in a safe and controlled environment.',
               })}
             </p>
-            <p>
-              {t('event.requirements')}
-            </p>
+            <p>{t('event.requirements')}</p>
           </div>
         </div>
       </div>
