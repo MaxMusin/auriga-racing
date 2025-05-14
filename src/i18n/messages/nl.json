@@ -171,7 +171,7 @@
       "booked": "Geboekt",
       "priceVATIncl": "{price}€ TTC",
       "priceVATExcl": "{price}€ HT",
-      "bracelet": "Rijdersarmband voor de dag",
+      "bracelet": "Prijs rijdersarmband voor de dag",
       "session": "Sessieprijs van {sessionTime}",
       "canceled": "Geannuleerd",
       "canceledNotice": "Dit evenement is geannuleerd",

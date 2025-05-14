@@ -171,7 +171,7 @@
       "booked": "Booked",
       "priceVATIncl": "{price}€ TTC",
       "priceVATExcl": "{price}€ HT",
-      "bracelet": "Driver bracelet for the day",
+      "bracelet": "Driver bracelet price for the day",
       "session": "Session price of {sessionTime}",
       "canceled": "Canceled",
       "canceledNotice": "This event has been canceled",
