@@ -136,9 +136,8 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 0,
-    sessionPrice: 150,
+    sessionPrice: 180,
     sessionTime: '20 min',
-    braceletPrice: 33,
   },
   {
     id: 'mettet-2025-08-17',
@@ -150,9 +149,8 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 0,
-    sessionPrice: 150,
+    sessionPrice: 180,
     sessionTime: '20 min',
-    braceletPrice: 33,
   },
   {
     id: 'dijon-2025-08-18',
