@@ -18,11 +18,12 @@ export default function EventsPage() {
     (a, b) => a.date.getTime() - b.date.getTime(),
   );
 
-  // Separate upcoming and past events
+  // Separate upcoming and past events, exclude canceled events from upcoming
   const upcomingEvents = sortedEvents.filter(
-    (event) => event.date >= currentDate,
+    (event) => event.date >= currentDate && !event.cancel,
   );
-  const pastEvents = sortedEvents.filter((event) => event.date < currentDate);
+  // Include canceled events in past events
+  const pastEvents = sortedEvents.filter((event) => event.date < currentDate || event.cancel);
 
   return (
     <div className="pt-[144px] bg-card pb-16">

@@ -273,13 +273,14 @@ export default async function EventPage({
               // Get the current date
               const currentDate = new Date();
 
-              // Filter events from the same track that are upcoming and not sold out
+              // Filter events from the same track that are upcoming, not sold out and not canceled
               const sameTrackEvents = events.filter(
                 (e) =>
                   e.id !== eventId &&
                   e.track === event.track &&
                   e.date >= currentDate &&
                   !e.soldOut &&
+                  !e.cancel &&
                   (!e.capacity ||
                     !e.registrations ||
                     e.capacity > e.registrations),
@@ -297,13 +298,14 @@ export default async function EventPage({
               let relatedEvents = [...sameTrackToShow];
 
               if (relatedEvents.length < 3) {
-                // Get all upcoming events from other tracks that are not sold out
+                // Get all upcoming events from other tracks that are not sold out and not canceled
                 const otherTrackEvents = events.filter(
                   (e) =>
                     e.id !== eventId &&
                     e.track !== event.track &&
                     e.date >= currentDate &&
                     !e.soldOut &&
+                    !e.cancel &&
                     (!e.capacity ||
                       !e.registrations ||
                       e.capacity > e.registrations),
