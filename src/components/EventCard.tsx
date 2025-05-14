@@ -25,10 +25,11 @@ export default function EventCard({
 }: EventCardProps) {
   const t = useTranslations('events');
 
-  // Calculate fill percentage if capacity and registrations are available
+  // Calculate fill percentage if capacity is available
+  // If registrations is 0 or undefined, show 0%
   const fillPercentage =
-    event.capacity && event.registrations
-      ? Math.min(Math.round((event.registrations / event.capacity) * 100), 100)
+    event.capacity !== undefined
+      ? Math.min(Math.round(((event.registrations || 0) / event.capacity) * 100), 100)
       : null;
 
   // Determine color based on fill percentage
