@@ -21,6 +21,7 @@ import {
   countryFlags,
   events,
   formatEventDate,
+  trackLengths,
   tracks,
   types,
 } from '@/data/events';
@@ -162,12 +163,7 @@ export default async function EventPage({
                     <Car className="h-4 w-4 mr-2" />
                     <p className="font-medium">
                       {t('kilometers', {
-                        length:
-                          event.track === 'spa-francorchamps'
-                            ? 7.004
-                            : event.track === 'zandvoort'
-                              ? 4.259
-                              : 3.5,
+                        length: trackLengths[event.track],
                       })}
                     </p>
                   </div>

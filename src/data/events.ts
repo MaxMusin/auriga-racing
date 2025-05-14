@@ -23,6 +23,15 @@ export const countryFlags: Record<EventItem['country'], string> = {
   netherlands: '🇳🇱',
 };
 
+export const trackLengths: Record<string, number> = {
+  'spa-francorchamps': 7.004,
+  mettet: 2.28,
+  clastres: 2.7,
+  dijon: 3.801,
+  'magny-cours': 4.411,
+  zandvoort: 4.259,
+};
+
 export const types = {
   trackday: 'Trackday',
   simracing: 'Simracing',
