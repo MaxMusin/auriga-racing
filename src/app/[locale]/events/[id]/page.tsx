@@ -24,6 +24,7 @@ import {
   tracks,
   types,
 } from '@/data/events';
+import { calculatePriceExcludingVat, roundPrice } from '@/utils/vat';
 import BookingSection from '@/views/events/components/BookingSection';
 
 export async function generateMetadata({
@@ -171,59 +172,89 @@ export default async function EventPage({
                     </p>
                   </div>
 
-                  <div className="flex items-center text-sm text-white/80 mb-2">
-                    <BadgeEuro className="h-4 w-4 mr-2" />
-                    <p className="font-semibold">
-                      {`${t('event.sessionPrice', { price: event.sessionPrice, session: event.sessionTime })}`}{' '}
-                      <span className="text-muted-foreground">&#42;</span>
-                    </p>
-                  </div>
-                  {event.braceletPrice && (
-                    <div className="flex items-center text-sm text-white/80 mb-2">
-                      <CircleDashed className="h-4 w-4 mr-2" />
-                      <p className="font-semibold">
-                        {t('event.braceletPrice', {
-                          price: event.braceletPrice,
-                        })}{' '}
-                        <span className="text-muted-foreground">&#42;</span>
+                  <div className="flex text-sm text-white/80 mb-2">
+                    <BadgeEuro className="h-4 w-4 mr-2 mt-0.5" />
+                    <div className="flex items-start flex-col">
+                      <p>
+                        {t('event.session', { sessionTime: event.sessionTime })}
                       </p>
+                      <p className="font-semibold">
+                        {`${t('event.priceVATIncl', { price: roundPrice(event.sessionPriceVatIncl || 0), session: event.sessionTime })}`}
+                        <span className="ml-2 text-muted-foreground text-xs">
+                          (
+                          {t('event.priceVATExcl', {
+                            price: calculatePriceExcludingVat(
+                              event.sessionPriceVatIncl || 0,
+                            ),
+                          })}
+                          )
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  {event.braceletPriceVatIncl && (
+                    <div className="flex text-sm text-white/80 mb-2">
+                      <CircleDashed className="h-4 w-4 mr-2 mt-0.5" />
+                      <div className="flex items-start flex-col">
+                        <p>{t('event.bracelet')}</p>
+                        <p className="font-semibold">
+                          {t('event.priceVATIncl', {
+                            price: roundPrice(event.braceletPriceVatIncl || 0),
+                          })}
+                          <span className="ml-2 text-muted-foreground text-xs">
+                            (
+                            {t('event.priceVATExcl', {
+                              price: calculatePriceExcludingVat(
+                                event.braceletPriceVatIncl || 0,
+                              ),
+                            })}
+                            )
+                          </span>
+                        </p>
+                      </div>
                     </div>
                   )}
                 </div>
               </div>
               <div>
                 {/* Fill percentage indicator */}
-                {event.capacity && event.registrations && (
+                {event.capacity !== undefined && (
                   <div className="mt-4">
-                    <div className="flex items-center justify-between text-sm mb-2">
-                      <div className="flex items-center text-xs">
-                        <Users className="h-3 w-3 mr-2" />
-                        <p className="font-medium">{t('event.booked')}</p>
-                      </div>
-                      <span className="font-medium text-xs">
-                        {Math.min(
-                          Math.round(
-                            (event.registrations / event.capacity) * 100,
-                          ),
-                          100,
-                        )}
-                        %
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
-                      <div
-                        className={`h-full rounded-full ${
-                          event.registrations / event.capacity >= 0.9
-                            ? 'bg-racing-darkred'
-                            : event.registrations / event.capacity >= 0.7
-                              ? 'bg-racing-red'
-                              : 'bg-racing-lightred'
-                        }`}
-                        style={{
-                          width: `${Math.min(Math.round((event.registrations / event.capacity) * 100), 100)}%`,
-                        }}
-                      ></div>
-                    </div>
+                    {/* Calculate fill percentage - handle null/undefined registrations */}
+                    {(() => {
+                      const fillPercentage = Math.min(
+                        Math.round(((event.registrations || 0) / event.capacity) * 100),
+                        100
+                      );
+                      
+                      return (
+                        <>
+                          <div className="flex items-center justify-between text-sm mb-2">
+                            <div className="flex items-center text-xs">
+                              <Users className="h-3 w-3 mr-2" />
+                              <p className="font-medium">{t('event.booked')}</p>
+                            </div>
+                            <span className="font-medium text-xs">
+                              {fillPercentage}%
+                            </span>
+                          </div>
+                          <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+                            <div
+                              className={`h-full rounded-full ${
+                                fillPercentage >= 90
+                                  ? 'bg-racing-darkred'
+                                  : fillPercentage >= 70
+                                    ? 'bg-racing-red'
+                                    : 'bg-racing-lightred'
+                              }`}
+                              style={{
+                                width: `${fillPercentage}%`,
+                              }}
+                            ></div>
+                          </div>
+                        </>
+                      );
+                    })()}
                   </div>
                 )}
                 <div className="mt-8">
@@ -237,9 +268,6 @@ export default async function EventPage({
                           : t('registerForEvent')
                     }
                   />
-                  <p className="text-xs text-muted-foreground text-center mt-4">
-                    * {t('disclaimerPrice')}
-                  </p>
                 </div>
               </div>
             </div>

@@ -11,9 +11,9 @@ export interface EventItem {
   soldOut?: boolean;
   capacity?: number;
   registrations?: number;
-  sessionPrice?: number;
+  sessionPriceVatIncl?: number;
   sessionTime?: string;
-  braceletPrice?: number;
+  braceletPriceVatIncl?: number;
   cancel?: boolean;
 }
 
@@ -56,6 +56,8 @@ export const formatEventDate = (
   return format(date, 'd MMMM yyyy', { locale });
 };
 
+export const vatRate = 0.21;
+
 export const events: EventItem[] = [
   {
     id: 'spa-2025-03-26',
@@ -67,9 +69,9 @@ export const events: EventItem[] = [
     soldOut: true,
     capacity: 18,
     registrations: 18,
-    sessionPrice: 200,
+    sessionPriceVatIncl: 240,
     sessionTime: '20 min',
-    braceletPrice: 50,
+    braceletPriceVatIncl: 60.50,
   },
   {
     id: 'spa-2025-03-27',
@@ -81,9 +83,9 @@ export const events: EventItem[] = [
     soldOut: true,
     capacity: 18,
     registrations: 18,
-    sessionPrice: 200,
+    sessionPriceVatIncl: 240,
     sessionTime: '20 min',
-    braceletPrice: 50,
+    braceletPriceVatIncl: 60.50,
   },
   {
     id: 'mettet-2025-04-29',
@@ -95,9 +97,9 @@ export const events: EventItem[] = [
     soldOut: true,
     capacity: 18,
     registrations: 18,
-    sessionPrice: 150,
+    sessionPriceVatIncl: 180,
     sessionTime: '20 min',
-    braceletPrice: 50,
+    braceletPriceVatIncl: 50,
   },
   {
     id: 'mettet-2025-05-26',
@@ -109,9 +111,9 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 4,
-    sessionPrice: 150,
+    sessionPriceVatIncl: 180,
     sessionTime: '20 min',
-    braceletPrice: 33,
+    braceletPriceVatIncl: 40,
   },
   {
     id: 'clastres-2025-06-27',
@@ -123,7 +125,7 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 16,
-    sessionPrice: 150,
+    sessionPriceVatIncl: 180,
     sessionTime: '20 min',
   },
   {
@@ -136,7 +138,7 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 0,
-    sessionPrice: 180,
+    sessionPriceVatIncl: 205,
     sessionTime: '20 min',
   },
   {
@@ -149,7 +151,7 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 0,
-    sessionPrice: 180,
+    sessionPriceVatIncl: 205,
     sessionTime: '20 min',
   },
   {
@@ -162,9 +164,9 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 3,
-    sessionPrice: 200,
+    sessionPriceVatIncl: 240,
     sessionTime: '20min',
-    braceletPrice: 50,
+    braceletPriceVatIncl: 60.50,
     cancel: true,
   },
   {
@@ -177,9 +179,9 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 8,
-    sessionPrice: 200,
+    sessionPriceVatIncl: 240,
     sessionTime: '20min',
-    braceletPrice: 50,
+    braceletPriceVatIncl: 60.50,
     cancel: true,
   },
   {
@@ -192,7 +194,7 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 5,
-    sessionPrice: 150,
+    sessionPriceVatIncl: 220,
     sessionTime: '20min',
   },
   {
@@ -205,7 +207,7 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 3,
-    sessionPrice: 150,
+    sessionPriceVatIncl: 180,
     sessionTime: '20min',
   },
   {
@@ -218,8 +220,8 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 9,
-    sessionPrice: 200,
+    sessionPriceVatIncl: 240,
     sessionTime: '20min',
-    braceletPrice: 50,
+    braceletPriceVatIncl:60.50,
   },
 ];
