@@ -14,6 +14,7 @@ export interface EventItem {
   sessionPriceVatIncl?: number;
   sessionTime?: string;
   braceletPriceVatIncl?: number;
+  braceletVatRate?: number;
   cancel?: boolean;
 }
 
@@ -81,6 +82,7 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 240,
     sessionTime: '20 min',
     braceletPriceVatIncl: 60.50,
+    braceletVatRate: 0.21,
   },
   {
     id: 'spa-2025-03-27',
@@ -95,7 +97,8 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 240,
     sessionTime: '20 min',
     braceletPriceVatIncl: 60.50,
-  },
+    braceletVatRate: 0.21,
+    },
   {
     id: 'mettet-2025-04-29',
     date: new Date(2025, 3, 29),
@@ -109,6 +112,7 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 180,
     sessionTime: '20 min',
     braceletPriceVatIncl: 50,
+    braceletVatRate: 0.06,
   },
   {
     id: 'mettet-2025-05-26',
@@ -123,6 +127,7 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 180,
     sessionTime: '20 min',
     braceletPriceVatIncl: 40,
+    braceletVatRate: 0.06,
   },
   {
     id: 'clastres-2025-06-27',
@@ -176,6 +181,7 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 240,
     sessionTime: '20min',
     braceletPriceVatIncl: 60.50,
+    braceletVatRate: 0.21,
     cancel: true,
   },
   {
@@ -191,6 +197,7 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 240,
     sessionTime: '20min',
     braceletPriceVatIncl: 60.50,
+    braceletVatRate: 0.21,
     cancel: true,
   },
   {
@@ -231,7 +238,8 @@ export const events: EventItem[] = [
     registrations: 9,
     sessionPriceVatIncl: 240,
     sessionTime: '20min',
-    braceletPriceVatIncl:60.50,
+    braceletPriceVatIncl: 60.50,
+    braceletVatRate: 0.21,
   },
   {
     id: 'spa-2025-10-14',
@@ -246,6 +254,7 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 240,
     sessionTime: '20 min',
     braceletPriceVatIncl: 60.50,
+    braceletVatRate: 0.21,
   },
   {
     id: 'spa-2025-10-15',
@@ -260,5 +269,6 @@ export const events: EventItem[] = [
     sessionPriceVatIncl: 240,
     sessionTime: '20 min',
     braceletPriceVatIncl: 60.50,
+    braceletVatRate: 0.21,
   },
 ];

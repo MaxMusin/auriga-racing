@@ -202,6 +202,7 @@ export default async function EventPage({
                             {t('event.priceVATExcl', {
                               price: calculatePriceExcludingVat(
                                 event.braceletPriceVatIncl || 0,
+                                event.braceletVatRate,
                               ),
                             })}
                             )
