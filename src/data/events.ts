@@ -147,7 +147,7 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 0,
-    sessionPriceVatIncl: 205,
+    sessionPriceVatIncl: 210,
     sessionTime: '20 min',
   },
   {
@@ -160,7 +160,7 @@ export const events: EventItem[] = [
     soldOut: false,
     capacity: 18,
     registrations: 0,
-    sessionPriceVatIncl: 205,
+    sessionPriceVatIncl: 210,
     sessionTime: '20 min',
   },
   {
