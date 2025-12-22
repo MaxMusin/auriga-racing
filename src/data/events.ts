@@ -277,7 +277,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'spa-2026-10-13',
-    date: new Date(2026, 09, 13),
+    date: new Date(2026, 9, 13),
     time: '9h30 - 18h00',
     type: 'trackday',
     track: 'spa-francorchamps',
@@ -292,7 +292,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'spa-2026-10-14',
-    date: new Date(2026, 09, 14),
+    date: new Date(2026, 9, 14),
     time: '9h30 - 18h00',
     type: 'trackday',
     track: 'spa-francorchamps',
