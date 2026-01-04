@@ -7,7 +7,7 @@ export interface EventItem {
   time: string;
   type: 'trackday' | 'simracing';
   track: string;
-  country: 'belgium' | 'france' | 'netherlands';
+  country: 'belgium' | 'france' | 'germany' | 'netherlands';
   soldOut?: boolean;
   capacity?: number;
   registrations?: number;
@@ -21,15 +21,17 @@ export interface EventItem {
 export const countryFlags: Record<EventItem['country'], string> = {
   belgium: '🇧🇪',
   france: '🇫🇷',
+  germany: '🇩🇪',
   netherlands: '🇳🇱',
 };
 
 export const trackLengths: Record<string, number> = {
   'spa-francorchamps': 7.004,
-  mettet: 2.28,
-  clastres: 2.7,
+  mettet: 2.280,
+  clastres: 2.700,
   dijon: 3.801,
   'magny-cours': 4.411,
+  'nurburgring-nordschleife': 20.832,
   zandvoort: 4.259,
 };
 
@@ -44,6 +46,7 @@ export const tracks: Record<string, string> = {
   clastres: 'Clastres',
   dijon: 'Dijon',
   'magny-cours': 'Magny-Cours',
+  'nurburgring-nordschleife': 'Nürburgring - Nordschleife',
   zandvoort: 'Zandvoort',
 };
 
@@ -302,6 +305,21 @@ export const events: EventItem[] = [
     registrations: 0,
     sessionPriceVatIncl: 240,
     sessionTime: '20min',
+    braceletPriceVatIncl: 60.5,
+    braceletVatRate: 0.21,
+  },
+  {
+    id: 'spa-2026-10-12',
+    date: new Date(2026, 9, 12),
+    time: '8h30 - 16h30',
+    type: 'trackday',
+    track: 'nurburgring-nordschleife',
+    country: 'germany',
+    soldOut: false,
+    capacity: 17,
+    registrations: 0,
+    sessionPriceVatIncl: 360,
+    sessionTime: '30 min',
     braceletPriceVatIncl: 60.5,
     braceletVatRate: 0.21,
   },
