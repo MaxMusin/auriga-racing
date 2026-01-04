@@ -280,7 +280,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'dijon-2026-07-23',
-    date: new Date(2025, 6, 23),
+    date: new Date(2026, 6, 23),
     time: '9h00 - 17h00',
     type: 'trackday',
     track: 'dijon',
@@ -295,7 +295,7 @@ export const events: EventItem[] = [
   },
   {
     id: 'dijon-2026-07-24',
-    date: new Date(2025, 6, 24),
+    date: new Date(2026, 6, 24),
     time: '9h00 - 17h00',
     type: 'trackday',
     track: 'dijon',
