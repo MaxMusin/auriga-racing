@@ -193,6 +193,7 @@
     "countries": {
       "belgium": "Belgium",
       "france": "France",
+      "germany": "Germany",
       "netherlands": "Netherlands"
     },
     "bookingSection": {
