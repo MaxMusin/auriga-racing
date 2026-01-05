@@ -272,7 +272,7 @@ export const events: EventItem[] = [
     country: 'belgium',
     soldOut: false,
     capacity: 17,
-    registrations: 5,
+    registrations: 8,
     sessionPriceVatIncl: 240,
     sessionTime: '20 min',
     braceletPriceVatIncl: 60.5,
