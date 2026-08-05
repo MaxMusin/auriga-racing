@@ -362,7 +362,7 @@
     },
     "hero": {
       "title": "Conditions Générales de Vente",
-      "subtitle": "Dernière mise à jour : 26 avril 2025"
+      "subtitle": "Dernière mise à jour : 1er juillet 2026"
     },
     "sections": {
       "article1": {
@@ -387,11 +387,11 @@
       },
       "article6": {
         "title": "6. Dommages au véhicule",
-        "content": "* En cas de dommages au véhicule fourni, le participant sera systématiquement responsable des réparations, qu'il soit ou non à l'origine du sinistre\n* Le circuit étant un lieu privé et considéré comme lieu de non-droit pour la responsabilité civile automobile, aucun recours entre participants n'est possible\n* Le participant accepte expressément de couvrir l'intégralité des frais de remise en état du véhicule sauf s'il a souscrit une assurance spécifique (voir article 7)\n* Cette règle s'applique également en cas d'incident impliquant un tiers"
+        "content": "* En cas de dommages au véhicule fourni, le participant sera systématiquement responsable des réparations, qu'il soit ou non à l'origine du sinistre\n* Le circuit étant un lieu privé et considéré comme lieu de non-droit pour la responsabilité civile automobile, aucun recours entre participants n'est possible\n* Le participant accepte expressément de couvrir l'intégralité des frais de remise en état du véhicule, sauf s'il a souscrit la couverture dégâts carrosserie proposée (voir article 7)\n* Cette règle s'applique également en cas d'incident impliquant un tiers"
       },
       "article7": {
-        "title": "7. Assurance",
-        "content": "Une formule d'assurance facultative peut être proposée par l'Organisateur avant l'événement :\n* Tarif : 125 € HTVA par jour\n* Franchise : 1 000 € HTVA\n* Couverture maximale : 15 000 € HTVA\n\nEn cas de sinistre, le participant reste responsable du montant de la franchise ainsi que de tout dommage excédant le plafond d'indemnisation.\n\nL'adhésion à cette assurance ne dispense pas le participant de l'obligation de prendre toutes les précautions nécessaires pour préserver l'intégrité du véhicule."
+        "title": "7. Couverture dégâts carrosserie",
+        "content": "Une assurance facultative couvrant les dégâts de carrosserie peut être proposée avant l'événement :\n* Tarif : 125 € HTVA par jour\n* Franchise : 1 000 € HTVA\n\nEn cas de sinistre, le participant reste responsable du montant de la franchise ainsi que de tout dommage excédant le plafond d'indemnisation.\n\nL'adhésion à cette assurance ne dispense pas le participant de l'obligation de prendre toutes les précautions nécessaires pour préserver l'intégrité du véhicule."
       },
       "article8": {
         "title": "8. Tarifs et modalités de paiement",
